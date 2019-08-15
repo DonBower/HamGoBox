@@ -8,7 +8,7 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 * Go Box -- [Gator Box](https://smile.amazon.com/gp/product/B0002BG4O8/ref=ppx_yo_dt_b_asin_title_o08_s04?ie=UTF8&psc=1) -- This 6U Portable Rack keeps all of the equipment in one place, and connected.
 ![alt text][gatorBox]
 
-[gatorBox]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBox.jpg "Field Day Box"
 
 Measure the effects of the North America Eclipse of August 21, 2017 with a [Raspberry Pi](https://www.adafruit.com/product/3055). To do the initial setup of the pi, follow the instructions found in the [Pi folder](https://github.com/DonBower/Eclipse2017/tree/master/Pi)
 
