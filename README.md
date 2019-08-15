@@ -10,6 +10,22 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 
 [gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBox.jpg "Field Day Box"
 
+* 2 Rack Shelfs -- [Shelf](https://smile.amazon.com/gp/product/B01C9KYUG8/ref=ppx_yo_dt_b_asin_title_o08_s01?ie=UTF8&psc=1) -- The venting on these shelfs will allow for easy bolting down of equipment.
+![alt text][gatorShelf]
+
+[gatorShelf]: https://github.com/DonBower/HamGoBox/blob/master/Images/Shelf.jpg "Rack Shelf"
+
+* 1U Blanks -- [Blank](https://smile.amazon.com/gp/product/B06Y1VJD6Q/ref=ppx_yo_dt_b_asin_title_o08_s03?ie=UTF8&psc=1) -- These alumium panels will provide a spot to add some meters, connectors and switches
+
+![alt text][gator1UPanel]
+
+[gator1UPanel]: https://github.com/DonBower/HamGoBox/blob/master/Images/1UPanel.jpg "Blank Panel"
+
+
+
+
+
+
 Measure the effects of the North America Eclipse of August 21, 2017 with a [Raspberry Pi](https://www.adafruit.com/product/3055). To do the initial setup of the pi, follow the instructions found in the [Pi folder](https://github.com/DonBower/Eclipse2017/tree/master/Pi)
 
 Julian will be enrolled once again in his school's science fair, so this is a once in a lifetime opportunity for him, even though the science fair is not until later in the calendar year.
