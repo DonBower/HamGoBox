@@ -8,7 +8,7 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 * Go Box -- [Gator Box](https://smile.amazon.com/gp/product/B0002BG4O8/ref=ppx_yo_dt_b_asin_title_o08_s04?ie=UTF8&psc=1) -- This 6U Portable Rack keeps all of the equipment in one place, and connected.
 ![alt text][gatorBox]
 
-[gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBox.jpg "Field Day Box"
+[gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBox2.jpg "Field Day Box"
 
 * 2 Rack Shelfs -- [Shelf](https://smile.amazon.com/gp/product/B01C9KYUG8/ref=ppx_yo_dt_b_asin_title_o08_s01?ie=UTF8&psc=1) -- The venting on these shelfs will allow for easy bolting down of equipment.
 ![alt text][gatorShelf]
