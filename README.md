@@ -40,6 +40,10 @@ Future Wants
 
 [yaesuFT897D]: https://github.com/DonBower/HamGoBox/blob/master/Images/FT-897DSmall.jpg "Ham Radio"
 
+[wmrPWRGate]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPWRGate.jpg "Epic PWRGate"
+
+[wmr4004U]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMR4004U.jpg "RIGrunner 4004U"
+
 [wmrPNP]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPnPSmall.jpg "Digital Mode Interface"
 
 [nanoIO]: https://github.com/DonBower/HamGoBox/blob/master/Images/nanoIOSmall.jpg "CW Keyer"
