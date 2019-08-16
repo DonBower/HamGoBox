@@ -40,7 +40,7 @@ Future Wants
 
 [yaesuFT897D]: https://github.com/DonBower/HamGoBox/blob/master/Images/FT-897DSmall.jpg "Ham Radio"
 
-[wmrPWRGate]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPWRGate.jpg "Epic PWRGate"
+[wmrPWRGate]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPWRgate.jpg "Epic PWRGate"
 
 [wmr4004U]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMR4004U.jpg "RIGrunner 4004U"
 
