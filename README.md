@@ -38,7 +38,7 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 
 [nanoIO]: https://github.com/DonBower/HamGoBox/blob/master/Images/nanoIOSmall.jpg "CW Keyer"
 
-[raspberryPI]: https://github.com/DonBower/HamGoBox/blob/master/Images/raspberryPiSmall.jpg "Raspberry Pi"
+[raspberryPI]: https://github.com/DonBower/HamGoBox/blob/master/Images/RaspberryPiSmall.jpg "Raspberry Pi"
 
 
 
