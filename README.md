@@ -5,7 +5,6 @@ Ham Radio Go Box
 The Purpose of this Repository is to document the build of the Ham Radio Go Box, which provides for an encapsulated radio that is already hooked up, and requires only power and an antenna.
 
 ## Components:
-|               | Item           | Cool  |
 |:----------------------:|:-------------|:------|
 | ![alt text][gatorBox]  | [Gator Box](https://smile.amazon.com/gp/product/B0002BG4O8/ref=ppx_yo_dt_b_asin_title_o08_s04?ie=UTF8&psc=1) | This 6U Portable Rack keeps all of the equipment in one place, and connected. |
 | ![alt text][gatorShelf] | [Shelf](https://smile.amazon.com/gp/product/B01C9KYUG8/ref=ppx_yo_dt_b_asin_title_o08_s01?ie=UTF8&psc=1) | The venting on these shelfs will allow for easy bolting down of equipment. |
