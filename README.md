@@ -23,6 +23,9 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 * Mortty nanoIO -- [Keyer](https://hamprojects.info/mortty/) -- This Interface is used to enable True Keyed CW when using fldigi. This is a DIY kit, that requires soldering.
 ![alt text][nanoIO]
 
+* Raspberry PI -- [Computer](https://www.adafruit.com/product/3755) -- This credit card size computer will run all of the software, it has 4 USB ports, and a boatload of interfaces.
+![alt text][raspberryPI]
+
 [gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBoxSmall.jpg "Field Day Box"
 
 [gatorShelf]: https://github.com/DonBower/HamGoBox/blob/master/Images/ShelfSmall.jpg "Rack Shelf"
@@ -34,6 +37,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 [wmrPNP]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPnPSmall.jpg "Digital Mode Interface"
 
 [nanoIO]: https://github.com/DonBower/HamGoBox/blob/master/Images/nanoIOSmall.jpg "CW Keyer"
+
+[raspberryPI]: https://github.com/DonBower/HamGoBox/blob/master/Images/raspberryPISmall.jpg "Raspberry Pi"
 
 
 
