@@ -8,18 +8,18 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 * Go Box -- [Gator Box](https://smile.amazon.com/gp/product/B0002BG4O8/ref=ppx_yo_dt_b_asin_title_o08_s04?ie=UTF8&psc=1) -- This 6U Portable Rack keeps all of the equipment in one place, and connected.
 ![alt text][gatorBox]
 
-[gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBox2.jpg "Field Day Box"
-
 * 2 Rack Shelfs -- [Shelf](https://smile.amazon.com/gp/product/B01C9KYUG8/ref=ppx_yo_dt_b_asin_title_o08_s01?ie=UTF8&psc=1) -- The venting on these shelfs will allow for easy bolting down of equipment.
 ![alt text][gatorShelf]
-
-[gatorShelf]: https://github.com/DonBower/HamGoBox/blob/master/Images/Shelf.jpg "Rack Shelf"
 
 * 1U Blanks -- [Blank](https://smile.amazon.com/gp/product/B06Y1VJD6Q/ref=ppx_yo_dt_b_asin_title_o08_s03?ie=UTF8&psc=1) -- These alumium panels will provide a spot to add some meters, connectors and switches
 
 ![alt text][gator1UPanel]
 
-[gator1UPanel]: https://github.com/DonBower/HamGoBox/blob/master/Images/1UPanel.jpg "Blank Panel"
+[gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBoxSmall.jpg "Field Day Box"
+
+[gatorShelf]: https://github.com/DonBower/HamGoBox/blob/master/Images/ShelfSmall.jpg "Rack Shelf"
+
+[gator1UPanel]: https://github.com/DonBower/HamGoBox/blob/master/Images/1UPanelSmall.jpg "Blank Panel"
 
 
 
