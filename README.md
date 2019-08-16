@@ -17,7 +17,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 * FT-897D -- [Radio](https://www.yaesu.com/indexVS.cfm?cmd=DisplayProducts&ProdCatID=102&encProdID=0372FA803B7BBADBF3076C94ACA7A8C5&DivisionID) -- While this radio is no longer in production, the mobile version (FT-857D) still is.  This Radio has  160M-6M, 2M & 70CM AM/FM/SSB/CW.  There is also a digital mode, which lends this radio to doing PSK and other popular modes of communication.
 ![alt text][yaesuFT897D]
 
-
+* WMR Plug & Play -- [Interface](https://www.hamradio.com/detail.cfm?pid=H0-008403) -- This Interface is capable of converting the audio from software sources such as Ham Radio Deluxe (windows only) and fldigi (win/mac/linux).  It's also capable of True Keyed CW when used with HRD, but not fldigi.
+![alt text][wmrPNP]
 
 [gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBoxSmall.jpg "Field Day Box"
 
@@ -26,6 +27,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 [gator1UPanel]: https://github.com/DonBower/HamGoBox/blob/master/Images/1UPanelSmall.jpg "Blank Panel"
 
 [yaesuFT897D]: https://github.com/DonBower/HamGoBox/blob/master/Images/FT-897DSmall.jpg "Ham Radio"
+
+[wmrPNP]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPnP.jpg "Ham Radio"
 
 
 
