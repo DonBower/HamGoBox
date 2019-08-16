@@ -68,10 +68,5 @@ Future Wants
 [monitor]: https://github.com/DonBower/HamGoBox/blob/master/Images/monitorSmall.jpg "Raspberry Pi"
 
 
-- git-triggered [![](https://ci.concourse-ci.org/api/v1/teams/examples/pipelines/git-triggered/badge)](https://ci.concourse-ci.org/teams/examples/pipelines/git-triggered)
-- golang-lib [![](https://ci.concourse-ci.org/api/v1/teams/examples/pipelines/golang-lib/badge)](https://ci.concourse-ci.org/teams/examples/pipelines/golang-lib)
-
-
-Measure the effects of the North America Eclipse of August 21, 2017 with a [Raspberry Pi](https://www.adafruit.com/product/3055). To do the initial setup of the pi, follow the instructions found in the [Pi folder](https://github.com/DonBower/Eclipse2017/tree/master/Pi)
-
-Julian will be enrolled once again in his school's science fair, so this is a once in a lifetime opportunity for him, even though the science fair is not until later in the calendar year.
+#- git-triggered [![](https://ci.concourse-ci.org/api/v1/teams/examples/pipelines/git-triggered/badge)](https://ci.concourse-ci.org/teams/examples/pipelines/git-triggered)
+#- golang-lib [![](https://ci.concourse-ci.org/api/v1/teams/examples/pipelines/golang-lib/badge)](https://ci.concourse-ci.org/teams/examples/pipelines/golang-lib)
