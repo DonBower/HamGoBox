@@ -23,7 +23,7 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 * Mortty nanoIO -- [Keyer](https://hamprojects.info/mortty/) -- This Interface is used to enable True Keyed CW when using fldigi. This is a DIY kit, that requires soldering.
 ![alt text][nanoIO]
 
-* Raspberry PI -- [Computer](https://www.adafruit.com/product/3755) -- This credit card size computer will run all of the software, it has 4 USB ports, and a boatload of interfaces.
+* Raspberry PI -- [Computer](https://www.adafruit.com/product/3775) -- This credit card size computer will run all of the software, it has 4 USB ports, and a boatload of interfaces.
 ![alt text][raspberryPI]
 
 [gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBoxSmall.jpg "Field Day Box"
@@ -41,7 +41,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 [raspberryPI]: https://github.com/DonBower/HamGoBox/blob/master/Images/RaspberryPiSmall.jpg "Raspberry Pi"
 
 
-
+- git-triggered [![](https://ci.concourse-ci.org/api/v1/teams/examples/pipelines/git-triggered/badge)](https://ci.concourse-ci.org/teams/examples/pipelines/git-triggered)
+- golang-lib [![](https://ci.concourse-ci.org/api/v1/teams/examples/pipelines/golang-lib/badge)](https://ci.concourse-ci.org/teams/examples/pipelines/golang-lib)
 
 
 Measure the effects of the North America Eclipse of August 21, 2017 with a [Raspberry Pi](https://www.adafruit.com/product/3055). To do the initial setup of the pi, follow the instructions found in the [Pi folder](https://github.com/DonBower/Eclipse2017/tree/master/Pi)
