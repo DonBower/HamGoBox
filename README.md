@@ -26,6 +26,9 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 * Raspberry PI -- [Computer](https://www.adafruit.com/product/3775) -- This credit card size computer will run all of the software, it has 4 USB ports, and a boatload of interfaces.
 ![alt text][raspberryPI]
 
+* Monitor -- [Monitor](https://smile.amazon.com/gp/product/B07NNXH2SS/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1) -- 13 inch high res monitor.
+![alt text][monitor]
+
 [gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBoxSmall.jpg "Field Day Box"
 
 [gatorShelf]: https://github.com/DonBower/HamGoBox/blob/master/Images/ShelfSmall.jpg "Rack Shelf"
@@ -39,6 +42,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 [nanoIO]: https://github.com/DonBower/HamGoBox/blob/master/Images/nanoIOSmall.jpg "CW Keyer"
 
 [raspberryPI]: https://github.com/DonBower/HamGoBox/blob/master/Images/RaspberryPiSmall.jpg "Raspberry Pi"
+
+[monitor]: https://github.com/DonBower/HamGoBox/blob/master/Images/monitorSmall.jpg "Raspberry Pi"
 
 
 - git-triggered [![](https://ci.concourse-ci.org/api/v1/teams/examples/pipelines/git-triggered/badge)](https://ci.concourse-ci.org/teams/examples/pipelines/git-triggered)
