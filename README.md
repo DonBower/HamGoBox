@@ -66,7 +66,3 @@ Future Wants
 [raspberryPI]: https://github.com/DonBower/HamGoBox/blob/master/Images/RaspberryPiSmall.jpg "Raspberry Pi"
 
 [monitor]: https://github.com/DonBower/HamGoBox/blob/master/Images/monitorSmall.jpg "Raspberry Pi"
-
-
-#- git-triggered [![](https://ci.concourse-ci.org/api/v1/teams/examples/pipelines/git-triggered/badge)](https://ci.concourse-ci.org/teams/examples/pipelines/git-triggered)
-#- golang-lib [![](https://ci.concourse-ci.org/api/v1/teams/examples/pipelines/golang-lib/badge)](https://ci.concourse-ci.org/teams/examples/pipelines/golang-lib)
