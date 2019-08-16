@@ -12,8 +12,12 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 ![alt text][gatorShelf]
 
 * 1U Blanks -- [Blank](https://smile.amazon.com/gp/product/B06Y1VJD6Q/ref=ppx_yo_dt_b_asin_title_o08_s03?ie=UTF8&psc=1) -- These alumium panels will provide a spot to add some meters, connectors and switches
-
 ![alt text][gator1UPanel]
+
+* FT-897D -- [Radio](https://www.yaesu.com/indexVS.cfm?cmd=DisplayProducts&ProdCatID=102&encProdID=0372FA803B7BBADBF3076C94ACA7A8C5&DivisionID) -- While this radio is no longer in production, the mobile version (FT-857D) still is.  This Radio has  160M-6M, 2M & 70CM AM/FM/SSB/CW.  There is also a digital mode, which lends this radio to doing PSK and other popular modes of communication.
+![alt text][yaesuFT897D]
+
+
 
 [gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBoxSmall.jpg "Field Day Box"
 
@@ -21,6 +25,7 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 
 [gator1UPanel]: https://github.com/DonBower/HamGoBox/blob/master/Images/1UPanelSmall.jpg "Blank Panel"
 
+[yaesuFT897D]: https://github.com/DonBower/HamGoBox/blob/master/Images/FT-897DSmall.jpg "Ham Radio"
 
 
 
