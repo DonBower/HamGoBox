@@ -20,6 +20,9 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 * WMR Plug & Play -- [Interface](https://www.hamradio.com/detail.cfm?pid=H0-008403) -- This Interface is capable of converting the audio from software sources such as Ham Radio Deluxe (windows only) and fldigi (win/mac/linux).  It's also capable of True Keyed CW when used with HRD, but not fldigi.
 ![alt text][wmrPNP]
 
+* Mortty nanoIO -- [Keyer](https://hamprojects.info/mortty/) -- This Interface is used to enable True Keyed CW when using fldigi. This is a DIY kit, that requires soldering.
+![alt text][nanoIO]
+
 [gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBoxSmall.jpg "Field Day Box"
 
 [gatorShelf]: https://github.com/DonBower/HamGoBox/blob/master/Images/ShelfSmall.jpg "Rack Shelf"
@@ -28,7 +31,9 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 
 [yaesuFT897D]: https://github.com/DonBower/HamGoBox/blob/master/Images/FT-897DSmall.jpg "Ham Radio"
 
-[wmrPNP]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPnP.jpg "Ham Radio"
+[wmrPNP]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPnPSmall.jpg "Digital Mode Interface"
+
+[nanoIO]: https://github.com/DonBower/HamGoBox/blob/master/Images/nanoIOSmall.jpg "CW Keyer"
 
 
 
