@@ -7,15 +7,11 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 ## Components:
 ||||
 |:----------------------:|:-------------|:------|
-| ![alt text][gatorBox]  | [Gator Box](https://smile.amazon.com/gp/product/B0002BG4O8/ref=ppx_yo_dt_b_asin_title_o08_s04?ie=UTF8&psc=1) | This 6U Portable Rack keeps all of the equipment in one place, and connected. |
+| ![alt text][gatorBox] | [Gator Box](https://smile.amazon.com/gp/product/B0002BG4O8/ref=ppx_yo_dt_b_asin_title_o08_s04?ie=UTF8&psc=1) | This 6U Portable Rack keeps all of the equipment in one place, and connected. |
 | ![alt text][gatorShelf] | [Shelf](https://smile.amazon.com/gp/product/B01C9KYUG8/ref=ppx_yo_dt_b_asin_title_o08_s01?ie=UTF8&psc=1) | The venting on these shelfs will allow for easy bolting down of equipment. |
 | ![alt text][gator1UPanel] | [Blank](https://smile.amazon.com/gp/product/B06Y1VJD6Q/ref=ppx_yo_dt_b_asin_title_o08_s03?ie=UTF8&psc=1) |These aluminum panels will provide a spot to add some meters, connectors and switches|
-
-
-* FT-897D -- [Radio](https://www.yaesu.com/indexVS.cfm?cmd=DisplayProducts&ProdCatID=102&encProdID=0372FA803B7BBADBF3076C94ACA7A8C5&DivisionID) -- While this radio is no longer in production, the mobile version (FT-857D) still is.  This Radio has  160M-6M, 2M & 70CM AM/FM/SSB/CW.  There is also a digital mode, which lends this radio to doing PSK and other popular modes of communication.
-![alt text][yaesuFT897D]
-
-* G5RV Antenna -- [G5RVJR](https://www.hamradio.com/detail.cfm?pid=H0-008917) --  40 through 6 meters dipole.
+|![alt text][yaesuFT897D]|[FT-897D](https://www.yaesu.com/indexVS.cfm?cmd=DisplayProducts&ProdCatID=102&encProdID=0372FA803B7BBADBF3076C94ACA7A8C5&DivisionID)|While this radio is no longer in production, the mobile version (FT-857D) still is.  This Radio has  160M-6M, 2M & 70CM AM/FM/SSB/CW.  There is also a digital mode, which lends this radio to doing PSK and other popular modes of communication.|
+|G5RV Antenna|[G5RVJR](https://www.hamradio.com/detail.cfm?pid=H0-008917)|40 through 6 meters dipole.|
 
 * VHF/UHF Antenna -- [NR-770HB](https://www.hamradio.com/detail.cfm?pid=H0-000063) --  Diamond VHF/UHF Mobile Antenna.
 
