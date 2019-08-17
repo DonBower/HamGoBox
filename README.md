@@ -6,7 +6,7 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 
 ## Components:
 ||||
-|:----------------------:|:-------------|:------|
+|:--------:|:---------|:------------------------------------------------------|
 | ![alt text][gatorBox] | [Gator Box](https://smile.amazon.com/gp/product/B0002BG4O8/ref=ppx_yo_dt_b_asin_title_o08_s04?ie=UTF8&psc=1) | This 6U Portable Rack keeps all of the equipment in one place, and connected. |
 | ![alt text][gatorShelf] | [Shelf](https://smile.amazon.com/gp/product/B01C9KYUG8/ref=ppx_yo_dt_b_asin_title_o08_s01?ie=UTF8&psc=1) | The venting on these shelfs will allow for easy bolting down of equipment. |
 | ![alt text][gator1UPanel] | [Blank](https://smile.amazon.com/gp/product/B06Y1VJD6Q/ref=ppx_yo_dt_b_asin_title_o08_s03?ie=UTF8&psc=1) |These aluminum panels will provide a spot to add some meters, connectors and switches|
@@ -24,13 +24,29 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 
 
 ---
-Future Wants
+## Future Wants
 * GPS
 * Weather Conditions - temp/humidity, rain? wind?
 * VOC Detector
 * Power Monitor V/A/W/Batt lifetime
 * CAT Monitor
 * Ext Speaker
+
+---
+## Assembly
+
+---
+## Software Installation
+* Setup the RaspberryPi
+
+1. OS. I am going to use Rasbian, the default OS for a RaspberryPi. Start by instsalling [NOOBs](http://downloads.raspberrypi.org/NOOBS_latest). The Setup is described in the [Pi](https://github.com/DonBower/HamGoBox/tree/master/Pi)
+
+1. Location. Precise location is always imperative. So we will use [Adafruit's GPS Hat](https://www.adafruit.com/product/2324). The Setup for this device is described in the [GPS Folder](https://github.com/DonBower/Eclipse2017/tree/master/GPSHat)
+
+2. Temperature and Humidity. We will be collecting this information with the [DHT22 Sensor](https://www.adafruit.com/product/385). Because Humidity has an effect on the rate of temperature change, it's important to collect the Relative Humidity. Setup will be found in the [DHT22 Folder](https://github.com/DonBower/Eclipse2017/tree/master/DHT22)
+
+3. Temperature and Barometric Pressure. Barometric Pressure also has an effect on Temperature, so we will use the [BMP280 Sensor](https://www.adafruit.com/product/2651) to collect this data.  Setup will be found in the [BMP280 Folder](https://github.com/DonBower/Eclipse2017/tree/master/BMP280)
+
 
 [gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBoxSmall.jpg "Field Day Box"
 
