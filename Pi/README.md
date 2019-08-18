@@ -109,6 +109,22 @@ cd ~/Developer/Eclipse2017
 git pull origin master
 ```
 
+# Enable Software Compiles
+do this:
+```
+sudo sed -i 's/^#deb-src/deb-src/g' /etc/apt/sources.list
+```
+
+Next, install aptitude
+```
+sudo apt-get install -y aptitude
+```
+
+Next, update the apt package cache:
+```
+sudo aptitude -y update
+```
+
 # External Storage (USB Stick)
 
 In addition to the RaspberryPi, we need a storage device for all the data we will collect.
