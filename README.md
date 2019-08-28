@@ -43,11 +43,11 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 
 1. Programs. I am going to use fldig, flrig and wsjt-x. The Setup is described in [fldig](https://github.com/DonBower/HamGoBox/tree/master/fldig) and [wsjt-x](https://github.com/DonBower/HamGoBox/tree/master/wsjtx)
 
-1. Location. Precise location is always imperative. So we will use [Adafruit's GPS Hat](https://www.adafruit.com/product/2324). The Setup for this device is described in the [GPS Folder](https://github.com/DonBower/Eclipse2017/tree/master/GPSHat)
+1. Location. Precise location is always imperative. So we will use [Adafruit's GPS Hat](https://www.adafruit.com/product/2324). The Setup for this device is described in the [GPS Folder](https://github.com/DonBower/HamGoBox/tree/master/GPSHat)
 
-2. Temperature and Humidity. We will be collecting this information with the [DHT22 Sensor](https://www.adafruit.com/product/385). Because Humidity has an effect on the rate of temperature change, it's important to collect the Relative Humidity. Setup will be found in the [DHT22 Folder](https://github.com/DonBower/Eclipse2017/tree/master/DHT22)
+2. Temperature and Humidity. We will be collecting this information with the [DHT22 Sensor](https://www.adafruit.com/product/385). Because Humidity has an effect on the rate of temperature change, it's important to collect the Relative Humidity. Setup will be found in the [DHT22 Folder](https://github.com/DonBower/HamGoBox/tree/master/DHT22)
 
-3. Temperature and Barometric Pressure. Barometric Pressure also has an effect on Temperature, so we will use the [BMP280 Sensor](https://www.adafruit.com/product/2651) to collect this data.  Setup will be found in the [BMP280 Folder](https://github.com/DonBower/Eclipse2017/tree/master/BMP280)
+3. Temperature and Barometric Pressure. Barometric Pressure also has an effect on Temperature, so we will use the [BMP280 Sensor](https://www.adafruit.com/product/2651) to collect this data.  Setup will be found in the [BMP280 Folder](https://github.com/DonBower/HamGoBox/tree/master/BMP280)
 
 
 [gatorBox]: https://github.com/DonBower/HamGoBox/blob/master/Images/GatorBoxSmall.jpg "Field Day Box"

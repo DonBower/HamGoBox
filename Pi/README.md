@@ -5,7 +5,7 @@ First order of business, was to connect to my WiFi, which had to be done via the
 
 ![alt text][WiFi]
 
-[WiFi]: https://github.com/DonBower/Eclipse2017/blob/master/Pi/SelectWiFi.png "Select WiFi"
+[WiFi]: https://github.com/DonBower/HamGoBox/blob/master/Pi/SelectWiFi.png "Select WiFi"
 
 <br>
 
@@ -14,7 +14,7 @@ Enter the Password...
 
 ![alt text][Password]
 
-[Password]: https://github.com/DonBower/Eclipse2017/blob/master/Pi/EnterWiFiPassword.png "Enter WiFi Password"
+[Password]: https://github.com/DonBower/HamGoBox/blob/master/Pi/EnterWiFiPassword.png "Enter WiFi Password"
 
 <br>
 
@@ -24,7 +24,7 @@ After a few moments, your RaspberryPi should be connected to the network.  Hover
 
 ![alt text][Connected]
 
-[Connected]: https://github.com/DonBower/Eclipse2017/blob/master/Pi/WiFiConnected.png "Your WiFi is connected"
+[Connected]: https://github.com/DonBower/HamGoBox/blob/master/Pi/WiFiConnected.png "Your WiFi is connected"
 
 <br>
 
@@ -65,19 +65,19 @@ Interfacing Options > P2 Enable SSH > Enable SSH.
 
 ![alt text][Main]
 
-[Main]: https://github.com/DonBower/Eclipse2017/blob/master/Pi/Interfacing%20Options.png "raspi-config Main Screen"
+[Main]: https://github.com/DonBower/HamGoBox/blob/master/Pi/Interfacing%20Options.png "raspi-config Main Screen"
 
 <br>
 
 ![alt text][P2SSH]
 
-[P2SSH]: https://github.com/DonBower/Eclipse2017/blob/master/Pi/P2%20Enable%20SSH.png "raspi-config P2 Enable SSH"
+[P2SSH]: https://github.com/DonBower/HamGoBox/blob/master/Pi/P2%20Enable%20SSH.png "raspi-config P2 Enable SSH"
 
 <br>
 
 ![alt text][SSH]
 
-[SSH]: https://github.com/DonBower/Eclipse2017/blob/master/Pi/Enable%20SSH.png "raspi-config Enable SSH"
+[SSH]: https://github.com/DonBower/HamGoBox/blob/master/Pi/Enable%20SSH.png "raspi-config Enable SSH"
 
 <br>
 
@@ -105,7 +105,7 @@ git clone git@github.com:DonBower/HamGoBox.git
 If you need updates from github, use git pull:
 
 ```
-cd ~/Developer/Eclipse2017
+cd ~/Developer/HamGoBox
 git pull origin master
 ```
 
@@ -127,7 +127,7 @@ look for devices mounted to /dev/sda*, and unmount them.  For example if you see
 
 ![alt text][DFH]
 
-[DFH]: https://github.com/DonBower/Eclipse2017/blob/master/Pi/DF%20-h%20output.png "df -h output example"
+[DFH]: https://github.com/DonBower/HamGoBox/blob/master/Pi/DF%20-h%20output.png "df -h output example"
 
 <br>
 
@@ -149,7 +149,7 @@ Next, *and this is destructive*, remove any partitions, and create a new, fresh 
 Now, format the new partition for ext4 file system.
 
   ```
-  sudo mkfs.ext4 -L Eclipse2017 /dev/sda1
+  sudo mkfs.ext4 -L HamGoBox /dev/sda1
   ```
 
 The follow steps will allow the USB drive to be persistently mounted.
@@ -159,7 +159,7 @@ sudo mkdir /mnt/usbstick
 sudo chmod 777 /mnt
 sudo chmod 777 /mnt/usbstick
 sudo tee -a /etc/fstab <<EOF
-LABEL=Eclipse2017     /mnt/usbstick   ext4    defaults          0       1
+LABEL=HamGoBox     /mnt/usbstick   ext4    defaults          0       1
 EOF
 sudo mount -a
 ```
