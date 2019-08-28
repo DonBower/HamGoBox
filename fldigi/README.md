@@ -72,7 +72,6 @@ make && sudo make install
 
 Compile fldigi
 ```
-mkdir -p ~/Developer/fldigi
 cd ~/Developer/fldigi
 wget http://www.w1hkj.com/files/fldigi/fldigi-4.1.08.tar.gz
 tar -xzvf fldigi-4.1.08.tar.gz
