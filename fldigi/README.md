@@ -81,12 +81,3 @@ cd fldigi-4.1.08
 ./configure --prefix=/usr/local --enable-static
 make && sudo make install
 ```
-
-
-Aptitude will assist you in resolving any library version conflicts. This may occur on some Debian/Ubuntu/Mint recent distributions.
-
-Portaudio development headers / libs may conflict on a system with Jack pre-installed. Portaudio is required for fldigi to compile, so do not accept a recommendation that does not include installing the portaudio library. Aptitude will offer suggested solutions to resolve the conflict (including doing nothing).
-
-Make sure that build-dep has installed libxft-dev. Test by looking for the Xft.h header.
-
-On Ubuntu/Mint/Pi3: /usr/include/X11/Xft/Xft.h
