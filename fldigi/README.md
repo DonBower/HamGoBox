@@ -52,7 +52,6 @@ make && sudo make install
 
 Compile hamlib
 ```
-mkdir -p ~/Developer/fldigi
 cd ~/Developer/fldigi
 wget https://sourceforge.net/projects/hamlib/files/hamlib/3.3/hamlib-3.3.tar.gz
 tar -xzvf hamlib-3.3.tar.gz
@@ -66,7 +65,7 @@ Compile flrig
 cd ~/Developer/fldigi
 wget http://www.w1hkj.com/files/flrig/flrig-1.3.48.tar.gz
 tar -xzvf flrig-1.3.48.tar.gz
-cd ~/Developer/fldigiflrig-1.3.48
+cd ~/Developer/fldigi/flrig-1.3.48
 ./configure --prefix=/usr/local --enable-static
 make && sudo make install
 ```
@@ -77,7 +76,7 @@ mkdir -p ~/Developer/fldigi
 cd ~/Developer/fldigi
 wget http://www.w1hkj.com/files/fldigi/fldigi-4.1.08.tar.gz
 tar -xzvf fldigi-4.1.08.tar.gz
-cd fldigi-4.1.08
+cd ~/Developer/fldigi/fldigi-4.1.08
 ./configure --prefix=/usr/local --enable-static
 make && sudo make install
 ```
