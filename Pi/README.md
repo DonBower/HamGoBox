@@ -99,7 +99,7 @@ Next Create a *Developer* directory, and clone this repository from there.  The 
 ```
 mkdir ~/Developer
 cd ~/Developer
-git clone git@github.com:DonBower/Eclipse2017.git
+git clone git@github.com:DonBower/HamGoBox.git
 ```
 
 If you need updates from github, use git pull:
