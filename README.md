@@ -41,6 +41,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 
 1. OS. I am going to use Rasbian, the default OS for a RaspberryPi. Start by instsalling [NOOBs](http://downloads.raspberrypi.org/NOOBS_latest). The Setup is described in the [Pi](https://github.com/DonBower/HamGoBox/tree/master/Pi)
 
+1. Programs. I am going to use fldig, flrig and wsjt-x. The Setup is described in [fldig](https://github.com/DonBower/HamGoBox/tree/master/fldig) and [wsjt-x](https://github.com/DonBower/HamGoBox/tree/master/wsjtx)
+
 1. Location. Precise location is always imperative. So we will use [Adafruit's GPS Hat](https://www.adafruit.com/product/2324). The Setup for this device is described in the [GPS Folder](https://github.com/DonBower/Eclipse2017/tree/master/GPSHat)
 
 2. Temperature and Humidity. We will be collecting this information with the [DHT22 Sensor](https://www.adafruit.com/product/385). Because Humidity has an effect on the rate of temperature change, it's important to collect the Relative Humidity. Setup will be found in the [DHT22 Folder](https://github.com/DonBower/Eclipse2017/tree/master/DHT22)

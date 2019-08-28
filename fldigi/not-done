@@ -1,0 +1,26 @@
+# Enable Software Compiles
+do this:
+```
+sudo sed -i 's/^#deb-src/deb-src/g' /etc/apt/sources.list
+```
+
+Next, install aptitude
+```
+                                  -y aptitude
+```
+
+Next, update the apt package cache:
+```
+sudo aptitude -y update
+```
+
+***
+Install the basic development packages (all distros)
+```
+sudo aptitude -y install build-essential
+```
+
+Install the build dependency packages (all distros)
+```
+sudo aptitude -y build-dep fldigi
+```

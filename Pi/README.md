@@ -109,37 +109,6 @@ cd ~/Developer/Eclipse2017
 git pull origin master
 ```
 
-# Enable Software Compiles
-do this:
-```
-sudo sed -i 's/^#deb-src/deb-src/g' /etc/apt/sources.list
-```
-
-Next, install aptitude
-```
-sudo apt-get install -y aptitude
-```
-
-Next, update the apt package cache:
-```
-sudo aptitude -y update
-```
-
-***
-Install the basic development packages (all distros)
-
-$ sudo aptitude -y install build-essential
-Install the build dependency packages (all distros)
-
-$ sudo aptitude -y build-dep fldigi
-Aptitude will assist you in resolving any library version conflicts. This may occur on some Debian/Ubuntu/Mint recent distributions.
-
-Portaudio development headers / libs may conflict on a system with Jack pre-installed. Portaudio is required for fldigi to compile, so do not accept a recommendation that does not include installing the portaudio library. Aptitude will offer suggested solutions to resolve the conflict (including doing nothing).
-
-Make sure that build-dep has installed libxft-dev. Test by looking for the Xft.h header.
-
-On Ubuntu/Mint/Pi3: /usr/include/X11/Xft/Xft.h
-
 ***
 
 # External Storage (USB Stick)
