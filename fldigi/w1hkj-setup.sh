@@ -1,9 +1,10 @@
 #!/bin/bash
 function get_source_tar() {
-  local sourceTAR=$1
-  local targetDir=$2
-  wget $baseURL/$sourceTar
-  tar --directory=$targetDir --extract --gunzip --verbose --file=$sourceTAR
+  local thisURL=$1
+  local thisTAR=$2
+  local thisDir=$3
+  wget ${thisURL}/${thisTAR}
+  tar --directory=${thisDir} --extract --gunzip --verbose --file=${thisTAR}
 }
 
 devDir=~/Developer
@@ -19,14 +20,19 @@ fldigiVer="4.1.08"
 
 declare -A programDIR
 declare -A sourceURL
+declare -A sourceTAR
 programDIR[4]=fldigi
 programDIR[3]=flrig
 programDIR[2]=hamlib
 programDIR[1]=flxmlrc
-sourceURL[flxmlrc]=http://www.w1hkj.com/files/flxmlrpc/flxmlrpc-${flxmlrpcVer}.tar.gz
-sourceURL[hamlib]=https://sourceforge.net/projects/hamlib/files/hamlib/${hamlibVer}/hamlib-${hamlibVer}.tar.gz
-sourceURL[flrig]=http://www.w1hkj.com/files/flrig/flrig-${flrigVer}.tar.gz
-sourceURL[fldigi]=http://www.w1hkj.com/files/fldigi/fldigi-$fldigiVer.tar.gz
+sourceTAR[flxmlrc]=flxmlrpc-${flxmlrpcVer}.tar.gz
+sourceTAR[hamlib]=${hamlibVer}/hamlib-${hamlibVer}.tar.gz
+sourceTAR[flrig]=flrig-${flrigVer}.tar.gz
+sourceTAR[fldigi]=fldigi-$fldigiVer.tar.gz
+sourceURL[flxmlrc]=http://www.w1hkj.com/files/flxmlrpc
+sourceURL[hamlib]=https://sourceforge.net/projects/hamlib/files/hamlib/${hamlibVer}
+sourceURL[flrig]=http://www.w1hkj.com/files/flrig
+sourceURL[fldigi]=http://www.w1hkj.com/files/fldigi
 
 #
 # Get Soure Files
@@ -36,7 +42,9 @@ if [[ ! -d $devDir ]]; then
 fi
 
 if [[ -d $projectDir ]]; then
-  rm -rf $projectDir
+  rm -rf $projectDir/*
+else
+  mkdir $projectDir
 fi
 
 pushd $projectDir
@@ -44,9 +52,11 @@ pushd $projectDir
 for i in $(echo ${programDIR[@]}); do
   thisProgramDir=${i}
   thisSourceURL=${sourceURL[$thisProgramDir]}
+  thisSourceTAR=${sourceTAR[$thisProgramDir]}
   echo -e "Program Directory....................: ${thisProgramDir}"
   echo -e "Source URL...........................: ${thisSourceURL}"
-  get_source_tar ${thisSourceURL} ${thisProgramDir}
+  echo -e "Source TAR...........................: ${thisSourceTAR}"
+  get_source_tar ${thisSourceURL} ${thisSourceTAR} ${thisProgramDir}
 done
 
 exit 0
