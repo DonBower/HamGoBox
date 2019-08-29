@@ -52,8 +52,8 @@ pushd $projectDir
 
 for i in $(echo ${programDIR[@]}); do
   thisProgram=${i}
-  thisSourceURL=${sourceURL[$thisProgramDir]}
-  thisSourceTAR=${sourceTAR[$thisProgramDir]}
+  thisSourceURL=${sourceURL[$thisProgram]}
+  thisSourceTAR=${sourceTAR[$thisProgram]}
   echo -e "Program..............................: ${thisProgram}"
   echo -e "Source URL...........................: ${thisSourceURL}"
   echo -e "Source TAR...........................: ${thisSourceTAR}"
