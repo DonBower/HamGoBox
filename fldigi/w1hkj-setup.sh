@@ -4,7 +4,8 @@ function get_source_tar() {
   local thisTAR=$2
   local thisDir=$3
   wget ${thisURL}/${thisTAR}
-  tar --directory=${thisDir} --extract --gunzip --verbose --file=${thisTAR}
+#  tar --directory=${thisDir} --extract --gunzip --verbose --file=${thisTAR}
+  tar --extract --gunzip --file=${thisTAR}
 }
 
 devDir=~/Developer
@@ -50,10 +51,10 @@ fi
 pushd $projectDir
 
 for i in $(echo ${programDIR[@]}); do
-  thisProgramDir=${i}
+  thisProgram=${i}
   thisSourceURL=${sourceURL[$thisProgramDir]}
   thisSourceTAR=${sourceTAR[$thisProgramDir]}
-  echo -e "Program Directory....................: ${thisProgramDir}"
+  echo -e "Program..............................: ${thisProgram}"
   echo -e "Source URL...........................: ${thisSourceURL}"
   echo -e "Source TAR...........................: ${thisSourceTAR}"
   get_source_tar ${thisSourceURL} ${thisSourceTAR} ${thisProgramDir}
