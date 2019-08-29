@@ -77,9 +77,14 @@ popd
 #
 # Enable source repositories
 #
-sudo --inplace=bak 's/^#deb-src/deb-src/g' /etc/apt/sources.list
+if grep "^#deb-src" /etc/apt/sources.list; then
+  echo -e "Enable source repositories"
+  sudo sed --inplace=.bak 's/^#deb-src/deb-src/g' /etc/apt/sources.list
+fi
+
 sudo apt-get install aptitude
 sudo aptitude update
+
 if [[ ! -f /usr/include/X11/Xft/Xft.h ]]; then
   echo "no Xft.h file found --bailing out"
   exit 1
@@ -89,9 +94,12 @@ fi
 #
 swapSizeOld=`grep "CONF_SWAPSIZE=" /etc/dphys-swapfile`
 swapSizeNew="CONF_SWAPSIZE=1024"
-sudo sed --inplace=bak "s/$swapSizeOld/$swapSizeNew/g" /etc/dphys-swapfile
-sudo /etc/init.d/dphys-swapfile stop
-sudo /etc/init.d/dphys-swapfile start
+if [[ $swapSizeNew != $swapSizeOld ]]; then
+  echo -e "Increase Swap Size"
+  sudo sed --inplace=.bak "s/$swapSizeOld/$swapSizeNew/g" /etc/dphys-swapfile
+  sudo /etc/init.d/dphys-swapfile stop
+  sudo /etc/init.d/dphys-swapfile start
+fi
 free -m
 #
 # Compile Programs
