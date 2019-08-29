@@ -1,0 +1,8 @@
+declare -A programDIR
+programDIR[1]=flxmlrc
+programDIR[2]=hamlib
+programDIR[3]=flrig
+programDIR[4]=fldigi
+for i in $(echo ${!programDIR[@]} | sort); do
+echo -e "Program Directory....................: ${programDIR[$i]}"
+done
