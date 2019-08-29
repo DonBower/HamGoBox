@@ -1,11 +1,11 @@
 #!/bin/bash
-function get_source_tar(parameter) {
-  local baseURL=$1
-  local sourceTar=$2
-  local targetDir=$3
+function get_source_tar() {
+  local sourceTAR=$1
+  local targetDir=$2
   wget $baseURL/$sourceTar
-  tar --directory=$targetDir --extract --gunzip --verbose --file=$sourceTar
+  tar --directory=$targetDir --extract --gunzip --verbose --file=$sourceTAR
 }
+
 devDir=~/Developer
 projectDir=$devDir/fldigi
 flxmlrpcDir=$projectDir/flxmlrpc
