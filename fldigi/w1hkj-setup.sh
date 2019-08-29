@@ -82,8 +82,8 @@ if grep "^#deb-src" /etc/apt/sources.list; then
   sudo sed --inplace=.bak 's/^#deb-src/deb-src/g' /etc/apt/sources.list
 fi
 
-sudo apt-get install aptitude
-sudo aptitude update
+sudo apt-get --assume-yes install aptitude
+sudo aptitude --assume-yes update
 
 if [[ ! -f /usr/include/X11/Xft/Xft.h ]]; then
   echo "no Xft.h file found --bailing out"
@@ -114,7 +114,7 @@ done
 #
 # install Volume Manager
 #
-sudo aptitude install pavucontrol
+sudo aptitude --assume-yes install pavucontrol
 #
 # Enable Dial:
 #
