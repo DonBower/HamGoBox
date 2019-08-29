@@ -19,10 +19,10 @@ fldigiVer="4.1.08"
 
 declare -A programDIR
 declare -A sourceURL
-programDIR[1]=flxmlrc
-programDIR[2]=hamlib
-programDIR[3]=flrig
 programDIR[4]=fldigi
+programDIR[3]=flrig
+programDIR[2]=hamlib
+programDIR[1]=flxmlrc
 sourceURL[flxmlrc]=http://www.w1hkj.com/files/flxmlrpc/flxmlrpc-${flxmlrpcVer}.tar.gz
 sourceURL[hamlib]=https://sourceforge.net/projects/hamlib/files/hamlib/${hamlibVer}/hamlib-${hamlibVer}.tar.gz
 sourceURL[flrig]=http://www.w1hkj.com/files/flrig/flrig-${flrigVer}.tar.gz
@@ -41,10 +41,12 @@ fi
 
 pushd $projectDir
 
-for i in $(echo ${!programDIR[@]} | sort); do
-  echo -e "Program Directory....................: ${programDIR[$i]}"
-  echo -e "Source URL...........................: ${sourceURL[$i]}"
-  get_source_tar ${sourceURL[$i]} ${programDIR[$i]}
+for i in $(echo ${programDIR[@]}); do
+  thisProgramDir=${i}
+  thisSourceURL=${sourceURL[$thisProgramDir]}
+  echo -e "Program Directory....................: ${thisProgramDir}"
+  echo -e "Source URL...........................: ${thisSourceURL}"
+  get_source_tar ${thisSourceURL} ${thisProgramDir}
 done
 
 exit 0
