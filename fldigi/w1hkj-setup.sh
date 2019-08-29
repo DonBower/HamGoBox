@@ -24,12 +24,12 @@ declare -A sourceTAR
 programDIR[4]=fldigi
 programDIR[3]=flrig
 programDIR[2]=hamlib
-programDIR[1]=flxmlrc
-sourceTAR[flxmlrc]=flxmlrpc-${flxmlrpcVer}.tar.gz
+programDIR[1]=flxmlrpc
+sourceTAR[flxmlrpc]=flxmlrpc-${flxmlrpcVer}.tar.gz
 sourceTAR[hamlib]=${hamlibVer}/hamlib-${hamlibVer}.tar.gz
 sourceTAR[flrig]=flrig-${flrigVer}.tar.gz
 sourceTAR[fldigi]=fldigi-$fldigiVer.tar.gz
-sourceURL[flxmlrc]=http://www.w1hkj.com/files/flxmlrpc
+sourceURL[flxmlrpc]=http://www.w1hkj.com/files/flxmlrpc
 sourceURL[hamlib]=https://sourceforge.net/projects/hamlib/files/hamlib/${hamlibVer}
 sourceURL[flrig]=http://www.w1hkj.com/files/flrig
 sourceURL[fldigi]=http://www.w1hkj.com/files/fldigi
