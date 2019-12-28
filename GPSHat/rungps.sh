@@ -6,9 +6,9 @@ BASEDIR="/mnt/usbstick/gps"
 
 if [[ ! -d $BASEDIR ]]; then
   mkdir -p $BASEDIR
+  chmod 777 $BASEDIR
 fi
 
-#BASEDIR="/Users/don/Developer/Eclipse2017"
 DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 LOGFILE=$BASEDIR/gpslog.txt
 RAWFILE=$BASEDIR/rawgps/gpsraw-$DATE.txt
@@ -46,12 +46,16 @@ while [ True ]
       # if cr/lf bothers you, make it lf only
       # (os-specfic concern)
       #
-      this_line=$( echo $this_line | sed s/$'\r'//g )
+      this_line=$(echo $this_line | sed s/$'\r'//g )
       # get a precise time stamp
       # %N = nanoseconds
       #
       timeStamp=$(date +"%H:%M:%S.%N")
 
+      if [[ $DEBUG -gt 0 ]]; then
+        echo -e "echo $timeStamp $this_line >> $RAWFILE"
+      fi
+      
       echo $timeStamp $this_line >> $RAWFILE
       gps_sentance=$(echo $this_line | cut -d, -f 1)
       gps_chksum=$(echo $this_line | cut -d, -f 15 )
