@@ -111,7 +111,7 @@ while [ True ]
         fi
 
         timeStamp=$(date +"%H:%M:%S")
-        maidenHead=`latlon2maiden.py $lat_dd $lon_dd`
+        maidenHead=`./latlon2maiden.py $lat_dd $lon_dd`
 #        printf "%8s %8s %2.6f %1s %3.6f %1s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd "$gps_latdir" $lon_dd "$gps_londir" $gps_elev $gps_elevscale
 #        printf "%8s %8s %2.6f %1s %3.6f %1s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd "$gps_latdir" $lon_dd "$gps_londir" $gps_elev $gps_elevscale >> $DATAFILE
         printf "%8s %8s %2.6f %3.6f %8s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd $lon_dd "$maidenHead" $gps_elev $gps_elevscale
