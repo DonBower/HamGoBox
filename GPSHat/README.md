@@ -94,7 +94,7 @@ sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock
 ... which will point the gps daemon to our GPS device on the onboard serial UART.
 
 
-Testing it Out
+Testing it Out<br>
 After a few seconds, gpsd should open up the proper socket and if the GPS has locked on to a minimum number of satellites, we should be able to get some data from the GPS module.
 To test this, we can use the following command:
 ```
