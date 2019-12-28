@@ -13,7 +13,7 @@ DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 LOGFILE=$BASEDIR/gpslog.txt
 RAWFILE=$BASEDIR/gpsraw-$DATE.txt
 DATAFILE=$BASEDIR/gpsdata-$DATE.txt
-
+CURRENT_LOCATION=$BASEDIR/location.txt
 dateStamp=$(date +"%Y-%m-%d")
 echo $dateStamp "Start GPS Process" >> $LOGFILE
 
@@ -116,6 +116,7 @@ while [ True ]
 #        printf "%8s %8s %2.6f %1s %3.6f %1s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd "$gps_latdir" $lon_dd "$gps_londir" $gps_elev $gps_elevscale >> $DATAFILE
         printf "%8s %8s %2.6f %3.6f %8s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd $lon_dd "$maidenHead" $gps_elev $gps_elevscale
         printf "%8s %8s %2.6f %3.6f %8s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd $lon_dd "$maidenHead" $gps_elev $gps_elevscale >> $DATAFILE
+        printf "%2.6f %3.6f %8s% 4.1f %1s\n" $lat_dd $lon_dd "$maidenHead" $gps_elev $gps_elevscale > $CURRENT_LOCATION
         sleep 5s
   	fi
 
