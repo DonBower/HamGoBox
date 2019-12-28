@@ -2,7 +2,12 @@
 inputDevice=/dev/ttyAMA0
 #inputDevice=/Users/don/Developer/Eclipse2017/gpststdta.txt
 IFS=":"
-BASEDIR="/mnt/usbstick"
+BASEDIR="/mnt/usbstick/gps"
+
+if [[ ! -d $BASEDIR ]]; then
+  mkdir -p $BASEDIR
+fi
+
 #BASEDIR="/Users/don/Developer/Eclipse2017"
 DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 LOGFILE=$BASEDIR/gpslog.txt
