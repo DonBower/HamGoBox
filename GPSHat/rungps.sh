@@ -11,8 +11,8 @@ fi
 
 DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 LOGFILE=$BASEDIR/gpslog.txt
-RAWFILE=$BASEDIR/rawgps/gpsraw-$DATE.txt
-DATAFILE=$BASEDIR/data/gpsdata-$DATE.txt
+RAWFILE=$BASEDIR/gpsraw-$DATE.txt
+DATAFILE=$BASEDIR/gpsdata-$DATE.txt
 
 dateStamp=$(date +"%Y-%m-%d")
 echo $dateStamp "Start GPS Process" >> $LOGFILE
