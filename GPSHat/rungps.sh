@@ -55,7 +55,7 @@ while [ True ]
       if [[ $DEBUG -gt 0 ]]; then
         echo -e "echo $timeStamp $this_line >> $RAWFILE"
       fi
-      
+
       echo $timeStamp $this_line >> $RAWFILE
       gps_sentance=$(echo $this_line | cut -d, -f 1)
       gps_chksum=$(echo $this_line | cut -d, -f 15 )
@@ -90,7 +90,12 @@ while [ True ]
         lat_s=$sec
         dms_to_dd $lat_d $lat_m $lat_s
         #printf "dms_to_dd returned %03.6f\n" $dd
-        lat_dd=$dd
+#        lat_dd=$dd
+        if [[ "$gps_latdir" == "N" ]]; then
+          lat_dd=$dd
+        else
+          lat_dd="-"$dd
+        fi
 
         extract_dms $gps_londeg
         #printf "extract_dms returned %03i° %02i\' %02.2f\"\n" $deg $min $sec
@@ -99,11 +104,18 @@ while [ True ]
         lon_s=$sec
         dms_to_dd $lon_d $lon_m $lon_s
         #printf "dms_to_dd returned %03.6f\n" $dd
-        lon_dd=$dd
+        if [[ "$gps_londir" == "E" ]]; then
+          lon_dd=$dd
+        else
+          lon_dd="-"$dd
+        fi
 
         timeStamp=$(date +"%H:%M:%S")
-        printf "%8s %8s %2.6f %1s %3.6f %1s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd "$gps_latdir" $lon_dd "$gps_londir" $gps_elev $gps_elevscale
-        printf "%8s %8s %2.6f %1s %3.6f %1s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd "$gps_latdir" $lon_dd "$gps_londir" $gps_elev $gps_elevscale >> $DATAFILE
+        maidenHead=`latlon2maiden.py $lat_dd $lon_dd`
+#        printf "%8s %8s %2.6f %1s %3.6f %1s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd "$gps_latdir" $lon_dd "$gps_londir" $gps_elev $gps_elevscale
+#        printf "%8s %8s %2.6f %1s %3.6f %1s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd "$gps_latdir" $lon_dd "$gps_londir" $gps_elev $gps_elevscale >> $DATAFILE
+        printf "%8s %8s %2.6f %3.6f %8s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd $lon_dd "$maidenHead" $gps_elev $gps_elevscale
+        printf "%8s %8s %2.6f %3.6f %8s% 4.1f %1s\n" "$dateStamp" "$timeStamp" $lat_dd $lon_dd "$maidenHead" $gps_elev $gps_elevscale >> $DATAFILE
         sleep 5s
   	fi
 

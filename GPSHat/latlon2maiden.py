@@ -1,56 +1,84 @@
-#!/usr/bin/python
-# lonlat2maiden -- long/lat to Maidenhead grid calculator not limited to 6 characters
-# Copyright       : http://www.fsf.org/copyleft/gpl.html
-# Author          : Dan Jacobson -- http://jidanni.org/geo/maidenhead/
-# Created On      : Sat Mar 15 03:54:08 2003
-# Last Modified On: Fri Nov 28 06:00:24 2003
-# Update Count    : 175
+#!/usr/bin/python3
+# latlon2maiden  - This script will convert the Latitude and Longitude
+# given in decimal, into a maidenhead format
+#
+# Initalize the script
+#
 import re,sys,string
-if len(sys.argv)==2: # slob city
-    stringlength=string.atoi(sys.argv[1])
-    if stringlength<2 or stringlength%2!=0:
-        sys.stderr.write('string length requested must be even integer > 0\n')
-        sys.exit(87)
+errLevel=0
+errMsg="\n"
+#
+# Check for input errors
+#
+if len(sys.argv) < 3:
+    errLevel=errLevel + 1
+    errMsg+="You must provide Latitude and Longitude\n"
+
+if len(sys.argv) > 4:
+    errLevel=errLevel + 2
+    errMsg+="Too Many Arguments.\n"
+
+latitude=float(sys.argv[1])
+longitude=float(sys.argv[2])
+
+if latitude < -90 or latitude > 90:
+    errLevel=errLevel + 4
+    errMsg+="Latitude "
+    errMsg+=str(latitude)
+    errMsg+=" must be between -90 and 90 degrees\n"
+
+if longitude < -180 or longitude > 180:
+    errLevel=errLevel + 8
+    errMsg+="Longitude "
+    errMsg+=str(longitude)
+    errMsg+=" must be between -180 and 180 degrees\n"
+
+if len(sys.argv) == 4: # slob city
+    maidenLenght=int(sys.argv[3])
+    if maidenLenght<2 or maidenLenght%2!=0:
+        errLevel=errLevel + 16
+        errMsg+="Persision length requested must be even integer > 0\n"
 else:
-    stringlength=6
-maxn=stringlength/2
+    maidenLenght=8
+
+if errLevel > 0:
+    errMsg+="\nCommand Syntax is latlon2maiden.py {Latitude} {Longitude} [precision | 8]\n"
+    sys.stderr.write(errMsg)
+    sys.exit(errLevel)
+
+#print(latitude)
+#print(longitude)
+#print(maidenLenght)
+
+maxMaiden=maidenLenght/2
 A=ord('A')
-while 1:
-    line=sys.stdin.readline()
-    if not line: break
-    ll=re.findall(r'([-0-9.]+)\s+([-0-9.]+)',line)
-    if ll:
-        for x,y in ll:
-            lon=string.atof(x)
-            lat=string.atof(y)
+
+a=divmod(longitude+180,20)
+b=divmod(latitude+90,10)
+maidenHead=chr(A+int(a[0]))+chr(A+int(b[0]))
+
+longitude=a[1]/2
+latitude=b[1]
+
+i=1
+
+while i<maxMaiden:
+    i+=1
+    a=divmod(longitude,1)
+    b=divmod(latitude,1)
+    if not(i%2):
+        maidenHead+=str(int(a[0]))+str(int(b[0]))
+        longitude=24*a[1]
+        latitude=24*b[1]
     else:
-        sys.stderr.write(sys.argv[0]+': cannot even get the basic items\n')
-        sys.exit(44)
-    if -180<=lon<180:pass
-    else:
-        sys.stderr.write('longitude must be -180<=lon<180\n')
-        sys.exit(32)
-    if -90<=lat<90:pass
-    else:
-        sys.stderr.write('latitude must be -90<=lat<90\n')
-        sys.exit(33) #can't handle north pole, sorry, [A-R]
-    a=divmod(lon+180,20)
-    b=divmod(lat+90,10)
-    astring=chr(A+int(a[0]))+chr(A+int(b[0]))
-    lon=a[1]/2
-    lat=b[1]
-    i=1
-    while i<maxn:
-        i+=1
-        a=divmod(lon,1)
-        b=divmod(lat,1)
-        if not(i%2):
-            astring+=str(int(a[0]))+str(int(b[0]))
-            lon=24*a[1]
-            lat=24*b[1]
+        tmp=i+1
+        tmpString=chr(A+int(a[0]))+chr(A+int(b[0]))
+        # Every other set is lowercase
+        if not(tmp%4):
+            maidenHead+=tmpString.lower()
         else:
-            astring+=chr(A+int(a[0]))+chr(A+int(b[0]))
-            lon=10*a[1]
-            lat=10*b[1]
-    print astring
-#We return the grid square, to the precision given, that contains the given point.
+            maidenHead+=tmpString
+        longitude=10*a[1]
+        latitude=10*b[1]
+
+print(maidenHead)
