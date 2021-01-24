@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806" icon="Custom1.png">
+    <title>Adafruit Raspberry Pi</title>
+    <instances>
+        <instance moduleIdRef="adafruit_e5fc1e5bc08fa729845c9b23012e9b81_1" modelIndex="85430325" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_e5fc1e5bc08fa729845c9b23012e9b81_1.fzp">
+            <property name="part number" value="Adafruit #2314 and #2310"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_9aa568e58f1bef2953c4f36eec8acaf0_1" modelIndex="85430326" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_9aa568e58f1bef2953c4f36eec8acaf0_1.fzp">
+            <property name="part number" value="Adafruit #2327"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="AdafruitPiPlate10" modelIndex="85430327" path="/Users/don/Documents/Fritzing/parts/contrib/Adafruit_Pi_Plate.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="Cap HAT" modelIndex="85430328" path="/Users/don/Documents/Fritzing/parts/contrib/Cap_HAT.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="Matrix HAT" modelIndex="85430329" path="/Users/don/Documents/Fritzing/parts/contrib/Matrix_HAT.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_09c451a305fca95f0d70a234e66de2de_1" modelIndex="85430330" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_09c451a305fca95f0d70a234e66de2de_1.fzp">
+            <property name="part number" value="Adafruit #2455"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_dfceb8220a150159265b6ee077626930_1" modelIndex="85430331" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_dfceb8220a150159265b6ee077626930_1.fzp">
+            <property name="part number" value="Adafruit #2298 and #2423"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_31c63cfbcdffeeb53d76ecc0ff7d2ce1_1" modelIndex="85430332" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_31c63cfbcdffeeb53d76ecc0ff7d2ce1_1.fzp">
+            <property name="part number" value="Adafruit #2324"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_b3cce8e3310d632bbfe3bbb334ab8858_1" modelIndex="85430333" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_b3cce8e3310d632bbfe3bbb334ab8858_1.fzp">
+            <property name="part number" value="Adafruit #2348"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_99e366b95e24f4cd7b867b1fe6cde956_1" modelIndex="85430334" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_99e366b95e24f4cd7b867b1fe6cde956_1.fzp">
+            <property name="part number" value="Adafruit #1109 #1110 "/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_6d8f66a13bdcfd81cf83aa0dd9687113_1" modelIndex="85430335" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_6d8f66a13bdcfd81cf83aa0dd9687113_1.fzp">
+            <property name="part number" value="Adafruit #2315"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_fec4f8ac9e983c342c848d1bb30db27b_13" modelIndex="85430336" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_fec4f8ac9e983c342c848d1bb30db27b_13.fzp">
+            <property name="part number" value="Adafruit #914"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_334329c5c9887081c43d735b4235dfaf_1" modelIndex="85430337" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_334329c5c9887081c43d735b4235dfaf_1.fzp">
+            <property name="part number" value="Adafruit #1754 and #1105"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_f140fdcf75d2cc97559fa039a34a01ea_1" modelIndex="85430338" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_f140fdcf75d2cc97559fa039a34a01ea_1.fzp">
+            <property name="part number" value="Adafruit #2029"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_c404f22dad39e4aca1e41367d00ec04a_13" modelIndex="85430339" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_c404f22dad39e4aca1e41367d00ec04a_13.fzp">
+            <property name="part number" value="Adafruit #1989 and #2028"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_4b24a5466733020350f70ff15abf2da1_2" modelIndex="85430340" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_4b24a5466733020350f70ff15abf2da1_2.fzp">
+            <property name="part number" value="Adafruit #1171"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_1bcdd87a263214f025989cf20c417f5b_2" modelIndex="85430341" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_1bcdd87a263214f025989cf20c417f5b_2.fzp">
+            <property name="part number" value="Adafruit #1148"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_d4775b417b6f5c77fa39f6f7d84c909a_1" modelIndex="85430342" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_d4775b417b6f5c77fa39f6f7d84c909a_1.fzp">
+            <property name="part number" value="Adafruit #1135"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="prefix0000_0b2a4c714061e4e618e03c62b5c0da7e_1" modelIndex="85430343" path="/Users/don/Documents/Fritzing/parts/contrib/prefix0000_0b2a4c714061e4e618e03c62b5c0da7e_1.fzp">
+            <property name="part number" value="Adafruit #"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="Adafruit_5ffc8f0d72e89a15876b993204d324e7_1" modelIndex="85430344" path="/Users/don/Documents/Fritzing/parts/contrib/Adafruit_5ffc8f0d72e89a15876b993204d324e7_1.fzp">
+            <property name="part number" value="3356"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_4ebb890bd6700a22ab9a6050634b911b_4" modelIndex="85430345" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_4ebb890bd6700a22ab9a6050634b911b_4.fzp">
+            <property name="part number" value="Adafruit #3386"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_af88536df56889ea86293af730fad816_3" modelIndex="85430346" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_af88536df56889ea86293af730fad816_3.fzp">
+            <property name="part number" value="Adafruit #3203"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_37e567c39e8fc5195d8887b73a4f11fd_1" modelIndex="85430352" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_37e567c39e8fc5195d8887b73a4f11fd_1.fzp">
+            <property name="part number" value="3464"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_2835318a2992566620872bab1fcca7de_4" modelIndex="85430350" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_2835318a2992566620872bab1fcca7de_4.fzp">
+            <property name="part number" value="Adafruit #3527"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_d80b6e63752fc051288f914c04d9079b_1" modelIndex="85430348" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_d80b6e63752fc051288f914c04d9079b_1.fzp">
+            <property name="part number" value="Adafruit #3531"/>
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_aff5c136e3210c8c2e5421a7f05b5ed6_16" modelIndex="85433771" path="/Users/don/Documents/Fritzing/parts/contrib/adafruit_aff5c136e3210c8c2e5421a7f05b5ed6_16.fzp">
+            <views/>
+        </instance>
+    </instances>
+</module>

@@ -84,6 +84,14 @@ Interfacing Options > P2 Enable SSH > Enable SSH.
 Reboot with `sudo shutdown -r now`
 
 
+# Set Timezone
+
+Set the Timezone
+
+```
+sudo timedatectl set-timezone America/Los_Angeles
+```
+
 # Git/GitHub
 
 Then it's time to get git, and configure the git Global Variables <br />

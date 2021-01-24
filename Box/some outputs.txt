@@ -1,0 +1,8 @@
+97255.00 Pa
+
+UV Index 0.0
+Temp xx.x*C,
+Humid: 14.1%
+Wind Speed 0.12m/s
+Alt -93.1m Pres: 1034.46.hPa
+eCO2: 403 ppm, TVOC: 0ppb
