@@ -66,13 +66,13 @@ sys.stdout = f
 # Clear the Screen
 #
 #os.system("echo clear > /dev/tty1")
-def clearScreen:
+def clearScreen():
     print(chr(27) + "[2J")
     sys.stdout.write("\x1b[2J\x1b[H")
 #
 # Print Timestamp
 #
-def printTimeStamp:
+def printTimeStamp():
     now = datetime.now()
     timeStampNow = now.strftime("%d/%m/%Y %H:%M:%S")
     print("Timestamp..........: " + timeStampNow + "\n")
@@ -108,7 +108,7 @@ def getMaidenHead(latitude, longitude):
             latitude         = 10*b[1]
     return maidenHead
 
-def printGPS:
+def printGPS():
     gps.update()
     current = time.monotonic()
     if current - last_print >= 0.50:
@@ -121,11 +121,11 @@ def printGPS:
         print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}')
         print(f'Altitude...........: {thisAltitude:06.1f}m')
 
-def printBMP:
+def printBMP():
     thisPressure = bmp.pressure
     print(f'Barometric Pressure: {thisPressure:05.2f} hPa')
 
-def printHTS:
+def printHTS():
     thisHumidity = hts.relative_humidity
     thisTempC    = hts.temperature
     thisTempF    = ((9.0 / 5.0) * thisTempC + 32)
