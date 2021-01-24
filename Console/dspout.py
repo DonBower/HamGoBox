@@ -68,14 +68,12 @@ sys.stdout = f
 #
 #os.system("echo clear > /dev/tty1")
 def clearScreen():
-    print("clearScreen")
     print(chr(27) + "[2J")
     sys.stdout.write("\x1b[2J\x1b[H")
 #
 # Print Timestamp
 #
 def printTimeStamp():
-    print("printTimeStamp")
     now = datetime.now()
     timeStampNow = now.strftime("%d/%m/%Y %H:%M:%S")
     print("Timestamp..........: " + timeStampNow + "\n")
