@@ -132,7 +132,7 @@ def printHTS():
     print(f'Temp...............: {thisTempC:4.1f}°c /{thisTempF:5.1f}°f')
     print(f'Relative Humidity..: {thisHumidity:4.1f} % rH')
 
-while true:
+while True:
     clearScreen
     printTimeStamp
     if hasGPS:
