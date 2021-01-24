@@ -2,6 +2,7 @@
 import os
 import sys
 import time
+from datetime import datetime
 import board
 import busio
 import adafruit_gps
@@ -135,12 +136,12 @@ def printHTS():
     print(f'Relative Humidity..: {thisHumidity:4.1f} % rH')
 
 while True:
-    clearScreen
-    printTimeStamp
+    clearScreen()
+    printTimeStamp()
     if hasGPS:
-        printGPS
+        printGPS()
     if hasBMP:
-        printBMP
+        printBMP()
     if hasHTS:
-        printHTS
+        printHTS()
     time.sleep(1)
