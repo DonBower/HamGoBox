@@ -68,7 +68,6 @@ print(hasBMP)
 #os.system("echo clear > /dev/tty1")
 def clearScreen():
     print(chr(27) + "[2J")
-    sys.stdout.write("\x1b[2J\x1b[H")
 #
 # Print Timestamp
 #
@@ -132,8 +131,9 @@ def printHTS():
     print(f'Temp...............: {thisTempC:4.1f}°c /{thisTempF:5.1f}°f')
     print(f'Relative Humidity..: {thisHumidity:4.1f} % rH')
 
+clearScreen()
 while True:
-    clearScreen()
+    sys.stdout.write("\x1b[2J\x1b[H") # Position to top
     printTimeStamp()
     if hasGPS:
         printGPS()
