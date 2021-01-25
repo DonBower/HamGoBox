@@ -112,7 +112,7 @@ def printGPS():
     gps.update()
 #    current = time.monotonic()
 #    if current - last_print >= 0.50:
-    last_print = current
+#    last_print = current
     thisLat = gps.latitude
     thisLon = gps.longitude
     thisAltitude = gps.altitude_m
