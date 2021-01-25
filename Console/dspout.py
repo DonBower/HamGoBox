@@ -133,7 +133,8 @@ def printHTS():
 
 clearScreen()
 while True:
-    sys.stdout.write("\x1b[2J\x1b[H") # Position to top
+#    sys.stdout.write("\x1b[2J\x1b[H") # Position to top
+    sys.stdout.write("\x1b[H") # Position to top
     printTimeStamp()
     if hasGPS:
         printGPS()
