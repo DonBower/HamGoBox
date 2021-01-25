@@ -9,7 +9,7 @@ import adafruit_gps
 import adafruit_bmp3xx
 import adafruit_hts221
 
-last_print = time.monotonic()
+#last_print = time.monotonic()
 
 i2c = busio.I2C(board.SCL, board.SDA)
 #
@@ -59,10 +59,9 @@ else:
 
 print(hasBMP)
 
+#f = open('/dev/tty1','w')
+#sys.stdout = f
 
-
-f = open('/dev/tty1','w')
-sys.stdout = f
 #
 # Clear the Screen
 #
@@ -111,16 +110,16 @@ def getMaidenHead(latitude, longitude):
 
 def printGPS():
     gps.update()
-    current = time.monotonic()
-    if current - last_print >= 0.50:
-        last_print = current
-        thisLat = gps.latitude
-        thisLon = gps.longitude
-        thisAltitude = gps.altitude_m
-        thisSatCount = gps.satellites
-        print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}')
-        print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}')
-        print(f'Altitude...........: {thisAltitude:06.1f}m')
+#    current = time.monotonic()
+#    if current - last_print >= 0.50:
+    last_print = current
+    thisLat = gps.latitude
+    thisLon = gps.longitude
+    thisAltitude = gps.altitude_m
+    thisSatCount = gps.satellites
+    print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}')
+    print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}')
+    print(f'Altitude...........: {thisAltitude:06.1f}m')
 
 def printBMP():
     thisPressure = bmp.pressure
