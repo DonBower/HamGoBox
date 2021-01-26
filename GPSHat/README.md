@@ -1,3 +1,9 @@
+# I2C Usage:
+```
+sudo pip3 install adafruit-circuitpython-gps
+```
+Way cooler than using an onboard UART you have to futz with, but if you want to go that route:
+
 # The Right UART
 So Here is my quest to use the Adafruit Ultimate GPS which comes in 2 flavors,   <br>
 one is a [breakout](https://www.adafruit.com/products/746), and the other is a [hat](https://www.adafruit.com/products/2324). <br>
