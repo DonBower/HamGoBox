@@ -188,3 +188,62 @@ View the connected devices:
 ```
 sudo i2cdetect -y 1
 ```
+
+
+# From Adafruit
+Here's the quick-start for people with some experience:
+
+Download the latest Raspberry Pi OS or Raspberry Pi OS Lite to your computer
+Burn the OS image to your MicroSD card using your computer
+Re-plug the SD card into your computer (don't use your Pi yet!) and set up your wifi connection by editing supplicant.conf
+Activate SSH support
+Plug the SD card into the Pi
+If you have an HDMI monitor we recommend connecting it so you can see that the Pi is booting OK
+Plug in power to the Pi - you will see the green LED flicker a little. The Pi will reboot while it sets up so wait a good 10 minutes
+If you are running Windows on your computer, install Bonjour support so you can use .local names, you'll need to reboot Windows after installation
+You can then ssh into raspberrypi.local
+
+Installing CircuitPython Libraries on Raspberry Pi
+ Like
+CircuitPython libraries and adafruit-blinka will work on any Raspberry Pi board! That means the original 1, the Pi 2, Pi 3, Pi 4, Pi Zero, or even the compute module.
+Prerequisite Pi Setup!
+In this page we'll assume you've already gotten your Raspberry Pi up and running and can log into the command line
+
+Here's the quick-start for people with some experience:
+
+Download the latest Raspberry Pi OS or Raspberry Pi OS Lite to your computer
+Burn the OS image to your MicroSD card using your computer
+Re-plug the SD card into your computer (don't use your Pi yet!) and set up your wifi connection by editing supplicant.conf
+Activate SSH support
+Plug the SD card into the Pi
+If you have an HDMI monitor we recommend connecting it so you can see that the Pi is booting OK
+Plug in power to the Pi - you will see the green LED flicker a little. The Pi will reboot while it sets up so wait a good 10 minutes
+If you are running Windows on your computer, install Bonjour support so you can use .local names, you'll need to reboot Windows after installation
+You can then ssh into raspberrypi.local
+The Pi Foundation has tons of guides as well
+
+We really really recommend the lastest Raspberry Pi OS only. If you have an older Raspberry Pi OS install, run "sudo apt-get update" and "sudo apt-get upgrade" to get the latest OS!
+Update Your Pi and Python
+Run the standard updates:
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+and
+
+sudo pip3 install --upgrade setuptools
+
+If above doesn't work try
+
+sudo apt-get install python3-pip
+cd ~
+sudo pip3 install --upgrade adafruit-python-shell
+wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
+sudo python3 raspi-blinka.py
+
+ls /dev/i2c* /dev/spi*
+
+You should see the response
+
+/dev/i2c-1 /dev/spidev0.0 /dev/spidev0.1

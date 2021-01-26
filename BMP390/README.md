@@ -1,16 +1,11 @@
 # Tempature and Barametric Pressure sensor
 Install with these commands<br>
 ```
-sudo apt-get update
-sudo apt-get install git build-essential python-dev python-smbus
-git clone https://github.com/adafruit/Adafruit_Python_BMP.git
-cd Adafruit_Python_BMP
-sudo python setup.py install
+sudo pip3 install adafruit-circuitpython-bmp3xx
 ```
 Then you can run a simple test:
 ```
-cd examples
-sudo python simpletest.py
+sudo python3 simpletest.py
 ```
 Here is what mine looks like:
 ```
