@@ -19,10 +19,13 @@ bmp = adafruit_bmp3xx.BMP3XX_I2C(i2c)
 
 bmp.pressure_oversampling = 8
 bmp.temperature_oversampling = 2
+bmp.sea_level_pressure = 1008.4665 # 29.7799986731 inches of mecury
 
 while True:
     hPa = bmp.pressure
+    Hg = bmp.pressure / 33.864
     os.system("echo " + str(hPa) + " > ~/console.hPa")
+    os.system("echo " + str(Hg) + " > ~/console.Hg")
     tempc = bmp.temperature
     tempf = 9.0/5.0 * tempc + 32
     os.system("echo " + str(tempc) + " > ~/console.tempc")
