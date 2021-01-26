@@ -25,8 +25,8 @@ while True:
     os.system("echo " + str(hPa) + " > ~/console.hPa")
     tempc = bmp.temperature
     tempf = 9.0/5.0 * tempc + 32
-    os.system("echo " + str(temc) + " > ~/console.tempc")
-    os.system("echo " + str(temf) + " > ~/console.tempf")
+    os.system("echo " + str(tempc) + " > ~/console.tempc")
+    os.system("echo " + str(tempf) + " > ~/console.tempf")
 
     print(
         "Pressure: {:6.4f}  Temperature: {:5.2f}".format(hPa, tempc)
