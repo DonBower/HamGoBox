@@ -209,14 +209,13 @@ def printSCD():
     global thisCO2
     if scd.data_available:
         thisCO2      = scd.eCO2
-    print(f'CO2................: {thisCO2:4.3,f}')
+    print(f'CO2................: {thisCO2:4,.3f}')
 
 clearScreen()
 while True:
 #    sys.stdout.write("\x1b[2J\x1b[H") # Position to top
     sys.stdout.write("\x1b[H") # Position to top
     printTimeStamp()
-    print(thisCO2)
     if hasGPS:
         printGPS()
     if hasBMP:
