@@ -175,41 +175,41 @@ def printGPS():
         thisAltitude = 0.0
     if not isinstance(thisSatCount, int):
         thisSatCount = 0
-    print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}')
-    print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}')
-    print(f'Altitude...........: {thisAltitude:06.1f}m')
+    print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40])
+    print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40])
+    print(f'Altitude...........: {thisAltitude:06.1f}m                   '[:40])
 
 def printBMP():
     thisHPA = bmp.pressure
     thisHG = thisHPA / 33.864
-    print(f'Barometric Pressure: {thisHPA:6.2f}hPa/{thisHG:5.2f}Hg')
+    print(f'Barometric Pressure: {thisHPA:6.2f}hPa/{thisHG:5.2f}Hg                   '[:40])
 
 def printHTS():
     thisHumidity = hts.relative_humidity
     thisTempC    = hts.temperature
     thisTempF    = ((9.0 / 5.0) * thisTempC + 32)
-    print(f'Temp...............: {thisTempC:4.1f}°c /{thisTempF:5.1f}°f')
-    print(f'Relative Humidity..: {thisHumidity:4.1f} % rH')
+    print(f'Temp...............: {thisTempC:4.1f}°c /{thisTempF:5.1f}°f                   '[:40])
+    print(f'Relative Humidity..: {thisHumidity:4.1f}% rH                   '[:40])
 
 def printLTR():
     thisUV           = ltr.uvs
     thisAmbient      = ltr.light
-    print(f'UltraViolet Light..: {thisUV:1,d}')
-    print(f'Ambient Light......: {thisAmbient:1,d}')
+    print(f'UltraViolet Light..: {thisUV:1,d}                   '[:40])
+    print(f'Ambient Light......: {thisAmbient:1,d}                   '[:40])
 
 def printTSL():
     thisIR           = tsl.infrared
     thisVis          = tsl.visible
     thisLux          = tsl.lux
     thisFullSpectrum = tsl.full_spectrum
-    print(f'Visable Light......: {thisVis:4,d}')
-    print(f'Infrared Light.....: {thisIR:1,d}')
+    print(f'Visable Light......: {thisVis:4,d}                   '[:40])
+    print(f'Infrared Light.....: {thisIR:1,d}                   '[:40])
 
 def printSCD():
     global thisCO2
     if scd.data_available:
         thisCO2      = scd.CO2
-    print(f'CO2................: {thisCO2:4,.1f}')
+    print(f'CO2................: {thisCO2:4,.1f}                   '[:40])
 
 clearScreen()
 while True:
