@@ -34,7 +34,7 @@ After a few moments, your RaspberryPi should be connected to the network.  Hover
 Next we update/upgrade the OS to the latest version, as well as the RaspberryPi Firmware.  <br />
 
 ```
-sudo apt-get update
+sudo apt-get --assume-yes update
 sudo rpi-update
 ```
 
@@ -42,8 +42,8 @@ At this point, your system may have actually performed a firmware update.  And a
 
 
 ```
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
+sudo apt-get --assume-yes upgrade
+sudo apt-get --assume-yes dist-upgrade
 sudo shutdown -r now
 ```
 
@@ -97,7 +97,7 @@ sudo timedatectl set-timezone America/Los_Angeles
 Then it's time to get git, and configure the git Global Variables <br />
 
 ```
-sudo apt-get install git
+sudo apt-get --assume-yes install git
 git config --global user.name "Don Bower"
 git config --global user.email "Don.Bower@outlook.com"
 ```
@@ -179,8 +179,8 @@ To setup the [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2
 Interface, execute the following:
 
 ```
-sudo apt-get install -y python-smbus
-sudo apt-get install -y i2c-tools
+sudo apt-get --assume-yes install python-smbus
+sudo apt-get --assume-yes install i2c-tools
 ```
 Then use `sudo raspi-config` to enable the Interface.
 
@@ -222,25 +222,20 @@ If you are running Windows on your computer, install Bonjour support so you can 
 You can then ssh into raspberrypi.local
 The Pi Foundation has tons of guides as well
 
-We really really recommend the lastest Raspberry Pi OS only. If you have an older Raspberry Pi OS install, run "sudo apt-get update" and "sudo apt-get upgrade" to get the latest OS!
+We really really recommend the lastest Raspberry Pi OS only. If you have an older Raspberry Pi OS install, run "sudo apt-get --assume-yes update" and "sudo apt-get --assume-yes upgrade" to get the latest OS!
 Update Your Pi and Python
 Run the standard updates:
 
-sudo apt-get update
-
-sudo apt-get upgrade
-
-and
-
+```
+sudo apt-get --assume-yes update
+sudo apt-get --assume-yes upgrade
+sudo apt-get --assume-yes install python3-pip
 sudo pip3 install --upgrade setuptools
-
-If above doesn't work try
-
-sudo apt-get install python3-pip
 cd ~
-sudo pip3 install --upgrade adafruit-python-shell
+sudo pip3 install --upgrade adafruit-python-shell click==7.0
 wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
 sudo python3 raspi-blinka.py
+```
 
 ls /dev/i2c* /dev/spi*
 
