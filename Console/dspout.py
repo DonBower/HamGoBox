@@ -81,8 +81,8 @@ def printTimeStamp():
 def getMaidenHead(latitude, longitude):
     maxMaiden  = 4
     A          = ord('A')
-    a          = divmod(float(longitude) + 180,20)
-    b          = divmod(float(latitude) + 90,10)
+    a          = divmod(longitude + 180,20)
+    b          = divmod(latitude + 90,10)
     maidenHead = chr(A + int(a[0])) + chr(A + int(b[0]))
     longitude  = a[1]/2
     latitude   = b[1]
