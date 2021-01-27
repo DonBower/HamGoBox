@@ -96,6 +96,19 @@ else:
 
 print("TSL2591 Sensor Present: " + str(hasTSL))
 
+try:
+    scd                          = adafruit_scd30.SCD30(i2c)
+except:
+    scd                          = "noSensor"
+
+if tsl == "noSensor":
+    hasSCD                       = False
+else:
+    hasSCD                       = True
+    thisCO2                      = 0.0
+
+print("SCD30 Sensor Present: " + str(hasSCD))
+
 #f = open('/dev/tty1','w')
 #sys.stdout = f
 
@@ -190,6 +203,12 @@ def printTSL():
     thisFullSpectrum = tsl.full_spectrum
     print(f'Visable Light......: {thisVis:4,d}')
     print(f'Infrared Light.....: {thisIR:1,d}')
+
+def printSCD():
+    thisSCDAvaiable  = scd.data_available
+    if thisSCDAvaiable:
+        thisCO2      = scd.eCO2
+    print(f'CO2................: {thisCO2:4.3,f}')
 
 clearScreen()
 while True:
