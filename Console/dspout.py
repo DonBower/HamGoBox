@@ -81,8 +81,8 @@ def printTimeStamp():
 def getMaidenHead(latitude, longitude):
     maxMaiden  = 4
     A          = ord('A')
-    a          = divmod(longitude+180,20)
-    b          = divmod(latitude+90,10)
+    a          = divmod(float(longitude) + 180,20)
+    b          = divmod(float(latitude) + 90,10)
     maidenHead = chr(A + int(a[0])) + chr(A + int(b[0]))
     longitude  = a[1]/2
     latitude   = b[1]
@@ -123,7 +123,7 @@ def printGPS():
 def printBMP():
     thisHPA = bmp.pressure
     thisHG = thisHPA / 33.864
-    print(f'Barometric Pressure: {thisHPA:05.2f} hPa / {thisHG:05.2f} Hg')
+    print(f'Barometric Pressure: {thisHPA:7.2f}hPa/ {thisHG:5.2f}Hg')
 
 def printHTS():
     thisHumidity = hts.relative_humidity
