@@ -1,4 +1,7 @@
-# TSL2591 python module
+# TSL2591 Circuit Python library
+```
+sudo pip3 install adafruit-circuitpython-tsl2591
+```
 
 This is a simple python library for the Adafruit TSL2591 breakout board based on the [Arduino library](https://github.com/adafruit/Adafruit_TSL2591_Library) from Adafruit. It was developed to work on a Raspberry PI.
 
