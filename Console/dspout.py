@@ -225,4 +225,6 @@ while True:
         printLTR()
     if hasTSL:
         printTSL()
+    if hasSCD:
+        printSCD()
     time.sleep(1)
