@@ -209,7 +209,7 @@ def printSCD():
     global thisCO2
     if scd.data_available:
         thisCO2      = scd.eCO2
-    print(f'CO2................: {thisCO2:4,.3f}')
+    print(f'CO2................: {thisCO2:4,.1f}')
 
 clearScreen()
 while True:
