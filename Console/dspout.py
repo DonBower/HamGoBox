@@ -125,7 +125,7 @@ def clearScreen():
 def printTimeStamp():
     now = datetime.now()
     timeStampNow = now.strftime("%d/%m/%Y %H:%M:%S")
-    print("Timestamp..........: " + timeStampNow + "\n")
+    print("Timestamp..........: " + timeStampNow)
 #
 # Print GPS Latitude, Longitude and Maidenhead
 #
