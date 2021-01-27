@@ -205,8 +205,7 @@ def printTSL():
     print(f'Infrared Light.....: {thisIR:1,d}')
 
 def printSCD():
-    thisSCDAvaiable  = scd.data_available
-    if thisSCDAvaiable:
+    if scd.data_available:
         thisCO2      = scd.eCO2
     print(f'CO2................: {thisCO2:4.3,f}')
 
