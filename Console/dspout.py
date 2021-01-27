@@ -11,7 +11,6 @@ import adafruit_hts221
 import adafruit_ltr390
 import adafruit_tsl2591
 import adafruit_scd30
-global thisCO2
 
 #last_print = time.monotonic()
 
@@ -207,6 +206,7 @@ def printTSL():
     print(f'Infrared Light.....: {thisIR:1,d}')
 
 def printSCD():
+    global thisCO2
     if scd.data_available:
         thisCO2      = scd.eCO2
     print(f'CO2................: {thisCO2:4.3,f}')
