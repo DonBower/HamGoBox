@@ -8,6 +8,7 @@ import busio
 import adafruit_gps
 import adafruit_bmp3xx
 import adafruit_hts221
+import adafruit_tsl2591
 
 #last_print = time.monotonic()
 
@@ -28,7 +29,7 @@ else:
     gps.send_command(b"PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0") # We only want GGA and RMC sentances...
     gps.send_command(b"PMTK220,1000") # Set Update rate to 1 second
 
-print(hasGPS)
+print("GPS Sensor Present: " + str(hasGPS))
 
 bmp = "noSensor"
 try:
@@ -43,7 +44,7 @@ else:
     bmp.pressure_oversampling    = 8
     bmp.temperature_oversampling = 2
 
-print(hasBMP)
+print("BMP3XX Sensor Present: " + str(hasBMP))
 
 try:
     hts                          = adafruit_hts221.HTS221(i2c)
@@ -57,7 +58,30 @@ else:
     bmp.pressure_oversampling    = 8
     bmp.temperature_oversampling = 2
 
-print(hasBMP)
+print("HTS221 Sensor Present: " + str(hasHTS))
+
+try:
+    tsl                          = adafruit_tsl2591.TSL2591(i2c)
+except:
+    tsl                          = "noSensor"
+
+if tsl == "noSensor":
+    hasTSL                       = False
+else:
+    hasTSL                       = True
+    # You can optionally change the gain and integration time:
+    # tsl.gain = adafruit_tsl2591.GAIN_LOW (1x gain)
+    # tsl.gain = adafruit_tsl2591.GAIN_MED (25x gain, the default)
+    # tsl.gain = adafruit_tsl2591.GAIN_HIGH (428x gain)
+    # tsl.gain = adafruit_tsl2591.GAIN_MAX (9876x gain)
+    # tsl.integration_time = adafruit_tsl2591.INTEGRATIONTIME_100MS (100ms, default)
+    # tsl.integration_time = adafruit_tsl2591.INTEGRATIONTIME_200MS (200ms)
+    # tsl.integration_time = adafruit_tsl2591.INTEGRATIONTIME_300MS (300ms)
+    # tsl.integration_time = adafruit_tsl2591.INTEGRATIONTIME_400MS (400ms)
+    # tsl.integration_time = adafruit_tsl2591.INTEGRATIONTIME_500MS (500ms)
+    # tsl.integration_time = adafruit_tsl2591.INTEGRATIONTIME_600MS (600ms)
+
+print("TSL2591 Sensor Present: " + str(hasTSL))
 
 #f = open('/dev/tty1','w')
 #sys.stdout = f
@@ -140,6 +164,14 @@ def printHTS():
     print(f'Temp...............: {thisTempC:4.1f}°c /{thisTempF:5.1f}°f')
     print(f'Relative Humidity..: {thisHumidity:4.1f} % rH')
 
+def printTSL():
+    thisIR           = tsl.infrared
+    thisVis          = tsl.visible
+    thisLux          = tsl.lux
+    thisFullSpectrum = tsl.full_spectrum
+    print(f'Visable Light......: {thisVis:6,d}')
+    print(f'Infrared Light.....: {thisIR:2,d}')
+
 clearScreen()
 while True:
 #    sys.stdout.write("\x1b[2J\x1b[H") # Position to top
@@ -151,4 +183,6 @@ while True:
         printBMP()
     if hasHTS:
         printHTS()
+    if hasTLS:
+        printTLS()
     time.sleep(1)
