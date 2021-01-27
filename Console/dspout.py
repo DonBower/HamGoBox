@@ -179,7 +179,7 @@ def printHTS():
 
 def printLTR():
     thisUV           = ltr.uvs
-    thisAmbient      = tr.light
+    thisAmbient      = ltr.light
     print(f'UltraViolet Light..: {thisUV:6,d}')
     print(f'Ambient Light......: {thisAmbient:3,d}')
 
