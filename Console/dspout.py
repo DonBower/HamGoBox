@@ -8,6 +8,7 @@ import busio
 import adafruit_gps
 import adafruit_bmp3xx
 import adafruit_hts221
+import adafruit_ltr390
 import adafruit_tsl2591
 
 #last_print = time.monotonic()
@@ -59,6 +60,18 @@ else:
     bmp.temperature_oversampling = 2
 
 print("HTS221 Sensor Present: " + str(hasHTS))
+
+try:
+    ltr                          = adafruit_ltr390.LTR390(i2c)
+except:
+    ltr                          = "noSensor"
+
+if ltr == "noSensor":
+    hasLTR                       = False
+else:
+    hasLTR                       = True
+
+print("LTR390 Sensor Present: " + str(hasLTR))
 
 try:
     tsl                          = adafruit_tsl2591.TSL2591(i2c)
@@ -164,6 +177,12 @@ def printHTS():
     print(f'Temp...............: {thisTempC:4.1f}°c /{thisTempF:5.1f}°f')
     print(f'Relative Humidity..: {thisHumidity:4.1f} % rH')
 
+def printLTR():
+    thisUV           = ltr.uvs
+    thisAmbient      = tr.light
+    print(f'UltraViolet Light..: {thisUV:6,d}')
+    print(f'Ambient Light......: {thisAmbient:3,d}')
+
 def printTSL():
     thisIR           = tsl.infrared
     thisVis          = tsl.visible
@@ -183,6 +202,8 @@ while True:
         printBMP()
     if hasHTS:
         printHTS()
+    if hasLTR:
+        printLTR()
     if hasTSL:
         printTSL()
     time.sleep(1)
