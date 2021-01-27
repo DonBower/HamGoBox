@@ -79,10 +79,6 @@ def printTimeStamp():
 # Print GPS Latitude, Longitude and Maidenhead
 #
 def getMaidenHead(latitude, longitude):
-    if not isinstance(latitude, float):
-        return "UNK"
-    if not isinstance(longitude, float):
-        return "UNK"
     maxMaiden  = 4
     A          = ord('A')
     a          = divmod(longitude + 180,20)
@@ -120,6 +116,14 @@ def printGPS():
     thisLon = gps.longitude
     thisAltitude = gps.altitude_m
     thisSatCount = gps.satellites
+    if not isinstance(thisLat, float):
+        thisLat = 0.0
+    if not isinstance(thisLon, float):
+        thisLon = 0.0
+    if not isinstance(thisAltitude, float):
+        thisAltitude = 0.0
+    if not isinstance(thisSatCount, int):
+        thisSatCount = 0
     print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}')
     print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}')
     print(f'Altitude...........: {thisAltitude:06.1f}m')
