@@ -183,6 +183,6 @@ while True:
         printBMP()
     if hasHTS:
         printHTS()
-    if hasTLS:
-        printTLS()
+    if hasTSL:
+        printTSL()
     time.sleep(1)
