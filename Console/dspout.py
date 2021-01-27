@@ -79,6 +79,10 @@ def printTimeStamp():
 # Print GPS Latitude, Longitude and Maidenhead
 #
 def getMaidenHead(latitude, longitude):
+    if not isinstance(latitude, float):
+        return "UNK"
+    if not isinstance(longitude, float):
+        return "UNK"
     maxMaiden  = 4
     A          = ord('A')
     a          = divmod(longitude + 180,20)
