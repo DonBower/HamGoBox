@@ -216,6 +216,7 @@ while True:
 #    sys.stdout.write("\x1b[2J\x1b[H") # Position to top
     sys.stdout.write("\x1b[H") # Position to top
     printTimeStamp()
+    print(thisCO2)
     if hasGPS:
         printGPS()
     if hasBMP:
