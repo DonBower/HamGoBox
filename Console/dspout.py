@@ -180,16 +180,16 @@ def printHTS():
 def printLTR():
     thisUV           = ltr.uvs
     thisAmbient      = ltr.light
-    print(f'UltraViolet Light..: {thisUV:6,d}')
-    print(f'Ambient Light......: {thisAmbient:3,d}')
+    print(f'UltraViolet Light..: {thisUV:1,d}')
+    print(f'Ambient Light......: {thisAmbient:1,d}')
 
 def printTSL():
     thisIR           = tsl.infrared
     thisVis          = tsl.visible
     thisLux          = tsl.lux
     thisFullSpectrum = tsl.full_spectrum
-    print(f'Visable Light......: {thisVis:6,d}')
-    print(f'Infrared Light.....: {thisIR:2,d}')
+    print(f'Visable Light......: {thisVis:4,d}')
+    print(f'Infrared Light.....: {thisIR:1,d}')
 
 clearScreen()
 while True:
