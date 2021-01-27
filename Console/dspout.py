@@ -10,6 +10,7 @@ import adafruit_bmp3xx
 import adafruit_hts221
 import adafruit_ltr390
 import adafruit_tsl2591
+import adafruit_scd30
 
 #last_print = time.monotonic()
 
