@@ -11,6 +11,7 @@ import adafruit_hts221
 import adafruit_ltr390
 import adafruit_tsl2591
 import adafruit_scd30
+global thisCO2
 
 #last_print = time.monotonic()
 
