@@ -102,11 +102,11 @@ try:
 except:
     scd                          = "noSensor"
 
+thisCO2                      = 0.0
 if tsl == "noSensor":
     hasSCD                       = False
 else:
     hasSCD                       = True
-    thisCO2                      = 0.0
 
 print("SCD30 Sensor Present: " + str(hasSCD))
 
