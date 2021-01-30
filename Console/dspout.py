@@ -14,7 +14,6 @@ import adafruit_scd30
 
 #last_print = time.monotonic()
 
-time.sleep(20)
 i2c = busio.I2C(board.SCL, board.SDA)
 #
 # Try GPS Board
