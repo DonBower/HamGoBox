@@ -1,7 +1,7 @@
 #!/bin/bash
 sleep 10
-if [[ -f /home/pi/dspout.errlog.txt ]]; then
-  rm /home/pi/dspout.errlog.txt
+if [[ -f /home/pi/dspout.py.errlog.txt ]]; then
+  rm /home/pi/dspout.py.errlog.txt
 fi
 
-/home/pi/Developer/Console/dspout.py > /dev/tty1 &
+/home/pi/Developer/Console/dspout.py > /dev/tty1 2> /home/pi/dspout.py.errlog.txt &
