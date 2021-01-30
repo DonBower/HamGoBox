@@ -1,5 +1,5 @@
 #!/bin/bash
-sleep 10
+sleep 15
 if [[ -f /home/pi/dspout.py.errlog.txt ]]; then
   rm /home/pi/dspout.py.errlog.txt
 fi
