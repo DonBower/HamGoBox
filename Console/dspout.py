@@ -180,7 +180,7 @@ def printGPS():
         thisSatCount = 0
     print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40])
     print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40])
-    print(f'Altitude.M/F.......: {thisAltM:5,.1f} / {thisAltF:6,f}                   '[:40])
+    print(f'Altitude.M/F.......: {thisAltM:5,.1f} / {thisAltF:3,.0f}                   '[:40])
 
 def printBMP():
     thisHPA = bmp.pressure
