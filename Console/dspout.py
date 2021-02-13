@@ -182,7 +182,7 @@ def printGPS():
 def printBMP():
     thisHPA = bmp.pressure
     thisHG = thisHPA / 33.864
-    print(f'Barometric Pressure: {thisHPA:6.2f}hPa/{thisHG:5.2f}Hg                   '[:40])
+    print(f'Barometric Pressure: {thisHPA:6.1f}hPa / {thisHG:5.2f}Hg                   '[:40])
 
 def printHTS():
     thisHumidity = hts.relative_humidity
