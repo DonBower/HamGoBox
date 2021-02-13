@@ -180,12 +180,12 @@ def printGPS():
         thisSatCount = 0
     print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40])
     print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40])
-    print(f'Altitude.M/F.......: {thisAltM:5,.1f} / {thisAltF:3,.0f}                   '[:40])
+    print(f'Altitude M/F.......: {thisAltM:5,.1f} / {thisAltF:3,.0f}                   '[:40])
 
 def printBMP():
     thisHPA = bmp.pressure
     thisHG = thisHPA / 33.864
-    print(f'Barometric Pressure: {thisHPA:6.1f}hPa / {thisHG:5.2f}Hg                   '[:40])
+    print(f'Barometer hPa / Hg.: {thisHPA:5,.1f} / {thisHG:5.2f}                   '[:40])
 
 def printHTS():
     thisHumidity = hts.relative_humidity
