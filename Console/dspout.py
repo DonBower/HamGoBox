@@ -165,19 +165,22 @@ def printGPS():
 #    last_print = current
     thisLat = gps.latitude
     thisLon = gps.longitude
-    thisAltitude = gps.altitude_m
+    thisAltM = gps.altitude_m
     thisSatCount = gps.satellites
     if not isinstance(thisLat, float):
         thisLat = 0.0
     if not isinstance(thisLon, float):
         thisLon = 0.0
-    if not isinstance(thisAltitude, float):
-        thisAltitude = 0.0
+    if not isinstance(thisAltM, float):
+        thisAltM = 0.0
+        thisAltF = 0.0
+    else:
+        thisAltF = thisAltM * 3.28084
     if not isinstance(thisSatCount, int):
         thisSatCount = 0
     print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40])
     print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40])
-    print(f'Altitude...........: {thisAltitude:06.1f}m                   '[:40])
+    print(f'Altitude.M/F.......: {thisAltM:6,.1f} /  {thisAltF:6,.1f}                   '[:40])
 
 def printBMP():
     thisHPA = bmp.pressure
