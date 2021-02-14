@@ -223,6 +223,7 @@ def printBMP():
     if samplesCount <= 60:
         thisMinHPA = thisMinHPA + thisHPA
         minuteAvgHPA = thisMinHPA / samplesCount
+        haveFullMinute = false
     else:
         samplesCount = 1
         thisMinHPA = thisHPA
