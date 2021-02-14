@@ -3,6 +3,7 @@ import os
 import sys
 import time
 from datetime import datetime
+import json
 import board
 import busio
 import adafruit_gps
@@ -184,17 +185,33 @@ def printGPS():
     print(f'Altitude...........: {thisAltM:5,.1f}M / {thisAltF:3,.0f}F                   '[:40])
 
 def printBMP():
-    global firstHPA, previousMin, measurementsCount, minuteAvgHPA, thisMinHPA, haveFullMinute
-
-    thisHPA = bmp.pressure
-    measurementsCount = measurementsCount + 1
+    global firstHPA, previousMin, haveFullMinute
     now = datetime.now()
     thisMin = now.strftime("%H:%M")
-    if measurementsCount <= 60
+
+    with open("bmp.json", "r") as jsonFile:
+        bmpJSON = json.load(jsonFile)
+        if bmpJSON is None:
+            bmpJSON = '{}'
+
+        if thisMin in bmpJSON:
+            thisMinData = bmpJSON.get(thisMin)
+        else
+            thisMinData['HPATotal'] = 0
+            thisMinData['Samples'] = 0
+            thisMinData['Trend'] = '→'
+
+        thisMinHPA = thisMinData['HPATotal']
+        samplesCount = thisMinData['Samples']
+
+    thisHPA = bmp.pressure
+    samplesCount = samplesCount + 1
+
+    if samplesCount <= 60
         thisMinHPA = thisMinHPA + thisHPA
-        minuteAvgHPA = thisMinHPA / measurementsCount
+        minuteAvgHPA = thisMinHPA / samplesCount
     else
-        measurementsCount = 1
+        samplesCount = 1
         thisMinHPA = thisHPA
         minuteAvgHPA = thisHPA
         haveFullMinute = true
@@ -209,6 +226,14 @@ def printBMP():
             thisHPATrend = '↓'
         else:
             thisHPATrend = '→'
+
+    thisMinData['HPATotal'] = thisMinHPA
+    thisMinData['Samples'] = samplesCount
+    thisMinData['Trend'] = thisHPATrend
+    bmpJSON[thisMin] = thisMinData
+
+    with open("bmp.json", "w") as jsonFile:
+        json.dump(data, jsonFile)
 
     thisHG = thisHPA / 33.864
     print(f'Barometer hPa/Hg..{thisHPATrend:1s}: {thisHPA:5,.1f} / {thisHG:5.2f}                   '[:40])
