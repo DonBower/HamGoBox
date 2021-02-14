@@ -246,10 +246,10 @@ def printBMP():
     thisMinData['HPATotal'] = thisMinHPA
     thisMinData['Samples'] = samplesCount
     thisMinData['Trend'] = thisHPATrend
-bmpJSON[thisMin] = thisMinData
+    bmpJSON[thisMin] = thisMinData
 
-with open(bmpJSONFileName, "w") as jsonFile:
-    json.dump(bmpJSON, jsonFile)
+    with open(bmpJSONFileName, "w") as jsonFile:
+        json.dump(bmpJSON, jsonFile)
 
     thisHG = thisHPA / 33.864
     print(f'Barometer hPa/Hg..{thisHPATrend:1s}: {thisHPA:5,.1f} / {thisHG:5.2f}                   '[:40])
