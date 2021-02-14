@@ -197,7 +197,6 @@ def printBMP():
             if bmpJSON is None:
                 bmpJSON = json.loads('{}')
 
-            print(bmpJSON)
             if thisMin in bmpJSON:
                 thisMinData = bmpJSON.get(thisMin)
             else:
@@ -225,12 +224,12 @@ def printBMP():
     if samplesCount <= 60:
         thisMinHPA = thisMinHPA + thisHPA
         minuteAvgHPA = thisMinHPA / samplesCount
-        haveFullMinute = false
+        haveFullMinute = False
     else:
         samplesCount = 1
         thisMinHPA = thisHPA
         minuteAvgHPA = thisHPA
-        haveFullMinute = true
+        haveFullMinute = True
 
     if firstHPA == 0 or not haveFullMinute:
         firstHPA = minuteAvgHPA
