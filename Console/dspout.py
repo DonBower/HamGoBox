@@ -197,9 +197,12 @@ def printBMP():
             if bmpJSON is None:
                 bmpJSON = '{}'
 
+            print(f'bmpJSON....: {bmpJSON:s}                   '[:40])
             if thisMin in bmpJSON:
+                print(f'bmpJSON has key {thisMin:s}                   '[:40])
                 thisMinData = bmpJSON.get(thisMin)
             else:
+                print(f'bmpJSON does not have key {thisMin:s}                   '[:40])
                 thisMinData['HPATotal'] = 0
                 thisMinData['Samples'] = 0
                 thisMinData['Trend'] = '→'
