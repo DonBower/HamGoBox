@@ -45,6 +45,7 @@ else:
     hasBMP                       = True
     bmp.pressure_oversampling    = 8
     bmp.temperature_oversampling = 2
+    firstHPA                     = 0
 
 print("BMP3XX Sensor Present: " + str(hasBMP))
 
@@ -183,9 +184,22 @@ def printGPS():
     print(f'Altitude...........: {thisAltM:5,.1f}M / {thisAltF:3,.0f}F                   '[:40])
 
 def printBMP():
+    global firstHPA
     thisHPA = bmp.pressure
+
+    if firstHPA = 0:
+        firstHPA = thisHPA
+
+    if thisHPA > firstHPA:
+        thisHPATrend = '↑'
+    else:
+        if thisHPA < firstHPA:
+            thisHPATrend = '↓'
+        else:
+            thisHPATrend = '→'
+
     thisHG = thisHPA / 33.864
-    print(f'Barometer hPa/Hg...: {thisHPA:5,.1f} / {thisHG:5.2f}                   '[:40])
+    print(f'Barometer hPa/Hg..{thisHPATrend:1s}: {thisHPA:5,.1f} / {thisHG:5.2f}                   '[:40])
 
 def printHTS():
     thisHumidity = hts.relative_humidity
