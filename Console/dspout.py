@@ -187,7 +187,7 @@ def printBMP():
     global firstHPA
     thisHPA = bmp.pressure
 
-    if firstHPA = 0:
+    if firstHPA == 0:
         firstHPA = thisHPA
 
     if thisHPA > firstHPA:
