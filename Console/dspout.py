@@ -16,6 +16,7 @@ import adafruit_scd30
 #last_print = time.monotonic()
 
 i2c = busio.I2C(board.SCL, board.SDA)
+bmpJSONFileName = "~/bmpData.json"
 #
 # Try GPS Board
 #
@@ -189,7 +190,7 @@ def printBMP():
     now = datetime.now()
     thisMin = now.strftime("%H:%M")
 
-    with open("bmp.json", "r") as jsonFile:
+    with open(bmpJSONFileName, "r") as jsonFile:
         bmpJSON = json.load(jsonFile)
         if bmpJSON is None:
             bmpJSON = '{}'
@@ -232,7 +233,7 @@ def printBMP():
     thisMinData['Trend'] = thisHPATrend
     bmpJSON[thisMin] = thisMinData
 
-    with open("bmp.json", "w") as jsonFile:
+    with open(bmpJSONFileName, "w") as jsonFile:
         json.dump(data, jsonFile)
 
     thisHG = thisHPA / 33.864
