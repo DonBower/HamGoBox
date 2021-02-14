@@ -216,20 +216,20 @@ def printBMP():
         thisMinHPA = thisMinData['HPATotal']
         samplesCount = thisMinData['Samples']
 
-
-
     thisHPA = bmp.pressure
-    samplesCount = samplesCount + 1
 
-    if samplesCount <= 60:
+    if thisMin == previousMin:
+        samplesCount = samplesCount + 1
         thisMinHPA = thisMinHPA + thisHPA
         minuteAvgHPA = thisMinHPA / samplesCount
-        haveFullMinute = False
     else:
+        if samplesCount <= 60:
+            haveFullMinute = False
+        else:
+            haveFullMinute = True
         samplesCount = 1
         thisMinHPA = thisHPA
         minuteAvgHPA = thisHPA
-        haveFullMinute = True
 
     if firstHPA == 0 or not haveFullMinute:
         firstHPA = minuteAvgHPA
