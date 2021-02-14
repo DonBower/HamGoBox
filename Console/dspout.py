@@ -197,7 +197,7 @@ def printBMP():
 
         if thisMin in bmpJSON:
             thisMinData = bmpJSON.get(thisMin)
-        else
+        else:
             thisMinData['HPATotal'] = 0
             thisMinData['Samples'] = 0
             thisMinData['Trend'] = '→'
