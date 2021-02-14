@@ -195,14 +195,13 @@ def printBMP():
         with open(bmpJSONFileName, "r") as jsonFile:
             bmpJSON = json.load(jsonFile)
             if bmpJSON is None:
-                bmpJSON = '{}'
+                bmpJSON = json.loads('{}')
 
-            print(f'bmpJSON....: {bmpJSON:s}                   '[:40])
+            print(bmpJSON)
             if thisMin in bmpJSON:
-                print(f'bmpJSON has key {thisMin:s}                   '[:40])
                 thisMinData = bmpJSON.get(thisMin)
             else:
-                print(f'bmpJSON does not have key {thisMin:s}                   '[:40])
+                thisMinData = json.loads('{}')
                 thisMinData['HPATotal'] = 0
                 thisMinData['Samples'] = 0
                 thisMinData['Trend'] = '→'
@@ -210,8 +209,8 @@ def printBMP():
             thisMinHPA = thisMinData['HPATotal']
             samplesCount = thisMinData['Samples']
     else:
-        bmpJSON = {}
-        thisMinData = {}
+        bmpJSON = json.loads('{}')
+        thisMinData = json.loads('{}')
         thisMinData['HPATotal'] = 0
         thisMinData['Samples'] = 0
         thisMinData['Trend'] = '→'
@@ -247,10 +246,10 @@ def printBMP():
     thisMinData['HPATotal'] = thisMinHPA
     thisMinData['Samples'] = samplesCount
     thisMinData['Trend'] = thisHPATrend
-    bmpJSON[thisMin] = thisMinData
+bmpJSON[thisMin] = thisMinData
 
-    with open(bmpJSONFileName, "w") as jsonFile:
-        json.dump(bmpJSON, jsonFile)
+with open(bmpJSONFileName, "w") as jsonFile:
+    json.dump(bmpJSON, jsonFile)
 
     thisHG = thisHPA / 33.864
     print(f'Barometer hPa/Hg..{thisHPATrend:1s}: {thisHPA:5,.1f} / {thisHG:5.2f}                   '[:40])
