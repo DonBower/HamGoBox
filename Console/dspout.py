@@ -205,17 +205,15 @@ def printBMP():
                 thisMinData['HPATotal'] = 0
                 thisMinData['Samples'] = 0
                 thisMinData['Trend'] = '→'
-
-            thisMinHPA = thisMinData['HPATotal']
-            samplesCount = thisMinData['Samples']
     else:
         bmpJSON = json.loads('{}')
         thisMinData = json.loads('{}')
         thisMinData['HPATotal'] = 0
         thisMinData['Samples'] = 0
         thisMinData['Trend'] = '→'
-        thisMinHPA = thisMinData['HPATotal']
-        samplesCount = thisMinData['Samples']
+
+    thisMinHPA = thisMinData['HPATotal']
+    samplesCount = thisMinData['Samples']
 
     thisHPA = bmp.pressure
 
@@ -231,6 +229,7 @@ def printBMP():
         samplesCount = 1
         thisMinHPA = thisHPA
         minuteAvgHPA = thisHPA
+        previousMin = thisMin
 
     if firstHPA == 0 or not haveFullMinute:
         firstHPA = minuteAvgHPA
