@@ -207,7 +207,8 @@ def printBMP():
             thisMinHPA = thisMinData['HPATotal']
             samplesCount = thisMinData['Samples']
     else:
-        bmpJSON = '{}'
+        bmpJSON = {}
+        thisMinData = {}
         thisMinData['HPATotal'] = 0
         thisMinData['Samples'] = 0
         thisMinData['Trend'] = '→'
