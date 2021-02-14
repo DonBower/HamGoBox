@@ -49,6 +49,7 @@ else:
     bmp.pressure_oversampling    = 8
     bmp.temperature_oversampling = 2
     firstHPA                     = 0
+    previousMin                  = ""
 
 print("BMP3XX Sensor Present: " + str(hasBMP))
 
