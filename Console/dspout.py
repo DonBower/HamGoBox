@@ -208,10 +208,10 @@ def printBMP():
     thisHPA = bmp.pressure
     samplesCount = samplesCount + 1
 
-    if samplesCount <= 60
+    if samplesCount <= 60:
         thisMinHPA = thisMinHPA + thisHPA
         minuteAvgHPA = thisMinHPA / samplesCount
-    else
+    else:
         samplesCount = 1
         thisMinHPA = thisHPA
         minuteAvgHPA = thisHPA
