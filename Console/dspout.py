@@ -184,11 +184,23 @@ def printGPS():
     print(f'Altitude...........: {thisAltM:5,.1f}M / {thisAltF:3,.0f}F                   '[:40])
 
 def printBMP():
-    global firstHPA
-    thisHPA = bmp.pressure
+    global firstHPA, previousMin, measurementsCount, minuteAvgHPA, thisMinHPA, haveFullMinute
 
-    if firstHPA == 0:
-        firstHPA = thisHPA
+    thisHPA = bmp.pressure
+    measurementsCount = measurementsCount + 1
+    now = datetime.now()
+    thisMin = now.strftime("%H:%M")
+    if measurementsCount <= 60
+        thisMinHPA = thisMinHPA + thisHPA
+        minuteAvgHPA = thisMinHPA / measurementsCount
+    else
+        measurementsCount = 1
+        thisMinHPA = thisHPA
+        minuteAvgHPA = thisHPA
+        haveFullMinute = true
+
+    if firstHPA == 0 or not haveFullMinute:
+        firstHPA = minuteAvgHPA
 
     if thisHPA > firstHPA:
         thisHPATrend = '↑'
