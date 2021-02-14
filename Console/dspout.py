@@ -212,6 +212,8 @@ def printBMP():
         thisMinData['HPATotal'] = 0
         thisMinData['Samples'] = 0
         thisMinData['Trend'] = '→'
+        thisMinHPA = thisMinData['HPATotal']
+        samplesCount = thisMinData['Samples']
 
 
 
