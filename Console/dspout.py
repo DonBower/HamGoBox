@@ -16,7 +16,7 @@ import adafruit_scd30
 #last_print = time.monotonic()
 
 i2c = busio.I2C(board.SCL, board.SDA)
-bmpJSONFileName = "/home/pi/bmpData.json"
+bmpJSONFileName = "~/bmpData.json"
 #
 # Try GPS Board
 #
@@ -190,20 +190,28 @@ def printBMP():
     now = datetime.now()
     thisMin = now.strftime("%H:%M")
 
-    with open(bmpJSONFileName, "r") as jsonFile:
-        bmpJSON = json.load(jsonFile)
-        if bmpJSON is None:
-            bmpJSON = '{}'
+    if path.exists(bmpJSONFileName):
+        with open(bmpJSONFileName, "r") as jsonFile:
+            bmpJSON = json.load(jsonFile)
+            if bmpJSON is None:
+                bmpJSON = '{}'
 
-        if thisMin in bmpJSON:
-            thisMinData = bmpJSON.get(thisMin)
-        else:
-            thisMinData['HPATotal'] = 0
-            thisMinData['Samples'] = 0
-            thisMinData['Trend'] = '→'
+            if thisMin in bmpJSON:
+                thisMinData = bmpJSON.get(thisMin)
+            else:
+                thisMinData['HPATotal'] = 0
+                thisMinData['Samples'] = 0
+                thisMinData['Trend'] = '→'
 
-        thisMinHPA = thisMinData['HPATotal']
-        samplesCount = thisMinData['Samples']
+            thisMinHPA = thisMinData['HPATotal']
+            samplesCount = thisMinData['Samples']
+    else:
+        bmpJSON = '{}'
+        thisMinData['HPATotal'] = 0
+        thisMinData['Samples'] = 0
+        thisMinData['Trend'] = '→'
+
+
 
     thisHPA = bmp.pressure
     samplesCount = samplesCount + 1
