@@ -197,7 +197,7 @@ def printBMP():
             try:
                 bmpJSON = json.load(jsonFile)
             except:
-                bmpJSON = json.loads('{}')
+                bmpJSON = None
 
             if bmpJSON is None:
                 bmpJSON = json.loads('{}')
