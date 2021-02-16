@@ -194,8 +194,10 @@ def printBMP():
 
     if path.exists(bmpJSONFileName):
         with open(bmpJSONFileName, "r") as jsonFile:
-            bmpJSON = json.load(jsonFile)
-            if bmpJSON is None:
+            try bmpJSON = json.load(jsonFile):
+                if bmpJSON is None:
+                    bmpJSON = json.loads('{}')
+            except:
                 bmpJSON = json.loads('{}')
 
             if thisMin in bmpJSON:
@@ -262,6 +264,7 @@ def printHTS():
 
 def printLTR():
     thisUV           = ltr.uvs
+    thisUVi          = thisUV / 95
     thisAmbient      = ltr.light
     print(f'UVa Light..........: {thisUV:1,d}uvs                   '[:40])
     print(f'Ambient Light......: {thisAmbient:1,d}                   '[:40])
