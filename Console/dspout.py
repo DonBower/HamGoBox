@@ -191,6 +191,7 @@ def printBMP():
     global firstHPA, previousMin, haveFullMinute
     now = datetime.now()
     thisMin = now.strftime("%H:%M")
+    thisDate = now.strftime("%Y-%m-%d")
 
     if path.exists(bmpJSONFileName):
         with open(bmpJSONFileName, "r") as jsonFile:
@@ -206,21 +207,28 @@ def printBMP():
                 thisMinData = bmpJSON.get(thisMin)
             else:
                 thisMinData = json.loads('{}')
+                thisMinData['Date'] = thisDate
                 thisMinData['HPATotal'] = 0
                 thisMinData['Samples'] = 0
                 thisMinData['Trend'] = '→'
     else:
         bmpJSON = json.loads('{}')
         thisMinData = json.loads('{}')
+        thisMinData['Date'] = thisDate
         thisMinData['HPATotal'] = 0
         thisMinData['Samples'] = 0
         thisMinData['Trend'] = '→'
 
     thisMinHPA = thisMinData['HPATotal']
     samplesCount = thisMinData['Samples']
+    jsonDate = thisMinData['Date']
 
     thisHPA = bmp.pressure
-
+#
+# Need a 12 hour clock to check if thisMinData is old
+#   (because of wraparound or multiday idle)
+#   - jsonDate + thisMin > 12 hours thisDate + thisMin is ok.
+#
     if thisMin == previousMin:
         samplesCount = samplesCount + 1
         thisMinHPA = thisMinHPA + thisHPA
@@ -249,6 +257,7 @@ def printBMP():
     thisMinData['HPATotal'] = thisMinHPA
     thisMinData['Samples'] = samplesCount
     thisMinData['Trend'] = thisHPATrend
+    thisMinData['Date'] = thisDate
     bmpJSON[thisMin] = thisMinData
 
     with open(bmpJSONFileName, "w") as jsonFile:
