@@ -194,10 +194,12 @@ def printBMP():
 
     if path.exists(bmpJSONFileName):
         with open(bmpJSONFileName, "r") as jsonFile:
-            try bmpJSON = json.load(jsonFile):
-                if bmpJSON is None:
-                    bmpJSON = json.loads('{}')
+            try:
+                bmpJSON = json.load(jsonFile)
             except:
+                bmpJSON = json.loads('{}')
+
+            if bmpJSON is None:
                 bmpJSON = json.loads('{}')
 
             if thisMin in bmpJSON:
