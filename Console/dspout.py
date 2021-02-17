@@ -204,10 +204,10 @@ def printGPS():
         thisAltF = thisAltM * 3.28084
     if not isinstance(thisSatCount, int):
         thisSatCount = 0
-    print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40])
-    print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40])
-    print(f'Lat/Lon ({thisSatCount:02d}).......: {getSexagesimal(thisLat,["N","S"]):16s} / {getSexagesimal(thisLon,["N","S"]):17s}                   '[:40])
-    print(f'Altitude...........: {thisAltM:5,.1f}M / {thisAltF:3,.0f}F                   '[:40])
+    print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40], end='')
+    print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40], end='')
+    print(f'Lat/Lon ({thisSatCount:02d}).......: {getSexagesimal(thisLat,["N","S"]):16s} / {getSexagesimal(thisLon,["N","S"]):17s}                   '[:40], end='')
+    print(f'Altitude...........: {thisAltM:5,.1f}M / {thisAltF:3,.0f}F                   '[:40], end='')
 
 def printBMP():
     global firstHPA, previousMin, haveFullMinute
@@ -316,7 +316,7 @@ def printSCD():
     global thisCO2
     if scd.data_available:
         thisCO2      = scd.CO2
-    print(f'CO2................: {thisCO2:4,.1f}ppm                   '[:40])
+    print(f'CO2................: {thisCO2:4,.1f}ppm                   '[:40], end='')
 
 clearScreen()
 while True:
