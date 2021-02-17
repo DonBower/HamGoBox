@@ -280,7 +280,7 @@ def printLTR():
     thisUV           = ltr.uvs
     thisUVi          = int(round((thisUV / 95), 0))
     thisAmbient      = ltr.light
-    print(f'UVa EMF / UVI......: {thisUV:1,d}um/cm^2 / {thisUV:1,d}UVi                   '[:40])
+    print(f'UVa EMF / UVI......: {thisUV:1,d}µm/cm^2 / {thisUV:1,d}UVi                   '[:40])
     print(f'Ambient Light......: {thisAmbient:1,d}                   '[:40])
 
 def printTSL():
