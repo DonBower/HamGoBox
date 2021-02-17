@@ -273,6 +273,7 @@ def printHTS():
     thisHumidity = hts.relative_humidity
     thisTempC    = hts.temperature
     thisTempF    = ((9.0 / 5.0) * thisTempC + 32)
+#    °c/°f
     print(f'Temperature........: {thisTempC:4.1f}℃ /{thisTempF:5.1f}℉                   '[:40])
     print(f'Relative Humidity..: {thisHumidity:4.1f}% rH                   '[:40])
 
