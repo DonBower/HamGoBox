@@ -206,7 +206,7 @@ def printGPS():
         thisSatCount = 0
     print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40], end='')
     print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40], end='')
-    print(f'Lat/Lon ({thisSatCount:02d}).......: {getSexagesimal(thisLat,["N","S"]):16s} / {getSexagesimal(thisLon,["N","S"]):17s}                   '[:40], end='')
+#    print(f'Lat/Lon ({thisSatCount:02d}).......: {getSexagesimal(thisLat,["N","S"]):16s} / {getSexagesimal(thisLon,["N","S"]):17s}                   '[:40], end='')
     print(f'Altitude...........: {thisAltM:5,.1f}M / {thisAltF:3,.0f}F                   '[:40], end='')
 
 def printBMP():
