@@ -135,6 +135,24 @@ def printTimeStamp():
     timeStampNow = now.strftime("%d/%m/%Y %H:%M:%S")
     print("Timestamp..........: " + timeStampNow)
 #
+# Convert Decimal Degrees to degrees, minutes, and seconds
+#
+def getSexagesimal(decDegrees, latlon):
+    thisDegree = int(abs(decDegrees))
+    decMinSec  = abs(decDegrees) - thisDegree
+    thisMin    = int(decMinSec * 60)
+    decSec     = decMinSec - (thisMin / 60)
+    thisSec    = round((decSec * 3600), 3)
+    thisSexagesimal  = str(thisDegree) + '° '
+    thisSexagesimal += str(thisMin).zfill(2) + '\' '
+    thisSexagesimal += str(thisSec).zfill(2) + '" '
+    if decDegrees >= 0:
+        thisSexagesimal += str(latlon[0])
+    else:
+        thisSexagesimal += str(latlon[1])
+    return thisSexagesimal
+
+#
 # Print GPS Latitude, Longitude and Maidenhead
 #
 def getMaidenHead(latitude, longitude):
@@ -188,6 +206,7 @@ def printGPS():
         thisSatCount = 0
     print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40])
     print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40])
+    print(f'Lat/Lon ({thisSatCount:02d}).......: {getSexagesimal(thisLat,["N","S"]):16s} / {getSexagesimal(thisLon,["N","S"]):17s}                   '[:40])
     print(f'Altitude...........: {thisAltM:5,.1f}M / {thisAltF:3,.0f}F                   '[:40])
 
 def printBMP():
