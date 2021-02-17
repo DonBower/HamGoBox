@@ -274,7 +274,8 @@ def printHTS():
     thisTempC    = hts.temperature
     thisTempF    = ((9.0 / 5.0) * thisTempC + 32)
 #    °c/°f
-    print(f'Temperature........: {thisTempC:4.1f}℃ /{thisTempF:5.1f}℉                   '[:40])
+#    ℃/℉ - These do not print.
+    print(f'Temperature........: {thisTempC:4.1f}°C /{thisTempF:5.1f}°F                   '[:40])
     print(f'Relative Humidity..: {thisHumidity:4.1f}% rH                   '[:40])
 
 def printLTR():
