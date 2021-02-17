@@ -76,6 +76,9 @@ if ltr == "noSensor":
     hasLTR                       = False
 else:
     hasLTR                       = True
+    ltr.gain                     = 1
+    ltr.resolution               = 4
+    ltr.measurement_delay        = 2
 
 print("LTR390 Sensor Present: " + str(hasLTR))
 
