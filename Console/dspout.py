@@ -323,16 +323,17 @@ while True:
 #    sys.stdout.write("\x1b[2J\x1b[H") # Position to top
     sys.stdout.write("\x1b[H") # Position to top
     printTimeStamp()
-    if hasGPS:
-        printGPS()
-    if hasBMP:
-        printBMP()
-    if hasHTS:
-        printHTS()
-    if hasLTR:
-        printLTR()
-    if hasTSL:
-        printTSL()
-    if hasSCD:
-        printSCD()
+    if not divmod(int(datetime.now().strftime("%S")),6)[1]:
+        if hasGPS:
+            printGPS()
+        if hasBMP:
+            printBMP()
+        if hasHTS:
+            printHTS()
+        if hasLTR:
+            printLTR()
+        if hasTSL:
+            printTSL()
+        if hasSCD:
+            printSCD()
     time.sleep(1)
