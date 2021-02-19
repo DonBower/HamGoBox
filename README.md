@@ -22,6 +22,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 |![alt text][monitor]|[Monitor](https://smile.amazon.com/gp/product/B07NNXH2SS/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1)|13 inch high res monitor.|
 |![alt text][raspberryPIZero]|[Computer](https://www.adafruit.com/product/3708)|This credit card size computer will run all of the software, it has 4 USB ports, and a boatload of interfaces.|
 |![alt text][PiTFT]|[Display](https://www.adafruit.com/product/2441)|This Display is configured as the Console for the RaspberryPi. It will display all the Environmental information.|
+|![alt text][GPS]|[GPS Sensor](https://www.adafruit.com/product/4415)|Used to determine precise Latitude and Longitude. From this we can derive the Maidenhead Gridsquare.|
+|![alt text][GPS]|[GPS Sensor](https://www.adafruit.com/product/4415)|Used to determine precise Latitude and Longitude. From this we can derive the Maidenhead Gridsquare.|
 
 
 ---
@@ -74,3 +76,15 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 [raspberryPIZero]: https://github.com/DonBower/HamGoBox/blob/master/Images/RPiZWH.jpg "Raspberry Pi Zero"
 
 [PiTFT]: https://github.com/DonBower/HamGoBox/blob/master/Images/PiTFT.jpg "Raspberry Pi TFT"
+
+[GPS]: https://github.com/DonBower/HamGoBox/blob/master/Images/GPS.jpg "Mini GPS Sensor"
+
+[SCD-30]: https://github.com/DonBower/HamGoBox/blob/master/Images/SCD30.jpg "NDIR CO2 Sensor"
+
+[HTS221]: https://github.com/DonBower/HamGoBox/blob/master/Images/HTS221.jpg "Temperature & Humidity Sensor"
+
+[BMP390]: https://github.com/DonBower/HamGoBox/blob/master/Images/BMP390.jpg "Precision Barometric Pressure and Altimeter Sensor"
+
+[LTR390]: https://github.com/DonBower/HamGoBox/blob/master/Images/LTR390.jpg "UV Light Sensor"
+
+[TSL2591]: https://github.com/DonBower/HamGoBox/blob/master/Images/TSL2591.jpg "High Dynamic Range Digital Light Sensor"
