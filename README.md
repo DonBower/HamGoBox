@@ -69,8 +69,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 
 [raspberryPI]: https://github.com/DonBower/HamGoBox/blob/master/Images/RaspberryPiSmall.jpg "Raspberry Pi"
 
-[raspberryPIZero]: https://github.com/DonBower/HamGoBox/blob/master/Images/RPiZWH.jpg "Raspberry Pi Zero"
-
 [monitor]: https://github.com/DonBower/HamGoBox/blob/master/Images/monitorSmall.jpg "Monitor"
 
-[display]: https://github.com/DonBower/HamGoBox/blob/master/Images/PiTFT.jpg "Raspberry Pi TFT"
+[raspberryPIZero]: https://github.com/DonBower/HamGoBox/blob/master/Images/RPiZWH.jpg "Raspberry Pi Zero"
+
+[PiTFT]: https://github.com/DonBower/HamGoBox/blob/master/Images/PiTFT.jpg "Raspberry Pi TFT"
