@@ -7,13 +7,13 @@ Download and install Raspberry Pi Imager to a computer with an SD card reader. P
 
 Install the [RaspberryPi Imager](https://www.raspberrypi.org/software/):
 
-Install on another Raspberry Pi with GUI: run `sudo apt install rpi-imager` in a terminal window
+* Install on another Raspberry Pi with GUI: run `sudo apt install rpi-imager` in a terminal window
 
-[Download for macOS](https://downloads.raspberrypi.org/imager/imager_1.5.dmg)
+* [Download for macOS](https://downloads.raspberrypi.org/imager/imager_1.5.dmg)
 
-[Download for Ubuntu_x86](https://downloads.raspberrypi.org/imager/imager_1.5_amd64.deb)
+* [Download for Ubuntu_x86](https://downloads.raspberrypi.org/imager/imager_1.5_amd64.deb)
 
-[Download for Windows](https://downloads.raspberrypi.org/imager/imager_1.5.exe)
+* [Download for Windows](https://downloads.raspberrypi.org/imager/imager_1.5.exe)
 
 [Imager]: https://github.com/DonBower/HamGoBox/blob/master/Images/RPiImager.webp "RaspberryPi Imager"
 
@@ -27,9 +27,12 @@ Re-plug the SD card into your computer (don't use your Pi yet!)
 Set up your wifi by copying the file [wpa_supplicant.conf](https://github.com/DonBower/HamGoBox/blob/master/Pi/wpa_supplicant.conf) to the sd card and then edit the file, replacing the <> values with your WiFi name and password.
 
 Create an empty file called ssh on the sd card.
+```
+touch /Volumes/boot/ssh
+```
 This enables the ssh protocol on the RaspberryPi, which is good, because there is no GUI on this machine.
 
-Plug the SD card into the Pi
+Eject the SD Card from your PC, and plug it into the Pi
 
 If you have an HDMI monitor we recommend connecting it so you can see that the Pi is booting OK
 
@@ -42,11 +45,12 @@ You can now ssh into raspberrypi.local
 
 # Set Hostname
 ```
-sudo echo hampi > /etc/Hostname
+sudo sed -i 's/raspberrypi/goboxpi/g' /etc/hosts
+sudo sed -i 's/raspberrypi/goboxpi/g' /etc/hostname
 sudo shutdown -r now
 ```
 
-The Pi will reboot so log back in with `ssh pi@hampi.local`
+The Pi will reboot so log back in with `ssh pi@goboxpi.local`
 
 # SSH Interface
 
@@ -58,11 +62,10 @@ ssh-keygen
 Now, log out of the session with `exit` and copy the public key on your linux based machine to the RaspberryPi, so you don't have to use a password each time you log in.
 
 ```
-ssh-copy-id -i ~/.ssh/mykey pi@hampi.local
+ssh-copy-id -i ~/.ssh/id_rsa.pub pi@goboxpi.local
 ```
 
 Copy the public SSH key to GitHub per the instructions documented in https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/<br>
-
 
 # Firmware/OS Updates
 
@@ -93,6 +96,7 @@ sudo timedatectl set-timezone America/Los_Angeles
 # Git/GitHub
 
 Then it's time to get git, and configure the git Global Variables <br />
+(note: use your own name and email...)
 
 ```
 sudo apt-get --assume-yes install git
@@ -124,17 +128,46 @@ sudo apt-get --assume-yes install python-smbus
 sudo apt-get --assume-yes install i2c-tools
 ```
 Then use `sudo raspi-config` to enable the Interface.
+Select `Interface Options>I2C>Yes`
+Then Select `Finish`
 
 View the connected devices:
 ```
 sudo i2cdetect -y 1
 ```
+Your output will look similar to the following:
+```
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: 10 -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- 29 -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- 53 -- -- -- -- -- -- -- -- -- -- -- 5f
+60: -- 61 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- 77                         
+```
+all of the non "--" entries represent a device detected.
 
 # Setup Tools
 
 ```
-sudo pip3 install --upgrade setuptools\
+sudo pip3 install --upgrade setuptools
 ```
+If above doesn't work, install pip3 and try again.
+
+```
+sudo apt-get install python3-pip
+```
+
+# Install Blinka from Adafruit
+```
+cd ~
+sudo pip3 install --upgrade adafruit-python-shell
+wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
+sudo python3 raspi-blinka.py
+```
+
 
 # From Adafruit
 
