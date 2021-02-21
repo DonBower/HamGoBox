@@ -119,7 +119,7 @@ cd ~/Developer/HamGoBox
 git pull
 ```
 
-# I2C Interface
+# I&#x00B2C Interface
 To setup the [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C)
 Interface, execute the following:
 
