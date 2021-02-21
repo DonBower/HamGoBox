@@ -4,8 +4,9 @@ Raspberry Pi Imager is the quick and easy way to install Raspberry Pi OS and oth
 Download and install Raspberry Pi Imager to a computer with an SD card reader. Put the SD card you'll use with your Raspberry Pi into the reader and run Raspberry Pi Imager.
 Install on another Raspberry Pi with GUI: run `sudo apt install rpi-imager` in a terminal window
 
+![alt text][Imager]
+
 Install the [RaspberryPi Imager](https://www.raspberrypi.org/software/):
-![alt text][Imager](https://www.raspberrypi.org/software/)
 
 [Download for macOS](https://downloads.raspberrypi.org/imager/imager_1.5.dmg)
 
