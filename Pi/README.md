@@ -26,7 +26,7 @@ Re-plug the SD card into your computer (don't use your Pi yet!)
 
 Set up your wifi by copying the file [wpa_supplicant.conf](https://github.com/DonBower/HamGoBox/blob/master/Pi/wpa_supplicant.conf) to the sd card and then edit the file, replacing the <> values with your WiFi name and password.
 
-For the Lite version, there should already be an empty file named ssh.
+Create an empty file called ssh on the sd card.
 This enables the ssh protocol on the RaspberryPi, which is good, because there is no GUI on this machine.
 
 Plug the SD card into the Pi
@@ -38,6 +38,31 @@ Plug in power to the Pi - you will see the green LED flicker a little. The Pi wi
 If you are running Windows on your computer, install Bonjour support so you can use .local names, you'll need to reboot Windows after installation
 
 You can now ssh into raspberrypi.local
+`ssh pi@raspberrypi.local`
+
+# Set Hostname
+```
+sudo echo hampi > /etc/Hostname
+sudo shutdown -r now
+```
+
+The Pi will reboot so log back in with `ssh pi@hampi.local`
+
+# SSH Interface
+
+Next order of business is get a ssh key. (Take all defaults)
+
+```
+ssh-keygen
+```
+Now, log out of the session with `exit` and copy the public key on your linux based machine to the RaspberryPi, so you don't have to use a password each time you log in.
+
+```
+ssh-copy-id -i ~/.ssh/mykey pi@hampi.local
+```
+
+Copy the public SSH key to GitHub per the instructions documented in https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/<br>
+
 
 # Firmware/OS Updates
 
@@ -56,43 +81,6 @@ sudo apt-get --assume-yes upgrade
 sudo apt-get --assume-yes dist-upgrade
 sudo shutdown -r now
 ```
-
-# SSH Interface
-
-Next order of business is get a ssh key. (Take all defaults)
-
-```
-ssh-keygen
-```
-
-Copy the public SSH key to GitHub per the instructions documented in https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/<br>
-
-Now is a perfect oppertunity to enable SSH, so that you can access your Pi via terminal from other devices.
-
-`sudo raspi-config`
-Interfacing Options > P2 Enable SSH > Enable SSH.
-<br>
-
-![alt text][Main]
-
-[Main]: https://github.com/DonBower/HamGoBox/blob/master/Pi/Interfacing%20Options.png "raspi-config Main Screen"
-
-<br>
-
-![alt text][P2SSH]
-
-[P2SSH]: https://github.com/DonBower/HamGoBox/blob/master/Pi/P2%20Enable%20SSH.png "raspi-config P2 Enable SSH"
-
-<br>
-
-![alt text][SSH]
-
-[SSH]: https://github.com/DonBower/HamGoBox/blob/master/Pi/Enable%20SSH.png "raspi-config Enable SSH"
-
-<br>
-
-Reboot with `sudo shutdown -r now`
-
 
 # Set Timezone
 
@@ -144,7 +132,9 @@ sudo i2cdetect -y 1
 
 # Setup Tools
 
-```sudo pip3 install --upgrade setuptools```
+```
+sudo pip3 install --upgrade setuptools\
+```
 
 # From Adafruit
 

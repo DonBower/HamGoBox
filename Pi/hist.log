@@ -1,0 +1,279 @@
+    1  ssh-keygen
+    2  cat .ssh/id_rsa.pub 
+    3  exit
+    4  sudo timedatectl set-timezone America/Los_Angeles
+    5  sudo apt-get install git
+    6  sudo apt-get --help
+    7  sudo apt-get --assu xxx
+    8  sudo apt-get --assume-yes xxx
+    9  sudo apt-get --assume-yes install xxx
+   10  sudo apt-get --assume-ye install xxx
+   11  sudo apt-get --assume-yes install git
+   12  mkdir ~/Developer
+   13  cd ~/Developer
+   14  git clone git@github.com:DonBower/HamGoBox.git
+   15  cd ~/Developer/HamGoBox
+   16  git pull origin master
+   17  sudo apt-get --assume-yes install python-smbus
+   18  sudo i2cdetect -y 1
+   19  sudo pip3 install --upgrade setuptools
+   20  sudo apt-get --assume-yes install python3-pip
+   21  sudo pip3 install --upgrade setuptools
+   22  cd ~
+   23  sudo pip3 install --upgrade adafruit-python-shell
+   24  sudo pip3 install --upgrade adafruit-python-shell click==7.0
+   25  git clone https://github.com/adafruit/Raspberry-Pi-Installer-Scripts.git
+   26  cd Raspberry-Pi-Installer-Scripts
+   27  sudo python3 adafruit-pitft.py --display=35r --rotation=90 --install-type=console
+   28  history | grep i2c
+   29  sudo i2cdetect -y 1
+   30  ls -l
+   31  cd Developer/
+   32  cd HamGoBox/
+   33  ll
+   34  ls -l
+   35  cd
+   36  sudo pip3 install adafruit-circuitpython-gps
+   37  sudo pip3 install adafruit-circuitpython-bmp3xx
+   38  sudo pip3 install adafruit-circuitpython-hts221
+   39  cd Developer/HamGoBox/Console/
+   40  dir
+   41  cat dspout.py 
+   42  ls -l
+   43  ./dspout.py 
+   44  git pull
+   45  ./dspout.py 
+   46  python3 --version
+   47  python3
+   48  python3 dspout.py 
+   49  nano dspout.py 
+   50  python3 dspout.py 
+   51  nano dspout.py 
+   52  python3 dspout.py 
+   53  python3 dspout.py > /dev/tty1
+   54  git pull
+   55  git reset --hard
+   56  git pull
+   57  python3 dspout.py > /dev/tty1
+   58  git pull
+   59  python3 dspout.py > /dev/tty1
+   60  git pull
+   61  python3 dspout.py > /dev/tty1
+   62  git pull
+   63  python3 dspout.py > /dev/tty1
+   64  git pull
+   65  python3 dspout.py > /dev/tty1
+   66  git pull
+   67  python3 dspout.py > /dev/tty1
+   68  git pull
+   69  python3 dspout.py > /dev/tty1
+   70  cd
+   71  sudo pip3 install adafruit-circuitpython-tsl2591
+   72  cd Developer/HamGoBox/
+   73  git pull 
+   74  cd TSL2591/
+   75  ls -l
+   76  python3 simpleTest.py 
+   77  history | grep detect
+   78  sudo i2cdetect -y 1
+   79  python3 simpleTest.py 
+   80  python3
+   81  git pull
+   82  python3 simpleTest.py 
+   83  python3
+   84  git pull
+   85  python3 simpleTest.py 
+   86  cd ../Console/
+   87  python3 dspout.py 
+   88  git pull
+   89  python3 dspout.py 
+   90  cd
+   91  ls -l
+   92  sudo pip3 install adafruit-circuitpython-ltr390
+   93  python3
+   94  cd Developer/HamGoBox/Console/
+   95  python3 dspout.py 
+   96  sudo i2cdetect -y 1
+   97  python3
+   98  git pull
+   99  python3 dspout.py 
+  100  git pull
+  101  python3 dspout.py 
+  102  git pull
+  103  python3 dspout.py 
+  104  python3 dspout.py > /dev/tty1
+  105  cd
+  106  sudo pip3 install adafruit-circuitpython-scd30
+  107  python3
+  108  cd Developer/HamGoBox/
+  109  git pull
+  110  cd Console/
+  111  python3 dspout.py 
+  112  sudo i2cdetect -y 1
+  113  python3 dspout.py 
+  114  git pull
+  115  python3 dspout.py 
+  116  git pull
+  117  python3 dspout.py 
+  118  git pull
+  119  python3 dspout.py 
+  120  python3
+  121  git pull
+  122  python3 dspout.py 
+  123  git pull
+  124  python3 dspout.py 
+  125  git pull
+  126  python3 dspout.py 
+  127  python3
+  128  git pull
+  129  python3 dspout.py 
+  130  python3 dspout.py > /dev/tty1
+  131  git pull
+  132  python3 dspout.py > /dev/tty1
+  133  git pull
+  134  python3 dspout.py > /dev/tty1
+  135  exit
+  136  sudo apt-get install gnupg1 apt-transport-https dirmngr
+  137  export INSTALL_KEY=379CE192D401AB61
+  138  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $INSTALL_KEY
+  139  cat /etc/hostname
+  140  Developer/HamGoBox/Console/dspout.py 
+  141  ls -l
+  142  cat dspout.py.errlog.txt 
+  143  /home/pi/Developer/Console/dspout.py
+  144  cd Developer/HamGoBox/
+  145  git pull
+  146  sudo su
+  147  sudo reboot
+  148  ps -ef | grep dspout.py
+  149  kill -9 609
+  150  kill -9 276
+  151  sudo kill -9 609
+  152  ps -ef | grep dspout.py
+  153  cd Developer/HamGoBox/Console/
+  154  git pull
+  155  sudo kill -9 666
+  156  git pull
+  157  ps -ef | grep dspout.py
+  158  sudo kill -9 772
+  159  git pull
+  160  ps -ef | grep dspout.py
+  161  sudo kill -9 1000
+  162  git pull
+  163  ps -ef | grep dspout.py
+  164  sudo kill -9 1063
+  165  git pull
+  166  ps -ef | grep dspout.py
+  167  sudo kill -9 1121
+  168  git pull
+  169  ps -ef | grep dspout.py
+  170  sudo kill -9 1223
+  171  git pull
+  172  ps -ef | grep dspout.py
+  173  sudo kill -9 7041
+  174  ./dspout.py 
+  175  git pull
+  176  python3
+  177  ll
+  178  ls -l
+  179  cat data.txt 
+  180  jq . data.txt 
+  181  sudo apt-get install jq
+  182  jq . data.txt 
+  183  git pull
+  184  ps -ef | grep dspout.py
+  185  sudo kill -9 23588
+  186  /home/pi/Developer/HamGoBox/Console/dspout.py
+  187  git pull
+  188  /home/pi/Developer/HamGoBox/Console/dspout.py
+  189  git pull
+  190  /home/pi/Developer/HamGoBox/Console/dspout.py
+  191  git pull
+  192  /home/pi/Developer/HamGoBox/Console/dspout.py
+  193  git pull
+  194  /home/pi/Developer/HamGoBox/Console/dspout.py
+  195  git pull
+  196  /home/pi/Developer/HamGoBox/Console/dspout.py
+  197  git pull
+  198  /home/pi/Developer/HamGoBox/Console/dspout.py
+  199  git pull
+  200  /home/pi/Developer/HamGoBox/Console/dspout.py
+  201  ls -l ~
+  202  jq . ~/bmpData.json 
+  203  git pull
+  204  jq . ~/bmpData.json 
+  205  /home/pi/Developer/HamGoBox/Console/dspout.py
+  206  rm ~/bmpData.json 
+  207  /home/pi/Developer/HamGoBox/Console/dspout.py
+  208  git pull
+  209  /home/pi/Developer/HamGoBox/Console/dspout.py
+  210  jq . ~/bmpData.json 
+  211  git pull
+  212  /home/pi/Developer/HamGoBox/Console/dspout.py
+  213  python3
+  214  jq . ~/bmpData.json 
+  215  git pull
+  216  /home/pi/Developer/HamGoBox/Console/dspout.py
+  217  git pull
+  218  /home/pi/Developer/HamGoBox/Console/dspout.py
+  219  python3
+  220  git pull
+  221  /home/pi/Developer/HamGoBox/Console/dspout.py
+  222  while true; do jq . ~/bmpData.json ; sleep 5s; done
+  223  git pull
+  224  ps -ef | grep dspout.py
+  225  sudo kill -9 4100
+  226  while true; do jq . ~/bmpData.json ; sleep 5s; done
+  227  /home/pi/Developer/HamGoBox/Console/dspout.py
+  228  git pull
+  229  /home/pi/Developer/HamGoBox/Console/dspout.py
+  230  while true; do jq . ~/bmpData.json ; sleep 5s; done
+  231  git pull
+  232  rm ~/bmpData.json 
+  233  while true; do jq . ~/bmpData.json ; sleep 5s; done
+  234  ps -ef | grep dspout.py
+  235  sudo kill -9 4760
+  236  rm ~/bmpData.json 
+  237  while true; do jq . ~/bmpData.json ; sleep 5s; done
+  238  cat bmpData.json 
+  239  df -h
+  240  jq keys bmpData.json 
+  241  echo '{}' > bmpData.json 
+  242  ls -l
+  243  echo '{}' > bmpData.json 
+  244  sudo echo '{}' > bmpData.json 
+  245  sudo chmod 666 bmpData.json 
+  246  ls -l
+  247  sudo echo '{}' > bmpData.json 
+  248  cat bmpData.json 
+  249  ps -ef | grep dspout
+  250  sudo kill -9 270
+  251  sudo kill -9 276
+  252  ps -ef | grep Console
+  253  /home/pi/Developer/HamGoBox/Console/dspout.py 
+  254  cd Developer/HamGoBox/Console/
+  255  git pull
+  256  ./dspout.py 
+  257  git pull
+  258  jq . ~/bmpData.json 
+  259  ./dspout.py 
+  260  jq . ~/bmpData.json 
+  261  ./dspout.py 
+  262  git pull
+  263  ./dspout.py 
+  264  echo '{}' > ~/bmpData.json 
+  265  ./dspout.py 
+  266  cat ~/bmpData.json 
+  267  jq . ~/bmpData.json 
+  268  ls -l
+  269  cd
+  270  cd Developer/
+  271  ls -l
+  272  git clone https://github.com/adafruit/Adafruit_CircuitPython_LTR390.git
+  273  cd Adafruit_CircuitPython_LTR390/
+  274  find uvs
+  275  exit
+  276  history
+  277  history | grep host
+  278  cat /etc/hostname
+  279  history > hist.log
