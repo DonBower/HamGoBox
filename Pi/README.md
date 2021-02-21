@@ -119,19 +119,46 @@ cd ~/Developer/HamGoBox
 git pull
 ```
 
-# I&#x00B2;C Interface
-To setup the [I2C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C)
-Interface, execute the following:
+# Setup Tools
 
 ```
-sudo apt-get --assume-yes install python-smbus
-sudo apt-get --assume-yes install i2c-tools
+sudo pip3 install --upgrade setuptools
 ```
-Then use `sudo raspi-config` to enable the Interface.
-Select `Interface Options>I2C>Yes`
-Then Select `Finish`
+If above doesn't work, install pip3 and try again.
 
-View the connected devices:
+```
+sudo apt-get install python3-pip
+```
+Adafruit put together a script to easily make sure your Pi is correctly configured and install Blinka. It requires just a few commands to run. Most of it is installing the dependencies.
+```
+cd ~
+sudo pip3 install --upgrade adafruit-python-shell
+wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
+sudo python3 raspi-blinka.py
+```
+select Y for any prompts.
+after the RaspberryPi has rebooted, run this Test to confirm all the interfaces were installed and enabled
+
+The [I&#x00B2;C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C) and spi interfaces should now be installed and enabled.
+
+
+You can run the following command to verify:
+```
+python3 Developer/HamGoBox/Pi/blinkatest.py
+```
+
+You can run the following command to verify:
+```
+ls /dev/i2c* /dev/spi*
+```
+You should see the response
+```
+/dev/i2c-1 /dev/spidev0.0 /dev/spidev0.1
+```
+
+# Python SMBUS and I&#x00B2;C Interface tools
+To view the [I&#x00B2;C (Inter-Integrated Circuit)](https://en.wikipedia.org/wiki/I%C2%B2C)
+devices that are connected, execute the following:
 ```
 sudo i2cdetect -y 1
 ```
@@ -149,16 +176,37 @@ Your output will look similar to the following:
 ```
 all of the non "--" entries represent a device detected.
 
-# Setup Tools
+
+# Install CircuitPython Libraries for the sensors:
 
 ```
-sudo pip3 install --upgrade setuptools
+sudo pip3 install adafruit-circuitpython-gps \
+ adafruit-circuitpython-bmp3xx \
+ adafruit-circuitpython-hts221 \
+ adafruit-circuitpython-tsl2591 \
+ adafruit-circuitpython-ltr390 \
+ adafruit-circuitpython-scd30
 ```
-If above doesn't work, install pip3 and try again.
+
+Test Which sensors are installed:
+```
+python3 ~/Developer/HamGoBox/Pi/sensortest.py
+```
+
+# Install TFT Display as the console.
 
 ```
-sudo apt-get install python3-pip
+cd ~
+sudo pip3 install --upgrade adafruit-python-shell click==7.0
+sudo apt-get install -y git
+git clone https://github.com/adafruit/Raspberry-Pi-Installer-Scripts.git
+cd Raspberry-Pi-Installer-Scripts
+sudo python3 adafruit-pitft.py --display=35r --rotation=90 --install-type=console
 ```
+
+
+
+
 
 # Install Blinka from Adafruit
 ```
@@ -167,47 +215,3 @@ sudo pip3 install --upgrade adafruit-python-shell
 wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
 sudo python3 raspi-blinka.py
 ```
-
-
-# From Adafruit
-
-
-Installing CircuitPython Libraries on Raspberry Pi
- Like
-CircuitPython libraries and adafruit-blinka will work on any Raspberry Pi board! That means the original 1, the Pi 2, Pi 3, Pi 4, Pi Zero, or even the compute module.
-Prerequisite Pi Setup!
-In this page we'll assume you've already gotten your Raspberry Pi up and running and can log into the command line
-
-Here's the quick-start for people with some experience:
-
-Download the latest Raspberry Pi OS or Raspberry Pi OS Lite to your computer
-Burn the OS image to your MicroSD card using your computer
-Re-plug the SD card into your computer (don't use your Pi yet!) and set up your wifi connection by editing supplicant.conf
-Activate SSH support
-Plug the SD card into the Pi
-If you have an HDMI monitor we recommend connecting it so you can see that the Pi is booting OK
-Plug in power to the Pi - you will see the green LED flicker a little. The Pi will reboot while it sets up so wait a good 10 minutes
-If you are running Windows on your computer, install Bonjour support so you can use .local names, you'll need to reboot Windows after installation
-You can then ssh into raspberrypi.local
-The Pi Foundation has tons of guides as well
-
-We really really recommend the lastest Raspberry Pi OS only. If you have an older Raspberry Pi OS install, run "sudo apt-get --assume-yes update" and "sudo apt-get --assume-yes upgrade" to get the latest OS!
-Update Your Pi and Python
-Run the standard updates:
-
-```
-sudo apt-get --assume-yes update
-sudo apt-get --assume-yes upgrade
-sudo apt-get --assume-yes install python3-pip
-sudo pip3 install --upgrade setuptools
-cd ~
-sudo pip3 install --upgrade adafruit-python-shell click==7.0
-wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
-sudo python3 raspi-blinka.py
-```
-
-ls /dev/i2c* /dev/spi*
-
-You should see the response
-
-/dev/i2c-1 /dev/spidev0.0 /dev/spidev0.1
