@@ -1,3 +1,33 @@
+# Install the RaspberryPi Imager
+Raspberry Pi Imager is the quick and easy way to install Raspberry Pi OS and other operating systems to a microSD card, ready to use with your Raspberry Pi. [Watch their 40-second video](https://www.youtube.com/watch?v=J024soVgEeM) to learn how to install an operating system using Raspberry Pi Imager.
+
+Download and install Raspberry Pi Imager to a computer with an SD card reader. Put the SD card you'll use with your Raspberry Pi into the reader and run Raspberry Pi Imager.
+Install on another Raspberry Pi with GUI: run `sudo apt install rpi-imager` in a terminal window
+[Download for macOS](https://downloads.raspberrypi.org/imager/imager_1.5.dmg)
+[Download for Ubuntu_x86](https://downloads.raspberrypi.org/imager/imager_1.5_amd64.deb)
+[Download for Windows](https://downloads.raspberrypi.org/imager/imager_1.5.exe)
+
+
+Install the [RaspberryPi Imager]()
+![alt text][Imager]
+
+[Imager]: https://github.com/DonBower/HamGoBox/blob/master/Images/RPiImager.webp "RaspberryPi Imager"
+
+# Install RasbianOS Lite
+Here's the quick-start for people with some experience:
+
+Download the latest Raspberry Pi OS or Raspberry Pi OS Lite to your computer
+Burn the OS image to your MicroSD card using your computer
+Re-plug the SD card into your computer (don't use your Pi yet!) and set up your wifi connection by editing supplicant.conf
+Activate SSH support
+Plug the SD card into the Pi
+If you have an HDMI monitor we recommend connecting it so you can see that the Pi is booting OK
+Plug in power to the Pi - you will see the green LED flicker a little. The Pi will reboot while it sets up so wait a good 10 minutes
+If you are running Windows on your computer, install Bonjour support so you can use .local names, you'll need to reboot Windows after installation
+You can then ssh into raspberrypi.local
+
+
+
 # Connect to network
 
 First order of business, was to connect to my WiFi, which had to be done via the KVM Interface.  Click on the Network Interface Icon, which is two Xs and just to the left of the speaker icon, to show the available WiFi Routers.
