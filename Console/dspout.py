@@ -205,8 +205,8 @@ def printGPS():
     if not isinstance(thisSatCount, int):
         thisSatCount = 0
 
-    thisLat = 34
-    thisLon = -117
+#    thisLat = 34
+#    thisLon = -117
     print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40], end='')
     print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40], end='')
 #    print(f'Lat/Lon ({thisSatCount:02d}).......: {getSexagesimal(thisLat,["N","S"]):16s} / {getSexagesimal(thisLon,["N","S"]):17s}                   '[:40], end='')
@@ -329,14 +329,14 @@ while True:
     if not divmod(int(datetime.now().strftime("%S")),6)[1]:
         if hasGPS:
             printGPS()
-        if hasBMP:
-            printBMP()
         if hasHTS:
             printHTS()
+        if hasBMP:
+            printBMP()
+        if hasSCD:
+            printSCD()
         if hasLTR:
             printLTR()
         if hasTSL:
             printTSL()
-        if hasSCD:
-            printSCD()
     time.sleep(1)
