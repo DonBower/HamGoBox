@@ -205,8 +205,8 @@ def printGPS():
     if not isinstance(thisSatCount, int):
         thisSatCount = 0
 
-    thisLat = 34
-    thisLon = -117
+#    thisLat = 34
+#    thisLon = -117
 
     print(f'Maidenhead.........: {getMaidenHead(thisLat, thisLon):8s}                   '[:40], end='')
     print(f'Lat/Lon ({thisSatCount:02d}).......: {thisLat:07.4f} / {thisLon:08.4f}                   '[:40], end='')
