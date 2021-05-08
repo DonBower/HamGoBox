@@ -323,18 +323,22 @@ def printTSL():
 def printLight():
     if hasTSL:
         thisIR       = tsl.infrared
-        thisVis      = tsl.visible
+        thisVis      = tsl.visible/1000
     else:
         thisIR       = 0
         thisVis      = 0
-
     if hasLTR:
         thisUV       = ltr.uvs
         thisUVi      = ltr.uvi
         if thisVis == 0:
-            thisVis  = ltr.lux
+            thisVis  = ltr.lux * 1000
+    if hasTSL and hasLTR:
+        print(f'IR/Visable/UVI.....: {thisIR:1,d} / {thisVis:1,.0f} / {thisUV:1,d}                   '[:40])
+    elif hasLTR:
+        print(f'Visable/UVI........: {thisVis:1,.0f} / {thisUV:1,d}                   '[:40])
+    elif hasTSL:
+        print(f'IR/Visable.........: {thisIR:1,d} / {thisVis:1,.0f}                   '[:40])
 
-    print(f'IR/Visable/UVI.....: {thisIR:1,d} / {thisVis:1,d} / {thisUV:1,d}                   '[:40])
 
 def printSCD():
     global thisCO2
