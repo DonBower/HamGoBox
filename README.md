@@ -4,6 +4,14 @@ Ham Radio Go Box
 ## Objectives:
 The Purpose of this Repository is to document the build of the Ham Radio Go Box, which provides for an encapsulated radio that is already hooked up, and requires only power and an antenna.
 
+## Status:
+While the display and python3 code are working very well, there is one piece that needs attention: the humidity trend indicator (↑, →, ↓), needs attention.  it should not be changing from rising, stable, falling more than once an hour, but it changes mid minute.
+
+Additionally, I need better documentation to set up the sensors.
+Adafruit has made it very easy to install, and I need to reflect that in this repo.
+
+Lastly, again on the documentation front, the STL files for the 3D printed objects need to be better documented.
+
 ## Components:
 ||||
 |:--------:|:---------|:------------------------------------------------------|
@@ -19,7 +27,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 |![alt text][wmr4004U]|[WMR-4004U](https://www.hamradio.com/detail.cfm?pid=H0-009867)|Distributes fused power from Power Gate to various pieces of equipment, including Radio, Raspberry Pi, and Monitor.|
 |![alt text][nanoIO]|[Keyer](https://hamprojects.info/mortty/)|This Interface is used to enable True Keyed CW when using fldigi. This is a DIY kit, that requires soldering.|
 |![alt text][monitor]|[Monitor](https://smile.amazon.com/gp/product/B07NNXH2SS/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&psc=1)|13 inch high res monitor.|
-|![alt text][raspberryPIZero]|[Computer](https://www.adafruit.com/product/3708)|This half credit card size computer will run all of the software, it has a USB port, a 40 pin GPIO, and and sd-micro for storage.|
+|![alt text][raspberryPI400]|[Computer](https://www.adafruit.com/product/4796)|Yea, that's right Computer. With built in Keyboard.  or peraps the other way around. This computer in a keyboard will run all of the software, it has a USB port, a 40 pin GPIO, and and sd-micro for storage. It will run the software connected to the radio.|
+|![alt text][raspberryPIZero]|[Computer](https://www.adafruit.com/product/3708)|This half credit card size computer will run all of the environmental software, it has a USB port, a 40 pin GPIO, and and sd-micro for storage, and it's connected to a boat load of sensors.|
 |![alt text][PiTFT]|[Display](https://www.adafruit.com/product/2441)|This Display is configured as the Console for the RaspberryPi. It will display all the Environmental information.|
 |![alt text][GPS]|[GPS Sensor](https://www.adafruit.com/product/4415)|Used to determine precise Latitude and Longitude. From this we can derive the Maidenhead Gridsquare.|
 |![alt text][SCD-30]|[CO2 Sensor](https://www.adafruit.com/product/4867)|The SCD-30 is an NDIR sensor, which is a 'true' CO2 sensor, that will tell you the CO2 PPM (parts-per-million) composition of ambient air. Unlike the SGP30, this sensor isn't approximating it from VOC gas concentration - it really is measuring the CO2 concentration. Perfect for environmental sensing, scientific experiments, air quality and ventilation studies, and more.|
@@ -78,6 +87,8 @@ The Purpose of this Repository is to document the build of the Ham Radio Go Box,
 [nanoIO]: https://github.com/DonBower/HamGoBox/blob/master/Images/nanoIOSmall.jpg "CW Keyer"
 
 [raspberryPI]: https://github.com/DonBower/HamGoBox/blob/master/Images/RaspberryPiSmall.jpg "Raspberry Pi"
+
+[raspberryPI400]: https://github.com/DonBower/HamGoBox/blob/master/Images/Pi400.jpg "Raspberry Pi 400"
 
 [monitor]: https://github.com/DonBower/HamGoBox/blob/master/Images/monitorSmall.jpg "Monitor"
 
