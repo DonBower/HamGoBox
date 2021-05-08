@@ -282,6 +282,7 @@ def printBMP():
         else:
             thisHPATrend = '→'
 
+
     thisMinData['HPATotal'] = thisMinHPA
     thisMinData['Samples'] = samplesCount
     thisMinData['Trend'] = thisHPATrend
@@ -344,7 +345,16 @@ def printSCD():
     global thisCO2
     if scd.data_available:
         thisCO2      = scd.CO2
-    print(f'CO2................: {thisCO2:4,.1f}ppm                   '[:40], end='')
+    thisCO2Lvl       = '↓'
+    if thisCO2 > 400:
+        thisCO2Lvl   = '⬊'
+    elif thisCO2 > 1000:
+        thisCO2Lvl   = '→'
+    elif thisCO2 > 2000:
+        thisCO2Lvl   = '⬈'
+    elif thisCO2 > 5000:
+        thisHPATrend = '↑'
+    print(f'CO2...............{thisCO2Lvl:1s}: {thisCO2:4,.1f}ppm                   '[:40], end='')
 
 clearScreen()
 while True:
