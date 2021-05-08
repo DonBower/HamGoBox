@@ -320,6 +320,22 @@ def printTSL():
     print(f'Visable Light......: {thisVis:4,d}                   '[:40])
     print(f'Infrared Light.....: {thisIR:1,d}                   '[:40])
 
+def printLight():
+    if hasTSL:
+        thisIR       = tsl.infrared
+        thisVis      = tsl.visible
+    else:
+        thisIR       = 0
+        thisVis      = 0
+
+    if hasLTR:
+        thisUV       = ltr.uvs
+        thisUVi      = ltr.uvi
+        if thisVis == 0:
+            thisVis  = ltr.lux
+
+    print(f'IR/Visable/UVI.....: {thisIR:1,d} / {thisVis:1,d} / {thisUV:1,d}                   '[:40])
+
 def printSCD():
     global thisCO2
     if scd.data_available:
@@ -340,8 +356,10 @@ while True:
             printBMP()
         if hasSCD:
             printSCD()
-        if hasLTR:
-            printLTR()
-        if hasTSL:
-            printTSL()
+        if hasLTR or hasTSL:
+            printLight()
+#        if hasLTR:
+#            printLTR()
+#        if hasTSL:
+#            printTSL()
     time.sleep(1)
