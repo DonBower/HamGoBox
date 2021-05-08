@@ -127,6 +127,7 @@ print("SCD30 Sensor Present: " + str(hasSCD))
 #os.system("echo clear > /dev/tty1")
 def clearScreen():
     print(chr(27) + "[2J")
+
 #
 # Print Timestamp
 #
@@ -134,6 +135,7 @@ def printTimeStamp():
     now = datetime.now()
     timeStampNow = now.strftime("%d/%m/%Y %H:%M:%S")
     print("Timestamp..........: " + timeStampNow)
+
 #
 # Convert Decimal Degrees to degrees, minutes, and seconds
 #
