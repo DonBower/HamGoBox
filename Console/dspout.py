@@ -345,16 +345,23 @@ def printSCD():
     global thisCO2
     if scd.data_available:
         thisCO2      = scd.CO2
-    thisCO2Lvl       = '↓'
+#    thisCO2Lvl       = '.↓'
+    thisCO2Lvl       = '.....(Low)'
     if thisCO2 > 400:
-        thisCO2Lvl   = '⬊'
+#        thisCO2Lvl   = '⬊'
+#        thisCO2Lvl       = '↓→'
+        thisCO2Lvl   = '..(Normal)'
     elif thisCO2 > 1000:
-        thisCO2Lvl   = '→'
+#        thisCO2Lvl   = '→→'
+        thisCO2Lvl   = '(Elevated)'
     elif thisCO2 > 2000:
-        thisCO2Lvl   = '⬈'
+#        thisCO2Lvl   = '⬈'
+#        thisCO2Lvl   = '↑→'
+        thisCO2Lvl   = '....(High)'
     elif thisCO2 > 5000:
-        thisHPATrend = '↑'
-    print(f'CO2...............{thisCO2Lvl:1s}: {thisCO2:4,.1f}ppm                   '[:40], end='')
+#        thisCO2Lvl   = '↑↑'
+        thisCO2Lvl   = '.(Danger!)'
+    print(f'CO2......{thisCO2Lvl:10s}: {thisCO2:4,.1f}ppm                   '[:40], end='')
 
 clearScreen()
 while True:
