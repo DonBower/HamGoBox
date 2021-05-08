@@ -303,8 +303,10 @@ def printHTS():
 
 def printLTR():
     thisUV           = ltr.uvs
-    thisUVi          = int(round((thisUV / 95), 0))
-    thisAmbient      = ltr.light
+#    thisUVi          = int(round((thisUV / 95), 0))
+    thisUVi          = ltr.ubi
+#    thisAmbient      = ltr.light
+    thisAmbient      = ltr.lux
     print(f'UVa EMF / UVI......: {thisUV:1,d}µW/cm^2 / {thisUV:1,d}UVi                   '[:40])
     print(f'Ambient Light......: {thisAmbient:1,d}                   '[:40])
 
