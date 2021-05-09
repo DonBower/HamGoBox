@@ -43,9 +43,7 @@ Lastly, again on the documentation front, the STL files for the 3D printed objec
 
 ---
 ## Future Wants
-* GPS
-* Weather Conditions - temp/humidity, rain? wind?
-* VOC Detector
+* Weather Conditions -rain? wind?
 * Power Monitor V/A/W/Batt lifetime
 * CAT Monitor
 * Ext Speaker
