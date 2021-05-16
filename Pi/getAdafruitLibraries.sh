@@ -40,3 +40,23 @@ while read thisLibrary; do
     sudo pip3 install ${thisLibrary}
   fi
 done < /tmp/needed
+
+sudo pip3 list --format json | \
+  jq --raw-output \
+    '.[] |
+    [.name, .version] |
+    @tsv' | \
+  grep --ignore-case \
+    --regexp="^adafruit" \
+      > /tmp/upgrade.tsv
+
+clear
+
+echo "The Following Libraries were updated:"
+echo ""
+diff --side-by-side \
+  --suppress-common-lines \
+  /tmp/installed.tsv /tmp/upgrade.tsv | \
+   awk '{print $4","$2","$5}' > /tmp/upgraded.csv
+
+ echo "Library,From,To" | cat - /tmp/upgraded.csv | csvlook
