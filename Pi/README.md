@@ -215,3 +215,24 @@ sudo pip3 install --upgrade adafruit-python-shell
 wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
 sudo python3 raspi-blinka.py
 ```
+
+# Get/Update Libraries from Adafruit
+Run the following command to get the latest Libraries.
+```
+./getAdafruitLibraries.sh
+```
+
+It will product output that ends like this:
+```
+The Following Libraries were updated:
+
+| Library                        | From   | To     |
+| ------------------------------ | ------ | ------ |
+| Adafruit-Blinka                | 5.13.0 | 6.9.1  |
+| adafruit-circuitpython-bmp3xx  | 1.3.2  | 1.3.6  |
+| adafruit-circuitpython-gps     | 3.6.7  | 3.9.0  |
+| adafruit-circuitpython-hts221  | 1.1.2  | 1.1.5  |
+| adafruit-circuitpython-scd30   | 2.0.0  | 2.1.0  |
+| adafruit-circuitpython-tsl2591 | 1.2.5  | 1.3.0  |
+| Adafruit-PlatformDetect        | 2.28.0 | 3.13.1 |
+```
