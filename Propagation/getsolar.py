@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+import os
+from os import path
+import sys
 import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime
@@ -13,38 +16,8 @@ def getRSS(xmlFile):
     # creating HTTP response object from given url
     resp = requests.get(url)
     # saving the xml file
-#    thisFile = open(xmlFile, 'wb')
-#    thisFile.write(resp.content)
     with open(xmlFile, 'wb') as f:
         f.write(resp.content)
-
-tree = ET.parse(xmlFile)
-# get root element
-root = tree.getroot()
-
-fileDate=root.findall('./channel/item/solar/solardata/updated')[0].text
-
-fileDate=' 23 May 2021 1701 GMT'
-rssDate=datetime.strptime(fileDate," %d %b %Y %H%M %Z")
-freshDate = rssDate + timedelta(hours = 12)
-now = datetime.now()
-
-if now > freshDate:
-    print('getNewRSSFeed()')
-
-    getNewRSSFeed()
-
-
-
-a = datetime.datetime.now()
-b = datetime.datetime(2015,8,25,0,0,0,0)
-b = datetime.datetime(strftime("%Y,%m,%d,%H,%M,%S",time.strptime(fileDate," %d %b %Y %H%M %Z")))
-c = a - b
-c.total_seconds()
-#87062.729491
-c.total_seconds() > 3*3600
-#True
-
 
 def bandIndex(thisBand):
     switcher={
@@ -83,6 +56,9 @@ def printSolar():
     print(f'MUF={thisMUF:5s}|80m-40m|30m-20m|17m-15m|12m-10m                    '[:40])
     print(f'Day      |{theseConditions[0][0]:7s}|{theseConditions[0][1]:7s}|{theseConditions[0][2]:7s}|{theseConditions[0][3]:7s}                    '[:40])
     print(f'Night    |{theseConditions[1][0]:7s}|{theseConditions[1][1]:7s}|{theseConditions[1][2]:7s}|{theseConditions[1][3]:7s}                    '[:40])
+
+if not path.exists(xmlFile) or now > freshDate:
+    print('getRSS()')
 
 getRSS(xmlFile)
 loadRSS(xmlFile)
