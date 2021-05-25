@@ -57,6 +57,8 @@ def printSolar():
     print(f'Day      |{theseConditions[0][0]:7s}|{theseConditions[0][1]:7s}|{theseConditions[0][2]:7s}|{theseConditions[0][3]:7s}                    '[:40])
     print(f'Night    |{theseConditions[1][0]:7s}|{theseConditions[1][1]:7s}|{theseConditions[1][2]:7s}|{theseConditions[1][3]:7s}                    '[:40])
 
+now = datetime.now()
+
 if not path.exists(xmlFile) or now > freshDate:
     print('getRSS()')
 
