@@ -9,6 +9,8 @@ from datetime import timedelta
 
 
 xmlFile = '/tmp/solarrss.xml'
+now = datetime.now()
+freshDate = now + timedelta(hours = 12)
 
 def getRSS(xmlFile):
     # url of rss feed
@@ -36,11 +38,16 @@ def timeIndex(thisTime):
     return switcher.get(thisTime,"Invalid Time")
 
 def parseRSS(xmlFile):
-    global thisMUF, theseConditions
+    global thisMUF, theseConditions, freshDate
     # create element tree object
     tree = ET.parse(xmlFile)
     # get root element
     root = tree.getroot()
+
+    fileDate=root.findall('./channel/item/solar/solardata/updated')[0].text
+    rssDate=datetime.strptime(fileDate," %d %b %Y %H%M %Z")
+    freshDate = rssDate + timedelta(hours = 12)
+
     solarData = root.findall('./channel/item/solar/solardata')
     thisMUF=root.findall('./channel/item/solar/solardata/muf')[0].text
     # create empty list for news items
@@ -59,10 +66,18 @@ def printSolar():
 
 now = datetime.now()
 
-if not path.exists(xmlFile) or now > freshDate:
-    print('getRSS()')
+if not path.exists(xmlFile):
+    getRSS(xmlFile)
 
-getRSS(xmlFile)
 loadRSS(xmlFile)
 parseRSS(xmlFile)
+
+#    if now > freshDate:
+
+#    print('getRSS()')
+
+
+#getRSS(xmlFile)
+#loadRSS(xmlFile)
+#parseRSS(xmlFile)
 printSolar()
