@@ -12,15 +12,6 @@ xmlFile = '/tmp/solarrss.xml'
 now = datetime.now()
 freshDate = now + timedelta(hours = 12)
 
-def getRSS(xmlFile):
-    # url of rss feed
-    url = 'http://www.hamqsl.com/solarrss.php'
-    # creating HTTP response object from given url
-    resp = requests.get(url)
-    # saving the xml file
-    with open(xmlFile, 'wb') as f:
-        f.write(resp.content)
-
 def bandIndex(thisBand):
     switcher={
         '80m-40m':0,
@@ -36,6 +27,15 @@ def timeIndex(thisTime):
             'night':1
          }
     return switcher.get(thisTime,"Invalid Time")
+
+def getRSS(xmlFile):
+    # url of rss feed
+    url = 'http://www.hamqsl.com/solarrss.php'
+    # creating HTTP response object from given url
+    resp = requests.get(url)
+    # saving the xml file
+    with open(xmlFile, 'wb') as f:
+        f.write(resp.content)
 
 def parseRSS(xmlFile):
     global thisMUF, theseConditions, freshDate
@@ -69,7 +69,6 @@ now = datetime.now()
 if not path.exists(xmlFile):
     getRSS(xmlFile)
 
-loadRSS(xmlFile)
 parseRSS(xmlFile)
 
 #    if now > freshDate:
