@@ -14,3 +14,10 @@ To start the four programs automatically on boot (useful for use when you have n
 ```
 @reboot /home/pi/Developer/HamGoBox/Console/dspout.sh 1> /home/pi/dspout.sh.errlog.txt 2>&1
 ```
+
+# Display
+Here is the display:
+
+![alt text][hampiwx]
+
+[hampiwx]: https://github.com/DonBower/HamGoBox/blob/master/Images/IMG_0802.jpeg "HamPiWX Console"
