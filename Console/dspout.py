@@ -419,6 +419,8 @@ def printSolar():
 if not path.exists(xmlFile):
     getRSS(xmlFile)
 
+parseRSS(xmlFile)
+
 clearScreen()
 while True:
 #    sys.stdout.write("\x1b[2J\x1b[H") # Position to top
