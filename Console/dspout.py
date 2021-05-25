@@ -442,8 +442,8 @@ while True:
 #            printLTR()
 #        if hasTSL:
 #            printTSL()
-    if now > freshDate:
-        getRSS(xmlFile)
-        parseRSS(xmlFile)
-    printSolar()
+        if now > freshDate:
+            getRSS(xmlFile)
+            parseRSS(xmlFile)
+        printSolar()
     time.sleep(1)
