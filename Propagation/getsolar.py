@@ -69,9 +69,9 @@ now = datetime.now()
 if not path.exists(xmlFile):
     getRSS(xmlFile)
 
-parseRSS(xmlFile)
 
-#    if now > freshDate:
+if now > freshDate:
+    parseRSS(xmlFile)
 
 #    print('getRSS()')
 
