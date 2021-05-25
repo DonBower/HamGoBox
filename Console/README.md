@@ -17,6 +17,7 @@ To start the four programs automatically on boot (useful for use when you have n
 
 # Display
 Here is the display:
+note: the GPS values are captured before satellite lock.
 
 ![alt text][hampiwx]
 
