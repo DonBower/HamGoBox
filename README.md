@@ -19,7 +19,8 @@ Lastly, again on the documentation front, the STL files for the 3D printed objec
 | ![alt text][gatorShelf] | [Shelf](https://smile.amazon.com/gp/product/B01C9KYUG8/ref=ppx_yo_dt_b_asin_title_o08_s01?ie=UTF8&psc=1) | The venting on these shelfs will allow for easy bolting down of equipment. |
 | ![alt text][gator1UPanel] | [Blank](https://smile.amazon.com/gp/product/B06Y1VJD6Q/ref=ppx_yo_dt_b_asin_title_o08_s03?ie=UTF8&psc=1) |These aluminum panels will provide a spot to add some meters, connectors and switches|
 |![alt text][FT-991]|[FT-991](https://www.yaesu.com/indexVS.cfm?cmd=DisplayProducts&DivisionID=65&ProdCatID=102&encProdID=D24F60F33816ED8BE5568D7E2B5E2131)|While this radio is no longer in production, a newer version (FT-991A) still is.  This Radio has  160M-6M, 2M & 70CM AM/FM/C4FM/SSB/CW.  There is also a digital mode, which lends this radio to doing PSK and other popular modes of communication.|
-|G5RV Antenna|[G5RVJR](https://www.hamradio.com/detail.cfm?pid=H0-008917)|40 through 6 meters dipole.|
+|Battery|[BATTERY](https://www.hamradio.com/detail.cfm?pid=H0-014837)|Lightweight 12 Volt/12 Ah battery based on state-of-the-art Lithium Iron Phosphate electrodes.|
+|HF Antenna|[G5RVJR](https://www.hamradio.com/detail.cfm?pid=H0-008917)|40 through 6 meters dipole.|
 |VHF/UHF Antenna|[NR-770HB](https://www.hamradio.com/detail.cfm?pid=H0-000063)|Diamond VHF/UHF Mobile Antenna.|
 |Antenna Mast|[PNH-22](https://www.hamradio.com/detail.cfm?pid=H0-010315)|Lightweight 22' telescoping fiberglass mast.|
 |Antenna Stand|[MFJ-1918](https://www.hamradio.com/detail.cfm?pid=H0-007037)|6 Foot Portable Tripod Antenna Stand.|
@@ -75,6 +76,8 @@ Lastly, again on the documentation front, the STL files for the 3D printed objec
 [yaesuFT897D]: https://github.com/DonBower/HamGoBox/blob/master/Images/FT-897DSmall.jpg "Ham Radio"
 
 [FT-991]: https://github.com/DonBower/HamGoBox/blob/master/Images/FT-991.jpg "Ham Radio"
+
+[BATTERY]: https://github.com/DonBower/HamGoBox/blob/master/Images/BLF-1212AS.jpg "Battery"
 
 [wmrPWRGate]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPWRgate.jpg "Epic PWRGate"
 
