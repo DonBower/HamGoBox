@@ -77,7 +77,7 @@ Lastly, again on the documentation front, the STL files for the 3D printed objec
 
 [FT-991]: https://github.com/DonBower/HamGoBox/blob/master/Images/FT-991.jpg "Ham Radio"
 
-[BATTERY]: https://github.com/DonBower/HamGoBox/blob/master/Images/BLF-1212AS.jpg "12V12Ah LiFePo Battery"
+[BATTERY]: https://github.com/DonBower/HamGoBox/blob/master/Images/BLF-1212AS.jpeg "12V12Ah LiFePo Battery"
 
 [wmrPWRGate]: https://github.com/DonBower/HamGoBox/blob/master/Images/WMRPWRgate.jpg "Epic PWRGate"
 
