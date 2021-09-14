@@ -266,17 +266,29 @@ Now that you’re up and running, there are two things that need to be done to g
 </style> 
 
 [FT991DU]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/FT991DU.jpeg "FT-991 in Data-USB mode"
+
 [fldigi.config.soundcard.devices]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.config.soundcard.devices.png "fldigi Config/Sound Card values""
+
 [fldigi.config.operator-station]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.configure.operatior-station.png "fldigi Config/Operation-Station values"
+
 [fldigi.config.rig-control.flrig]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.configure.rig-control.flrig.png "fldigi Config/rig-controll flrig"
+
 [fldigi.config.rig-control.flrig2]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.configure.rig-control.flrig2.png "fldigi Config/rig-controll flrig2"
+
 [fldigi.console.no-waterfall]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.console.no-waterfall.png "fldigi Console with no waterfall working"
+
 [fldigi.console.vfo]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.console.vfo.png "fldigi Console (vfo portion)" 
+
 [fldigi.console]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.png "fldigi Console"
+
 [flrig.config.pool]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.poll.png "flrig Config/poll options - this may be a bug"
+
 [flrig.config.ptt-generic]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.ptt-generic.png "flrig Config/PTT-Generic options"
+
 [flrig.config.restore]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.restore.png "flrig Config/restore options"
+
 [flrig.config.tcpip]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.tcpip.png "flrig Config/tcpip options"
+
 [flrig.config.xcvr]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.xcvr.png "flrig Config/xcvr options"
 
 [flrig.console]: images/flrig.png "Unconfigured Console"
