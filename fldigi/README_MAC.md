@@ -129,14 +129,14 @@ Install fldigi and flrig.  On Windows the programs install to their own folders 
 First, we get flrig going then it’s easy to configure fldigi to use flrig for xcvr control.
 
 With the radio on and the USB cable connected and no other communications program running, Start flrig.  It will come up with just a basic display. 
-<center>
-[flrig.console]
-</center>
+
+![alt-text][flrig.console]
+
 Go to the menu
 
 Config/Setup/Transceiver.
 <center>
-[flrig.config.xcvr]
+[[alt-text][flrig.config.xcvr]]
 </center>
 Choose the FT991A from the Rig dropdown list. That will select the default settings which will work on . Note: The RTS +12v and DTR +12v boxes do not normally need to be checked.
 
@@ -148,7 +148,7 @@ Open the device manager and determine to which com port the serial driver from S
 
 Next select the restore tab
 <center>
-![alt text][flrig.config.restore]
+[![alt text][flrig.config.restore]]
 </center>
 and choose whether you want flrig to save and restore all the radio’s parameters on startup and exit or whether you want it to open with the same settings as the rig is currently using.  If Use xcvr data is checked flrig will start up with the same settings as the rig currently is using.
 
