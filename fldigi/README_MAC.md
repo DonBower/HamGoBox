@@ -267,6 +267,7 @@ Now that you’re up and running, there are two things that need to be done to g
 [flrig.config.restore]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.restore.png "flrig Config/restore options"
 [flrig.config.tcpip]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.tcpip.png "flrig Config/tcpip options"
 [flrig.config.xcvr]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.xcvr.png "flrig Config/xcvr options"
+
 [FLRIG]: https://github.com/DonBower/HamGoBox/blob/master/Images/flrig.png "Unconfigured Console"
 
 [TSL2591]: https://github.com/DonBower/HamGoBox/blob/master/Images/TSL2591.jpg "High Dynamic Range Digital Light Sensor"
