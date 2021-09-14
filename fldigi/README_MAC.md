@@ -1,6 +1,4 @@
 # Connect FLDIGI on the Macbook Pro with Big Sur (11.5.2) to Yaesu FT-991 (non-A)
-![alt-text][flrig.console]
-![alt-text][TSL2591]
 
 ## Load CP210x VCP Drivers 
 If you have not already done so, or did with a version prior to 6.0.1, follow these steps 
@@ -55,15 +53,27 @@ To Configure the Radio, you can change the Menu items as follows. In the Menu, d
 ||||||
 
 
-## Connect the Radio
+## Connect the FT-991 Radio
 Use the [RT-42 USB-A to USB-B 6-Ft Cable](https://www.rtsystemsinc.com/RT-42-USB-A-to-USB-B-6-Ft-Cable_p_542.html) cable from RT Systems
 
+## Configure flrig
+1. [Download](http://www.w1hkj.com/files/flrig/flrig-1.4.2_bs.dmg) the flrig-1.4.2_bs.dmg file.
+_bs is for Big Sur, 11.x
+_hs is for macOS High Sierra, 10.13.x 
+_lion is for macOS Lion, 10.7.x
+1. Open the .dmg file and copy the app to your /Applications folder
+1. Open the flrig application from the Launchpad
+1. Open the Config menu and select Setup>Transceiver<br>
+Set the values as show in the graphic:
+![alt-text][flrig.config.xcvr]
 
+
+![alt-text][flrig.console]
 
 
 ## Using the FT-991A with fldigi and flrig
 
-CAT control involves both software and settings on the radio itself. The default radio settings on the FT-991A are not likely to work “out of the box”.
+CAT control involves both software and settings on the radio itself. The default radio settings on the FT-991 are not likely to work “out of the box”.
 
 Some initial things to verify are in place:
 
