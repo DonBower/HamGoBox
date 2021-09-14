@@ -1,4 +1,6 @@
 # Connect FLDIGI on the Macbook Pro with Big Sur (11.5.2) to Yaesu FT-991 (non-A)
+![alt-text][flrigConsole]
+![alt-text][TSL2591]
 
 ## Load CP210x VCP Drivers 
 If you have not already done so, or did with a version prior to 6.0.1, follow these steps 
@@ -130,8 +132,6 @@ First, we get flrig going then it’s easy to configure fldigi to use flrig for 
 
 With the radio on and the USB cable connected and no other communications program running, Start flrig.  It will come up with just a basic display. 
 
-![alt-text][flrigConsole]
-![alt-text][TSL2591]
 
 Go to the menu
 
