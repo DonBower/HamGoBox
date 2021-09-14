@@ -1,5 +1,5 @@
 # Connect FLDIGI on the Macbook Pro with Big Sur (11.5.2) to Yaesu FT-991 (non-A)
-![alt-text][TSL2592]
+![alt-text][TSL2591]
 ![alt-text][TSL2591]
 
 ## Load CP210x VCP Drivers 
@@ -267,6 +267,6 @@ Now that you’re up and running, there are two things that need to be done to g
 [flrig.config.restore]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.restore.png "flrig Config/restore options"
 [flrig.config.tcpip]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.tcpip.png "flrig Config/tcpip options"
 [flrig.config.xcvr]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.xcvr.png "flrig Config/xcvr options"
-[TSL2592]: https://github.com/DonBower/HamGoBox/blob/master/Images/flrig.png "Unconfigured Console"
+[FLRIG]: https://github.com/DonBower/HamGoBox/blob/master/Images/flrig.png "Unconfigured Console"
 
 [TSL2591]: https://github.com/DonBower/HamGoBox/blob/master/Images/TSL2591.jpg "High Dynamic Range Digital Light Sensor"
