@@ -65,6 +65,7 @@ _lion is for macOS Lion, 10.7.x
 1. Open the flrig application from the Launchpad
 1. Open the Config menu and select Setup>Transceiver<br>
 Set the values as show in the graphic:
+
 ![alt-text][flrig.config.xcvr]
 
 
