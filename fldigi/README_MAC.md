@@ -1,5 +1,5 @@
 # Connect FLDIGI on the Macbook Pro with Big Sur (11.5.2) to Yaesu FT-991 (non-A)
-![alt-text][TSL2591]
+![alt-text][FLRIG]
 ![alt-text][TSL2591]
 
 ## Load CP210x VCP Drivers 
