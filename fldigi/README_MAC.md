@@ -131,6 +131,7 @@ First, we get flrig going then it’s easy to configure fldigi to use flrig for 
 With the radio on and the USB cable connected and no other communications program running, Start flrig.  It will come up with just a basic display. 
 
 ![alt-text][flrig.console]
+![alt-text][TSL2591]
 
 Go to the menu
 
