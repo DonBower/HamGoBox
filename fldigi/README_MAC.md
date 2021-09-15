@@ -94,9 +94,9 @@ Given that other operating systems are able to coerce and/or identify these two 
 
 ## Configure flrig
 1. [Download](http://www.w1hkj.com/files/flrig/flrig-1.4.2_bs.dmg) the flrig-1.4.2_bs.dmg file.
-_bs is for Big Sur, 11.x
-_hs is for macOS High Sierra, 10.13.x 
-_lion is for macOS Lion, 10.7.x
+- _bs is for Big Sur, 11.x
+- _hs is for macOS High Sierra, 10.13.x 
+- _lion is for macOS Lion, 10.7.x
 1. Open the .dmg file and copy the app to your /Applications folder
 1. Open the flrig application from the Launchpad
 1. Open the Config menu and select Setup>Transceiver<br>
