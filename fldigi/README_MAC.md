@@ -68,9 +68,22 @@ Set the values as show in the graphic:
 ![alt-text][flrig.config.xcvr]
 1. Click the [init] button<br>
 If you this pop-up ![alt-text][flrig.not.responding]<br> then choose the other cu.SLAB device.  It is not possiable at this time to configure the macbook to predict which cu.SLAB device is the "enhanced" port, which provides CAT operations with the radio.  In fact, this assignment can change between reboots of the computer, and re-connection of the radio.  It's a huge dis-advantage to macOS, which Windows, Ubuntu and Raspberry Pi are able to deal with for better consistancy.
-So if your radio works today, but won't conecct tomorrow, swap these two values, and click the [init] button again.
-
-
+So if your radio works today, but won't conecct tomorrow, swap these two values, and click the [init] button again.<br>
+1. Select Setup>PTT-Generic from the Config menu<br>
+Set the values as show in the graphic:
+![alt-text][flrig.config.ptt-generic]
+1. Select Setup>TCPIP from the Config menu<br>
+Set the values as show in the graphic:
+![alt-text][flrig.config.tcpip]
+1. Select Setup>Poll from the Config menu<br>
+Set the values as show in the graphic:
+![alt-text][flrig.config.poll]
+Note: This panel may be a bug, as it's supposed to show values, not checkboxes.
+1. Select Setup>Restore from the Config menu<br>
+Set the values as show in the graphic:
+![alt-text][flrig.config.restore]
+<br>
+When Complete, close the Configuartion Pop-Up, and you should see this:
 ![alt-text][flrig.console]
 
 
@@ -267,33 +280,33 @@ Now that you’re up and running, there are two things that need to be done to g
    /* https://stackoverflow.com/questions/13366820/how-do-you-make-lettered-lists-using-markdown */
 </style> 
 
-[FT991DU]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/FT991DU.jpeg "FT-991 in Data-USB mode"
+[FT991DU]: images/FT991DU.jpeg "FT-991 in Data-USB mode"
 
-[fldigi.config.soundcard.devices]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.config.soundcard.devices.png "fldigi Config/Sound Card values""
+[fldigi.config.soundcard.devices]: images/fldigi.config.soundcard.devices.png "fldigi Config/Sound Card values""
 
-[fldigi.config.operator-station]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.configure.operatior-station.png "fldigi Config/Operation-Station values"
+[fldigi.config.operator-station]: images/fldigi.configure.operatior-station.png "fldigi Config/Operation-Station values"
 
-[fldigi.config.rig-control.flrig]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.configure.rig-control.flrig.png "fldigi Config/rig-controll flrig"
+[fldigi.config.rig-control.flrig]: images/fldigi.configure.rig-control.flrig.png "fldigi Config/rig-controll flrig"
 
-[fldigi.config.rig-control.flrig2]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.configure.rig-control.flrig2.png "fldigi Config/rig-controll flrig2"
+[fldigi.config.rig-control.flrig2]: images/fldigi.configure.rig-control.flrig2.png "fldigi Config/rig-controll flrig2"
 
-[fldigi.console.no-waterfall]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.console.no-waterfall.png "fldigi Console with no waterfall working"
+[fldigi.console.no-waterfall]: images/fldigi.console.no-waterfall.png "fldigi Console with no waterfall working"
 
-[fldigi.console.vfo]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.console.vfo.png "fldigi Console (vfo portion)" 
+[fldigi.console.vfo]: images/fldigi.console.vfo.png "fldigi Console (vfo portion)" 
 
-[fldigi.console]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/fldigi.png "fldigi Console"
+[fldigi.console]: images/fldigi.png "fldigi Console"
 
-[flrig.config.pool]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.poll.png "flrig Config/poll options - this may be a bug"
+[flrig.config.pool]: images/flrig.configure.poll.png "flrig Config/poll options - this may be a bug"
 
-[flrig.config.ptt-generic]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.ptt-generic.png "flrig Config/PTT-Generic options"
+[flrig.config.restore]: images/flrig.configure.restore.png "flrig Config/restore options"
 
-[flrig.config.restore]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.restore.png "flrig Config/restore options"
+[flrig.config.tcpip]: images/flrig.configure.tcpip.png "flrig Config/tcpip options"
 
-[flrig.config.tcpip]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.tcpip.png "flrig Config/tcpip options"
-
-[flrig.config.xcvr]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.xcvr.png "flrig Config/xcvr options"
+[flrig.config.xcvr]: images/flrig.configure.xcvr.png "flrig Config/xcvr options"
 
 [flrig.not.responding]: images/flrig.not.responding.png "Not Connected"
+
+[flrig.config.ptt-generic]: images/flrig.configure.ptt-generic.png "flrig Config/PTT-Generic options"
 
 [flrig.console]: images/flrig.png "Unconfigured Console"
 
