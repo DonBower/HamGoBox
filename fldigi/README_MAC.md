@@ -65,8 +65,10 @@ _lion is for macOS Lion, 10.7.x
 1. Open the flrig application from the Launchpad
 1. Open the Config menu and select Setup>Transceiver<br>
 Set the values as show in the graphic:
-
 ![alt-text][flrig.config.xcvr]
+1. Click the [init] button<br>
+If you this pop-up ![alt-text][flrig.not.responding]<br> then choose the other cu.SLAB device.  It is not possiable at this time to configure the macbook to predict which cu.SLAB device is the "enhanced" port, which provides CAT operations with the radio.  In fact, this assignment can change between reboots of the computer, and re-connection of the radio.  It's a huge dis-advantage to macOS, which Windows, Ubuntu and Raspberry Pi are able to deal with for better consistancy.
+So if your radio works today, but won't conecct tomorrow, swap these two values, and click the [init] button again.
 
 
 ![alt-text][flrig.console]
