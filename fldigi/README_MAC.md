@@ -68,7 +68,7 @@ The FT-991, and other radios that have an intergrated sound card (FTdx-3000, FTd
   * CAT communications..................: Enhanced COM Port
   * TX control (PTT, KEY, FSK)..........: Standard COM Port
 
-`<rant>`
+`<rant>`<br>
 For the macOS Big Sur, it is not possiable, as it is in Windows, along with Ubuntu, Raspberry PI and other Linux distributions, to coerce the driver to render one to `/dev/cu.SLAB_USBtoUART` and the other to `/dev/cu.SLAB_USBtoUART2` at this time.
 
 These devices can "swap" themselfs between macOS boots and reconnection of the radio.
@@ -90,7 +90,7 @@ CP2105 Dual USB to UART Bridge Controller:
 with the only indication that there are 2 devices here is the `/ 2` at `Location ID:`.
 
 Given that other operating systems are able to coerce and/or identify these two different ports, one can only conclude Silicon Labs has not invested enough effort into this issue, nor is Apple innocent in removing the udev functionality. 
-`</rant>`
+<br>`</rant>`
 
 ## Configure flrig
 1. [Download](http://www.w1hkj.com/files/flrig/flrig-1.4.2_bs.dmg) the flrig-1.4.2_bs.dmg file.
