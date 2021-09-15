@@ -54,7 +54,43 @@ To Configure the Radio, you can change the Menu items as follows. In the Menu, d
 
 
 ## Connect the FT-991 Radio
-Use the [RT-42 USB-A to USB-B 6-Ft Cable](https://www.rtsystemsinc.com/RT-42-USB-A-to-USB-B-6-Ft-Cable_p_542.html) cable from RT Systems
+Use the [RT-42 USB-A to USB-B 6-Ft Cable](https://www.rtsystemsinc.com/RT-42-USB-A-to-USB-B-6-Ft-Cable_p_542.html) cable from RT Systems<br>
+Open a terminal window and type `ls -l /dev/cu.*`
+you should see the following:
+```
+don@MacbookPro ~ % ls -l /dev/cu.*
+crw-rw-rw-  1 root  wheel    9,   1 Sep 14 15:31 /dev/cu.Bluetooth-Incoming-Port
+crw-rw-rw-  1 root  wheel    9,   3 Sep 14 16:54 /dev/cu.SLAB_USBtoUART
+crw-rw-rw-  1 root  wheel    9,   5 Sep 14 17:37 /dev/cu.SLAB_USBtoUART2
+```
+
+The FT-991, and other radios that have an intergrated sound card (FTdx-3000, FTdx-10D), along with the SCU-17 contain two virtual COM ports, an Enhanced COM port and a Standard COM Port, which are rendered by the SiliconLabs VCP Driver as `/dev/cu.SLAB_USBtoUART` and `/dev/cu.SLAB_USBtoUART2`  These ports offer the following functions:
+  * CAT communications..................: Enhanced COM Port
+  * TX control (PTT, KEY, FSK)..........: Standard COM Port
+
+`<ramt>`
+For the macOS Big Sur, it is not possiable, as it is in Windows, along with Ubuntu, Raspberry PI and other Linux distributions, to coerce the driver to render one to `/dev/cu.SLAB_USBtoUART` and the other to `/dev/cu.SLAB_USBtoUART2` at this time.
+
+These devices can "swap" themselfs between macOS boots and reconnection of the radio.
+if you examine the System Information for USB, you will see:
+```
+CP2105 Dual USB to UART Bridge Controller:
+
+  Product ID:	0xea70
+  Vendor ID:	0x10c4  (Silicon Laboratories, Inc.)
+  Version:	1.00
+  Serial Number:	AH057M5I150492
+  Speed:	Up to 12 Mb/s
+  Manufacturer:	Silicon Labs
+  Location ID:	0x14110000 / 2
+  Current Available (mA):	500
+  Current Required (mA):	100
+  Extra Operating Current (mA):	0
+```
+with the only indication that there are 2 devices here is the `/ 2` at `Location ID:`.
+
+Given that other operating systems are able to coerce and/or identify these two different ports, one can only conclude Silicon Labs has not invested enough effort into this issue, nor is Apple innocent in removing the udev functionality. 
+`</ramt>`
 
 ## Configure flrig
 1. [Download](http://www.w1hkj.com/files/flrig/flrig-1.4.2_bs.dmg) the flrig-1.4.2_bs.dmg file.
