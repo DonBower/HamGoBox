@@ -293,6 +293,8 @@ Now that you’re up and running, there are two things that need to be done to g
 
 [flrig.config.xcvr]: https://github.com/DonBower/HamGoBox/blob/master/fldigi/images/flrig.configure.xcvr.png "flrig Config/xcvr options"
 
+[flrig.not.responding]: images/flrig.not.responding.png "Not Connected"
+
 [flrig.console]: images/flrig.png "Unconfigured Console"
 
 [TSL2591]: https://github.com/DonBower/HamGoBox/blob/master/Images/TSL2591.jpg "High Dynamic Range Digital Light Sensor"
