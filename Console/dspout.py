@@ -306,7 +306,7 @@ def printHTS():
     thisHumidity = hts.relative_humidity
     thisTempC    = hts.temperature
     thisTempF    = ((9.0 / 5.0) * thisTempC + 32)
-#    °c/°f
+#    °C/°F
 #    ℃/℉ - These do not print.
     print(f'Temperature........: {thisTempC:4.1f}°C /{thisTempF:5.1f}°F                   '[:40])
     print(f'Relative Humidity..: {thisHumidity:4.1f}% rH                   '[:40])
@@ -384,11 +384,14 @@ def getRSS(xmlFile):
     # url of rss feed
     url = 'http://www.hamqsl.com/solarrss.php'
     # creating HTTP response object from given url
-    resp = requests.get(url)
-    # saving the xml file
-    with open(xmlFile, 'wb') as f:
-        f.write(resp.content)
-
+    try:
+        resp = requests.get(url)
+        # saving the xml file
+        with open(xmlFile, 'wb') as f:
+            f.write(resp.content)
+    finally:
+        print("Failed to cURL " + url)
+ 
 def parseRSS(xmlFile):
     global thisMUF, theseConditions, freshDate
     # create element tree object
@@ -420,7 +423,8 @@ def printSolar():
 if not path.exists(xmlFile):
     getRSS(xmlFile)
 
-parseRSS(xmlFile)
+if path.exists(xmlFile):
+    parseRSS(xmlFile)
 
 clearScreen()
 while True:
@@ -444,7 +448,7 @@ while True:
 #        if hasTSL:
 #            printTSL()
         if now > freshDate:
-            getRSS(xmlFile)
-            parseRSS(xmlFile)
-        printSolar()
-    time.sleep(1)
+            try:
+                getRSS(xmlFile)
+            finally:
+                print("Failed to getRSS(" + xmlFile + ")")
