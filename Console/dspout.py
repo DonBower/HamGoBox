@@ -6,6 +6,7 @@ import time
 from datetime import datetime
 from datetime import timedelta
 import requests
+from requests.exceptions import ConnectTimeout, HTTPError, ReadTimeout, RequestException, Timeout, TooManyRedirects, URLRequired
 import xml.etree.ElementTree as ET
 import json
 import board
@@ -393,8 +394,8 @@ def getRSS(xmlFile):
         print("RequestException for " + url)
         sys.stderr.write("RequestException for " + url)
     except ConnectionError:
-        print("ConnectionError for " + url)
-        sys.stderr.write("ConnectionError for " + url)
+        print("Connection error for " + url)
+        sys.stderr.write("Connection error for " + url)
     except HTTPError:
         print("HTTP request returned an unsuccessful status code for " + url)
         sys.stderr.write("HTTP request returned an unsuccessful status code for " + url)
