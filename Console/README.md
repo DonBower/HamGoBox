@@ -22,3 +22,5 @@ note: the GPS values are captured before satellite lock.
 ![alt text][hampiwx]
 
 [hampiwx]: https://github.com/DonBower/HamGoBox/blob/master/Images/IMG_0802.jpeg "HamPiWX Console"
+
+from a keyboard, use the command dspkill.sh to kill the auto-restart and python process
