@@ -476,5 +476,9 @@ while True:
         if now > freshDate:
             try:
                 getRSS(xmlFile)
+                parseRSS(xmlFile)
             finally:
                 print("Failed to getRSS(" + xmlFile + ")")
+
+        if path.exists(xmlFile):
+            printSolar()
