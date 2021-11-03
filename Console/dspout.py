@@ -391,33 +391,32 @@ def getRSS(xmlFile):
         with open(xmlFile, 'wb') as f:
             f.write(resp.content)
     except RequestException:
-        print("RequestException for " + url)
-        sys.stderr.write("RequestException for " + url)
+        print("RequestException for " + url + "\n")
+        sys.stderr.write("RequestException for " + url + "\n")
     except ConnectionError:
-        print("Connection error for " + url)
-        sys.stderr.write("Connection error for " + url)
+        print("Connection error for " + url + "\n")
+        sys.stderr.write("Connection error for " + url + "\n")
     except HTTPError:
-        print("HTTP request returned an unsuccessful status code for " + url)
-        sys.stderr.write("HTTP request returned an unsuccessful status code for " + url)
+        print("HTTP request returned an unsuccessful status code for " + url + "\n")
+        sys.stderr.write("HTTP request returned an unsuccessful status code for " + url + "\n")
     except URLRequired:
-        print("A valid URL is required for " + url)
-        sys.stderr.write("A valid URL is required for " + url)
+        print("A valid URL is required for " + url + "\n")
+        sys.stderr.write("A valid URL is required for " + url + "\n")
     except TooManyRedirects:
-        print("Too many redirects for " + url)
-        sys.stderr.write("Too many redirects for " + url)
+        print("Too many redirects for " + url + "\n")
+        sys.stderr.write("Too many redirects for " + url + "\n")
     except ConnectTimeout:
-        print("The request timed out while trying to connect to the remote server. " + url)
-        sys.stderr.write("The request timed out while trying to connect to the remote server. " + url)
+        print("The request timed out while trying to connect to the remote server. " + url + "\n")
+        sys.stderr.write("The request timed out while trying to connect to the remote server. " + url + "\n")
     except ReadTimeout:
-        print("The server did not send any data in the allotted amount of time for url " + url)
-        sys.stderr.write("The server did not send any data in the allotted amount of time for url " + url)
+        print("The server did not send any data in the allotted amount of time for url " + url + "\n")
+        sys.stderr.write("The server did not send any data in the allotted amount of time for url " + url + "\n")
     except Timeout:
-        print("The request timed out for url " + url)
-        sys.stderr.write("The request timed out for url " + url)
-    finally:
-        print("Failed to cURL " + url)
-        sys.stderr.write("Failed to cURL " + url)
-        sys.stderr.write(str(resp))
+        print("The request timed out for url " + url + "\n")
+        sys.stderr.write("The request timed out for url " + url + "\n")
+#    finally:
+#        print("Failed to cURL " + url + "\n")
+#        sys.stderr.write("Failed to cURL " + url + "\n")
  
 def parseRSS(xmlFile):
     global thisMUF, theseConditions, freshDate
