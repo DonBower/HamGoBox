@@ -389,10 +389,34 @@ def getRSS(xmlFile):
         # saving the xml file
         with open(xmlFile, 'wb') as f:
             f.write(resp.content)
+    except RequestException:
+        print("RequestException for " + url)
+        sys.stderr.write("RequestException for " + url)
+    except ConnectionError:
+        print("ConnectionError for " + url)
+        sys.stderr.write("ConnectionError for " + url)
+    except HTTPError:
+        print("HTTP request returned an unsuccessful status code for " + url)
+        sys.stderr.write("HTTP request returned an unsuccessful status code for " + url)
+    except URLRequired:
+        print("A valid URL is required for " + url)
+        sys.stderr.write("A valid URL is required for " + url)
+    except TooManyRedirects:
+        print("Too many redirects for " + url)
+        sys.stderr.write("Too many redirects for " + url)
+    except ConnectTimeout:
+        print("The request timed out while trying to connect to the remote server. " + url)
+        sys.stderr.write("The request timed out while trying to connect to the remote server. " + url)
+    except ReadTimeout:
+        print("The server did not send any data in the allotted amount of time for url " + url)
+        sys.stderr.write("The server did not send any data in the allotted amount of time for url " + url)
+    except Timeout:
+        print("The request timed out for url " + url)
+        sys.stderr.write("The request timed out for url " + url)
     finally:
         print("Failed to cURL " + url)
         sys.stderr.write("Failed to cURL " + url)
-        sys.stderr.write(resp)
+        sys.stderr.write(str(resp))
  
 def parseRSS(xmlFile):
     global thisMUF, theseConditions, freshDate

@@ -23,6 +23,6 @@ while true; do
 
     popd
 
-    /home/pi/Developer/HamGoBox/Console/dspout.py > /dev/tty1 2> /home/pi/dspout.py.errlog.txt &
+    /home/pi/Developer/HamGoBox/Console/dspout.py > /dev/tty1 2>> /home/pi/dspout.py.errlog.txt &
   fi
 done
