@@ -391,6 +391,8 @@ def getRSS(xmlFile):
             f.write(resp.content)
     finally:
         print("Failed to cURL " + url)
+        sys.stderr.write("Failed to cURL " + url)
+        sys.stderr.write(resp)
  
 def parseRSS(xmlFile):
     global thisMUF, theseConditions, freshDate

@@ -33,7 +33,7 @@ To Configure the Radio, you can change the Menu items as follows. In the Menu, d
 |68|DATA HCUT FREQ|700-4000 (50Hz Step)|3000 Hz|**3600 Hz**|
 |69|DATA HCUT SLOPE|6 dB/oct / 18 dB/oct|18 dB/oct|18 dB/oct|
 |70|DATA IN SELECT|REAR/MIC|REAR|REAR|
-|71|DATA PTT SELECT|DAKY/RTS/DTR|DAKY|DAKY|
+|71|DATA PTT SELECT|DAKY/RTS/DTR|DAKY|**DTR**|
 |72|DATA PORT SELECT|DATA/USB|DATA|**USB**|
 |73|DATA OUT LEVEL|0-100|50|**100**|
 |74|FM MIC SELECT (PHONE)|MIC/REAR|MIC|MIC|
@@ -92,8 +92,8 @@ with the only indication that there are 2 devices here is the `/ 2` at `Location
 Given that other operating systems are able to coerce and/or identify these two different ports, one can only conclude Silicon Labs has not invested enough effort into this issue, nor is Apple innocent in removing the udev functionality. 
 <br>`</rant>`
 
-## Configure flrig
-1. [Download](http://www.w1hkj.com/files/flrig/flrig-1.4.2_bs.dmg) the flrig-1.4.2_bs.dmg file.
+## Configure flrig 1.4.2
+1. Download [flrig 1.4.2](http://www.w1hkj.com/files/flrig/flrig-1.4.2_bs.dmg) for Big Sur.
 - _bs is for Big Sur, 11.x
 - _hs is for macOS High Sierra, 10.13.x 
 - _lion is for macOS Lion, 10.7.x
@@ -114,7 +114,6 @@ Set the values as show in the graphic:
 1. Select Setup>Poll from the Config menu<br>
 Set the values as show in the graphic:
 ![alt-text][flrig.config.poll]
-Note: This panel may be a bug, as it's supposed to show values, not checkboxes.
 1. Select Setup>Restore from the Config menu<br>
 Set the values as show in the graphic:
 ![alt-text][flrig.config.restore]
@@ -122,6 +121,14 @@ Set the values as show in the graphic:
 When Complete, close the Configuartion Pop-Up, and you should see this:
 ![alt-text][flrig.console]
 
+
+## Configure fldigi 4.1.20
+1. Download [fldigi 4.1.29](http://www.w1hkj.com/files/fldigi/fldigi-4.1.20_bs.dmg) for Big Sur.
+- _bs is for Big Sur, 11.x
+- _hs is for macOS High Sierra, 10.13.x 
+- _lion is for macOS Lion, 10.7.x
+1. Open the .dmg file and copy the app to your /Applications folder
+1. Open the fldigi application from the Launchpad
 
 ## Using the FT-991A with fldigi and flrig
 
