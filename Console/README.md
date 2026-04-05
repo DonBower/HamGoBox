@@ -12,7 +12,7 @@ If/When it asks you to reboot, then choose yes because the setting won't take fu
 To start the four programs automatically on boot (useful for use when you have no access to the pi in the field), edit the crontab (`sudo crontab -e -u root`) and add the following line:
 
 ```
-@reboot /home/pi/Developer/HamGoBox/Console/dspout.sh 1> /home/pi/dspout.sh.errlog.txt 2>&1
+@reboot /home/donDeveloper/HamGoBox/Console/dspout.sh 1> /home/dondspout.sh.errlog.txt 2>&1
 ```
 
 # Display

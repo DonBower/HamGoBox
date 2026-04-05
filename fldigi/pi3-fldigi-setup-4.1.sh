@@ -12,7 +12,7 @@ sudo apt-get -y install git cmake build-essential libusb-1.0-0.dev libltdl-dev l
 	{ echo 'Retrieving dependencies failed'; exit 1;}
 
 #Comment - If the HamPi-FLDIGI directory does exist, skip. If not, create it!
-mkdir -p /home/pi/HamPi-FLDIGI && cd HamPi-FLDIGI ||
+mkdir -p /home/donHamPi-FLDIGI && cd HamPi-FLDIGI ||
 	{ echo 'Can not create or find HamPi-FLDIGI dir'; exit 1; }
 
 #Comment - Remove old directories used for installing previous version(s) of fldigi
@@ -96,7 +96,7 @@ cd .. && wget -N http://www.elazary.com/images/mediaFiles/ham/hampi/setGPIO ||
   { echo 'Can not get setGPIO'; exit 1; }
 
 if ! grep -q setGPIO ~/.bashrc  ; then 
-  echo "sudo sh /home/pi/HamPi-FLDIGI/setGPIO" >> ~/.bashrc
+  echo "sudo sh /home/donHamPi-FLDIGI/setGPIO" >> ~/.bashrc
 fi
 
 if ! grep -q snd-mixer-oss /etc/modules  ; then 
@@ -115,7 +115,7 @@ Exec=fldigi
 Icon=fldigi
 Terminal=false
 Type=Application
-Categories=Network;HamRadio;" > /home/pi/Desktop/fldigi.desktop ||
+Categories=Network;HamRadio;" > /home/donDesktop/fldigi.desktop ||
    { echo 'Cannot setup fldigi icon'; exit 1;}
 
 echo 'Setup Complete! Enjoy... de K3HTK'

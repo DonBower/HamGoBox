@@ -17,7 +17,7 @@ import adafruit_scd30
 #last_print = time.monotonic()
 
 i2c = busio.I2C(board.SCL, board.SDA)
-bmpJSONFileName = "/home/pi/bmpData.json"
+bmpJSONFileName = "/home/donbmpData.json"
 #
 # Try GPS Board
 #

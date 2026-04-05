@@ -3,7 +3,7 @@
 #K3HTK 4-5-2018
 #Visit http://www.indyham.com
 
-cd /home/pi/HamPi-FLDIGI/
+cd /home/donHamPi-FLDIGI/
 
 wget -N http://sourceforge.net/projects/fldigi/files/flamp/flamp-2.2.03.tar.gz ||
   { echo 'Can not get flamp file'; exit 1; }
@@ -22,10 +22,10 @@ Exec=flamp
 Icon=flamp
 Terminal=false
 Type=Application
-Categories=Network;HamRadio;" > /home/pi/Desktop/flamp.desktop ||
+Categories=Network;HamRadio;" > /home/donDesktop/flamp.desktop ||
    { echo 'can not setup flamp icon'; exit 1;}
 
-cd /home/pi/HamPi-FLDIGI
+cd /home/donHamPi-FLDIGI
 
 wget -N https://sourceforge.net/projects/fldigi/files/flmsg/flmsg-4.0.6.tar.gz ||
  { echo 'Can not get flmsg file'; exit 1; }
@@ -44,5 +44,5 @@ Exec=flmsg
 Icon=flmsg
 Terminal=false
 Type=Application
-Categories=Network;HamRadio;" > /home/pi/Desktop/flmsg.desktop ||
+Categories=Network;HamRadio;" > /home/donDesktop/flmsg.desktop ||
  { echo 'can not setup flmsg icon'; exit 1;}

@@ -140,7 +140,7 @@
   140  Developer/HamGoBox/Console/dspout.py 
   141  ls -l
   142  cat dspout.py.errlog.txt 
-  143  /home/pi/Developer/Console/dspout.py
+  143  /home/donDeveloper/Console/dspout.py
   144  cd Developer/HamGoBox/
   145  git pull
   146  sudo su
@@ -183,50 +183,50 @@
   183  git pull
   184  ps -ef | grep dspout.py
   185  sudo kill -9 23588
-  186  /home/pi/Developer/HamGoBox/Console/dspout.py
+  186  /home/donDeveloper/HamGoBox/Console/dspout.py
   187  git pull
-  188  /home/pi/Developer/HamGoBox/Console/dspout.py
+  188  /home/donDeveloper/HamGoBox/Console/dspout.py
   189  git pull
-  190  /home/pi/Developer/HamGoBox/Console/dspout.py
+  190  /home/donDeveloper/HamGoBox/Console/dspout.py
   191  git pull
-  192  /home/pi/Developer/HamGoBox/Console/dspout.py
+  192  /home/donDeveloper/HamGoBox/Console/dspout.py
   193  git pull
-  194  /home/pi/Developer/HamGoBox/Console/dspout.py
+  194  /home/donDeveloper/HamGoBox/Console/dspout.py
   195  git pull
-  196  /home/pi/Developer/HamGoBox/Console/dspout.py
+  196  /home/donDeveloper/HamGoBox/Console/dspout.py
   197  git pull
-  198  /home/pi/Developer/HamGoBox/Console/dspout.py
+  198  /home/donDeveloper/HamGoBox/Console/dspout.py
   199  git pull
-  200  /home/pi/Developer/HamGoBox/Console/dspout.py
+  200  /home/donDeveloper/HamGoBox/Console/dspout.py
   201  ls -l ~
   202  jq . ~/bmpData.json 
   203  git pull
   204  jq . ~/bmpData.json 
-  205  /home/pi/Developer/HamGoBox/Console/dspout.py
+  205  /home/donDeveloper/HamGoBox/Console/dspout.py
   206  rm ~/bmpData.json 
-  207  /home/pi/Developer/HamGoBox/Console/dspout.py
+  207  /home/donDeveloper/HamGoBox/Console/dspout.py
   208  git pull
-  209  /home/pi/Developer/HamGoBox/Console/dspout.py
+  209  /home/donDeveloper/HamGoBox/Console/dspout.py
   210  jq . ~/bmpData.json 
   211  git pull
-  212  /home/pi/Developer/HamGoBox/Console/dspout.py
+  212  /home/donDeveloper/HamGoBox/Console/dspout.py
   213  python3
   214  jq . ~/bmpData.json 
   215  git pull
-  216  /home/pi/Developer/HamGoBox/Console/dspout.py
+  216  /home/donDeveloper/HamGoBox/Console/dspout.py
   217  git pull
-  218  /home/pi/Developer/HamGoBox/Console/dspout.py
+  218  /home/donDeveloper/HamGoBox/Console/dspout.py
   219  python3
   220  git pull
-  221  /home/pi/Developer/HamGoBox/Console/dspout.py
+  221  /home/donDeveloper/HamGoBox/Console/dspout.py
   222  while true; do jq . ~/bmpData.json ; sleep 5s; done
   223  git pull
   224  ps -ef | grep dspout.py
   225  sudo kill -9 4100
   226  while true; do jq . ~/bmpData.json ; sleep 5s; done
-  227  /home/pi/Developer/HamGoBox/Console/dspout.py
+  227  /home/donDeveloper/HamGoBox/Console/dspout.py
   228  git pull
-  229  /home/pi/Developer/HamGoBox/Console/dspout.py
+  229  /home/donDeveloper/HamGoBox/Console/dspout.py
   230  while true; do jq . ~/bmpData.json ; sleep 5s; done
   231  git pull
   232  rm ~/bmpData.json 
@@ -250,7 +250,7 @@
   250  sudo kill -9 270
   251  sudo kill -9 276
   252  ps -ef | grep Console
-  253  /home/pi/Developer/HamGoBox/Console/dspout.py 
+  253  /home/donDeveloper/HamGoBox/Console/dspout.py 
   254  cd Developer/HamGoBox/Console/
   255  git pull
   256  ./dspout.py 
