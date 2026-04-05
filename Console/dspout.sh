@@ -1,28 +1,28 @@
 #!/bin/bash
 sleep 10
-if [[ -f /home/pi/dspout.py.errlog.txt ]]; then
-  rm /home/pi/dspout.py.errlog.txt
+if [[ -f /home/don/dspout.py.errlog.txt ]]; then
+  rm /home/don/dspout.py.errlog.txt
 fi
 
-touch /home/pi/gitpull.log
-chmod 666 /home/pi/gitpull.log
+touch /home/don/gitpull.log
+chmod 666 /home/don/gitpull.log
 
-date >> /home/pi/gitpull.log
+date >> /home/don/gitpull.log
 
 while true; do
   if ps -ef | grep dspout.py | grep --quiet -v grep; then
     sleep 10
   else
-    pushd /home/pi/Developer/HamGoBox
+    pushd /home/don/Developer/HamGoBox
 
     if nc -tv -w 10 github.com 443; then
-      git pull >> /home/pi/gitpull.log 2>&1
+      git pull >> /home/don/gitpull.log 2>&1
     else
-      echo github not avaiable >> /home/pi/gitpull.log 2>&1
+      echo github not avaiable >> /home/don/gitpull.log 2>&1
     fi
 
     popd
 
-    /home/pi/Developer/HamGoBox/Console/dspout.py > /dev/tty1 2>> /home/pi/dspout.py.errlog.txt &
+    /home/don/Developer/HamGoBox/Console/dspout.py > /dev/tty1 2>> /home/don/dspout.py.errlog.txt &
   fi
 done

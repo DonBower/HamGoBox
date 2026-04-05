@@ -34,10 +34,10 @@ while read thisLibrary; do
   thisVersion=`grep --ignore-case --regexp=${thisLibrary} /tmp/installed.tsv | cut -f2`
   if grep --quiet --ignore-case --regexp=${thisLibrary} /tmp/installed.tsv ; then
     echo -e "Upgrade Circuit Python library ${thisLibrary} version ${thisVersion} to latest release"
-    sudo pip3 install --upgrade ${thisLibrary}
+    sudo pip3 install --break-system-packages --upgrade ${thisLibrary}
   else
     echo -e "Install latest release of Circuit Python library ${thisLibrary}"
-    sudo pip3 install ${thisLibrary}
+    sudo pip3 install --break-system-packages ${thisLibrary}
   fi
 done < /tmp/needed
 
