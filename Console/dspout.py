@@ -25,7 +25,7 @@ freshDate = now + timedelta(hours = 12)
 #last_print = time.monotonic()
 
 i2c = busio.I2C(board.SCL, board.SDA)
-bmpJSONFileName = "/home/don/bmpData.json"
+bmpJSONFileName = "/home/don//bmpData.json"
 #
 # Try GPS Board
 #
