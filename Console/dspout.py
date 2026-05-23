@@ -351,20 +351,22 @@ def printLight():
 
 def printSCD():
     global thisCO2
-    if scd.data_available:
-        thisCO2      = scd.CO2
-    if thisCO2 > 5000:
-        thisCO2Lvl   = '(!Danger!)'
-    elif thisCO2 > 2000:
-        thisCO2Lvl   = '..(*High*)'
-    elif thisCO2 > 1000:
-        thisCO2Lvl   = '(Elevated)'
-    elif thisCO2 > 400:
-        thisCO2Lvl   = '..(Normal)'
-    else:
-        thisCO2Lvl   = '.....(Low)'
-    print(f'CO2......{thisCO2Lvl:10s}: {thisCO2:3,.1f}ppm                   '[:40], end='')
 
+    try:
+        ready = scd.data_available
+        if ready:
+            thisCO2 = scd.CO2
+            status = "OK"
+        else:
+            status = "NO DATA"
+            thisCO2 = -1.0
+    except Exception as e:
+        status = "ERROR"
+        thisCO2 = -2.0
+        print(repr(e), file=sys.stderr)
+
+    print(f'CO2......{status:10s}: {thisCO2:3,.1f}ppm '[:40], end='')
+    
 def bandIndex(thisBand):
     switcher={
         '80m-40m':0,
